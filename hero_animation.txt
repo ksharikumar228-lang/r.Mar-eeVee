@@ -1,0 +1,330 @@
+# Taamsi Technology — Interactive Ecosystem Hero Enhancement
+
+Act as a **Senior Frontend Architect, Senior UI/UX Designer, Interaction Designer, and Premium Corporate Website Creator**.
+
+You are working on the existing **Taamsi Technology homepage hero section**.
+
+## 1. Core Objective
+
+I want to transform the existing right-side Ecosystem visualization into an:
+
+**“Interactive Ecosystem Orbit + Synchronized Hero Content”**
+
+The goal is to make the hero section feel like a **premium, intelligent, living ecosystem**, not a static collection of cards.
+
+Do NOT redesign the entire hero section.
+
+**Preserve the existing overall visual identity, layout, typography, logo, colors, spacing, and branding.**
+
+Enhance only the interaction and synchronized content behavior described below.
+
+---
+
+## 2. Auto-Rotation Behavior
+
+The ecosystem cards on the right side should automatically rotate through the business divisions.
+
+Each ecosystem item should remain active for:
+
+**5 seconds**
+
+Example sequence:
+
+rMAR eeVee
+→ rMAR SaaS
+→ rMAR Complex
+→ rMAR Mart
+→ rMAR Parkudil
+→ rMAR ARAM
+→ iBAZ Arti
+→ back to rMAR eeVee
+
+The sequence must run continuously in a smooth loop.
+
+Do NOT make the animation feel rushed.
+
+The user should have enough time to visually understand the active ecosystem and its corresponding content.
+
+---
+
+## 3. Active Ecosystem Card
+
+When an ecosystem item becomes active:
+
+* Give that card a subtle **light-red background tint**
+* Add a soft red glow/border
+* Slightly increase visual prominence
+* Use a smooth scale effect, approximately **1.02–1.04**
+* Keep the animation elegant and subtle
+* Do NOT use aggressive blinking
+* Do NOT use excessive glow
+* Do NOT make the card look like a warning/error state
+
+The effect should feel similar to a **premium mouse-hover interaction**.
+
+The active card should clearly communicate:
+
+**“This is the ecosystem currently being showcased.”**
+
+Inactive cards should remain clean and visually secondary.
+
+---
+
+## 4. Synchronize the Left Side Content
+
+This is the most important requirement.
+
+The active ecosystem card on the right must control the content shown on the left side.
+
+For example:
+
+### When rMAR eeVee becomes active
+
+Right side:
+→ rMAR eeVee card becomes highlighted.
+
+Left side:
+→ Automatically show rMAR eeVee-related content.
+
+### When rMAR SaaS becomes active
+
+Right side:
+→ rMAR SaaS becomes highlighted.
+
+Left side:
+→ Automatically transition to rMAR SaaS-related content.
+
+### When rMAR Complex becomes active
+
+Right side:
+→ rMAR Complex becomes highlighted.
+
+Left side:
+→ Automatically transition to rMAR Complex-related content.
+
+Continue the same behavior for every ecosystem division.
+
+Therefore:
+
+**Right Card Active → Left Content Changes**
+
+The two areas must feel like **one connected interactive experience**, not two independent animations.
+
+---
+
+## 5. Left Content Transition
+
+Do not abruptly replace the content.
+
+Use a premium transition such as:
+
+* subtle fade-out
+* slight upward/downward movement
+* content fade-in
+* approximately 500–800ms transition
+
+Avoid flashy animations.
+
+The content should feel like it is **naturally changing as the ecosystem rotates**.
+
+---
+
+## 6. User Interaction
+
+The automatic rotation should NOT fight with the user.
+
+If the user moves the mouse over an ecosystem card:
+
+1. Pause the automatic rotation.
+2. Highlight the hovered card immediately.
+3. Display its corresponding left-side content.
+4. Keep the selected ecosystem active while the user is interacting.
+5. When the user moves away, resume the automatic rotation gracefully.
+
+If appropriate, clicking an ecosystem card can also make that ecosystem active.
+
+The experience should support both:
+
+**Automatic storytelling + Manual exploration**
+
+---
+
+## 7. Timing
+
+Use:
+
+**5 seconds per ecosystem**
+
+Use approximately:
+
+**500–800ms for visual transitions**
+
+Do NOT hard-code timing throughout multiple components.
+
+Create a centralized/configurable value such as:
+
+`ECOSYSTEM_ROTATION_INTERVAL = 5000`
+
+This allows the timing to be easily changed later to 4, 5, or 6 seconds without modifying multiple parts of the code.
+
+---
+
+## 8. Loop Requirements
+
+The animation must:
+
+* Start automatically when the hero section becomes visible.
+* Continue indefinitely.
+* Return smoothly to the first ecosystem after the last item.
+* Never stop unexpectedly.
+* Avoid memory leaks.
+* Properly clean up timers/subscriptions when the component is destroyed.
+
+Use the framework's proper lifecycle and timer management practices.
+
+---
+
+## 9. Important Design Principle
+
+This is NOT simply:
+
+**“Animate the cards every 5 seconds.”**
+
+The actual interaction model is:
+
+**Ecosystem Card Selection**
+↓
+**Active Card Highlight**
+↓
+**Corresponding Hero Content Update**
+↓
+**User Understands That Business Division**
+↓
+**Next Ecosystem Automatically Selected**
+↓
+**Content Updates Again**
+↓
+**Continuous Storytelling Loop**
+
+The animation should communicate the idea:
+
+> **“One company. Multiple businesses. One connected ecosystem.”**
+
+---
+
+## 10. Preserve Existing Design
+
+Do NOT:
+
+* redesign the header
+* redesign the hero layout
+* change the Taamsi Technology logo
+* replace the existing typography unnecessarily
+* introduce a completely new color palette
+* move the ecosystem to another location
+* remove existing CTA buttons
+* remove existing business cards
+* add unnecessary 3D effects
+* add excessive animations
+* add distracting particles
+* add a generic carousel UI
+
+The current design is already established.
+
+Your task is to **elevate the existing design through intelligent interaction**, not redesign it from scratch.
+
+---
+
+## 11. Responsive Behavior
+
+Ensure the interaction works properly across:
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile
+
+On mobile, adapt the ecosystem interaction intelligently rather than simply shrinking the desktop design.
+
+Maintain readability and usability.
+
+---
+
+## 12. Accessibility
+
+Respect:
+
+* `prefers-reduced-motion`
+* keyboard navigation
+* visible focus states
+* readable contrast
+* semantic buttons/interactive elements
+
+If the user prefers reduced motion, provide a calm/static version instead of forcing continuous animation.
+
+---
+
+## 13. Performance
+
+Keep the animation lightweight.
+
+Avoid unnecessary:
+
+* DOM re-rendering
+* expensive JavaScript calculations
+* continuous layout recalculation
+* excessive box-shadow animation
+* unnecessary third-party animation libraries
+
+Prefer performant CSS transitions/transforms where possible.
+
+---
+
+## 14. Final UX Goal
+
+When someone lands on the Taamsi Technology homepage, the hero should immediately communicate:
+
+**Taamsi Technology is one unified ecosystem with multiple business divisions.**
+
+The visitor should naturally notice:
+
+**rMAR eeVee → rMAR SaaS → rMAR Complex → rMAR Mart → ...**
+
+while simultaneously seeing the corresponding story/content change on the left.
+
+It should feel:
+
+**Premium
+Modern
+Intelligent
+Corporate
+Smooth
+Purposeful
+Not gimmicky**
+
+Before modifying the code:
+
+1. Inspect the existing hero implementation.
+2. Identify the current ecosystem card structure.
+3. Identify the existing left-side hero content structure.
+4. Reuse the existing components/data wherever possible.
+5. Implement the synchronized interaction with minimal structural changes.
+6. Do not duplicate code for each ecosystem item.
+7. Use a reusable data-driven configuration for ecosystem items and their corresponding content.
+8. Test the complete rotation and manual hover behavior.
+9. Verify that the existing design remains visually intact.
+
+After implementation, explain briefly:
+
+* Which files/components were changed
+* How the 5-second rotation works
+* How right-side and left-side content are synchronized
+* How hover interaction overrides/resumes the automatic rotation
+* How the timing can be changed later
+* Any responsive/accessibility considerations implemented
+
+**Think like a founder protecting a premium brand, and like a senior frontend designer responsible for production-quality UX.**
+
+Do not over-design.
+
+**Make the existing Taamsi Technology hero smarter, more interactive, and more memorable without losing its current premium corporate identity.**

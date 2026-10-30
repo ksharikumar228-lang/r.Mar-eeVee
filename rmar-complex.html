@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="rMAR Complex — premium commercial property rentals in Tenkasi from Taamsi Technology. Shops, offices, showrooms and hotels in prime locations.">
+  <title>rMAR Complex — Commercial Property Rentals | Taamsi Technology</title>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Taamsi Technology">
+  <meta property="og:title" content="rMAR Complex — Commercial Property Rentals | Taamsi Technology">
+  <meta property="og:description" content="Premium shops, offices, showrooms and commercial spaces for rent in prime locations across Tenkasi.">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#063A78">
+
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/base.css">
+  <!-- inner.css is NOT loaded here: contact.html depends on 33 classes in it,
+       so this page's design lives in its own isolated stylesheet, same as
+       rMAR Porkudil. complex.css uses the same tokens as porkudil.css under
+       a "cx-" prefix — same ecosystem, distinct commercial-marketplace look. -->
+  <link rel="stylesheet" href="css/complex.css">
+  <link rel="stylesheet" href="css/hero-shared.css">
+
+  <!-- Safety net: if JavaScript is disabled, the scroll-reveal never runs and
+       the opacity:0 start states would leave the page permanently blank. -->
+  <noscript>
+    <style>
+      .reveal, .reveal-left, .reveal-right, .reveal-scale {
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+      }
+    </style>
+  </noscript>
+
+</head>
+
+<body class="has-header complex-page">
+
+  <a href="#main" class="visually-hidden-focusable position-absolute top-0 start-0 m-2 p-2 bg-white border rounded"
+     style="z-index:2000">Skip to content</a>
+
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="mobile-menu-backdrop" id="mobileBackdrop"></div>
+
+  <!-- ===== HEADER ===== -->
+  <div class="nav-outer-wrap fixed-top" id="navOuterWrap">
+    <nav class="navbar navbar-expand-lg navbar-premium" id="mainNav">
+      <div class="container-fluid px-lg-4">
+        <a class="navbar-brand-custom" href="index.html">
+          <div class="brand-logo-taamsi"><img src="images/taamsi-logo-official.png" alt=""
+              class="brand-logo-img" width="34" height="34" decoding="async"></div>
+          <div>
+            <div class="brand-text">Taamsi Technology</div>
+            <div class="brand-tagline">Innovate • Transform • Grow</div>
+          </div>
+        </a>
+        <button class="navbar-toggler border-0" type="button" id="mobileMenuToggle" aria-label="Toggle navigation"
+          aria-expanded="false" aria-controls="navMenu">
+          <span class="hamburger-icon">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About Us</a></li>
+            <li class="nav-item mega-menu-wrapper" id="megaMenuWrapper">
+              <a class="nav-link nav-link-custom dropdown-toggle" href="index.html#divisions" id="megaMenuTrigger"
+                aria-haspopup="true" aria-expanded="false" aria-controls="divisionsMenu">
+                Divisions <i class="bi bi-chevron-down mega-caret"></i>
+              </a>
+              <div class="mega-menu mega-menu-grid" id="divisionsMenu" role="menu" aria-label="Business divisions">
+                <div class="mega-menu-columns">
+                  <div class="mega-menu-col">
+                    <span class="mega-group-label" style="--mobile-order:1">CORE DIVISIONS</span>
+                    <a href="rmar-eevee.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=700&q=80"
+                      data-preview-icon="bi-lightning-charge-fill"
+                      data-preview-title="rMAR eeVee" data-preview-sub="Electric mobility solutions"
+                      style="--mobile-order:2">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #2C6FC4, #063A78);"><i
+                          class="bi bi-lightning-charge-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR eeVee</span>
+                        <span class="mega-menu-subtitle">Electric mobility solutions</span>
+                      </div>
+                    </a>
+                    <a href="rmar-complex.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&q=80"
+                      data-preview-icon="bi-building"
+                      data-preview-title="rMAR Complex" data-preview-sub="Premium real estate"
+                      style="--mobile-order:7">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #063A78, #003A82);"><i
+                          class="bi bi-building"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR Complex</span>
+                        <span class="mega-menu-subtitle">Premium real estate</span>
+                      </div>
+                    </a>
+                    <span class="mega-group-label" style="--mobile-order:8">MARKETING & COMMUNITY</span>
+                    <a href="ibaz-arti.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&q=80"
+                      data-preview-icon="bi-megaphone-fill"
+                      data-preview-title="iBAZ Arti" data-preview-sub="Strategic marketing"
+                      style="--mobile-order:9">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #2C6FC4, #063A78);"><i
+                          class="bi bi-megaphone-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">iBAZ Arti</span>
+                        <span class="mega-menu-subtitle">Strategic marketing</span>
+                      </div>
+                    </a>
+                    <span class="mega-group-label" style="--mobile-order:5">PROPERTY & GROWTH</span>
+                    <a href="rmar-porkudil.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80"
+                      data-preview-icon="bi-house-door-fill"
+                      data-preview-title="rMAR Porkudil" data-preview-sub="Rental hub solutions"
+                      style="--mobile-order:6">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #A71501, #7E1001);"><i
+                          class="bi bi-house-door-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR Porkudil</span>
+                        <span class="mega-menu-subtitle">Rental hub solutions</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="mega-menu-col">
+                    <a href="https://rmarsaas.in/" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=700&q=80"
+                      data-preview-icon="bi-laptop"
+                      data-preview-title="rMAR SaaS" data-preview-sub="125+ digital services"
+                      style="--mobile-order:3" target="_blank" rel="noopener">
+                      <div class="mega-menu-icon"
+                        style="background: linear-gradient(135deg, var(--color-primary), var(--color-accent));"><i
+                          class="bi bi-laptop"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR SaaS</span>
+                        <span class="mega-menu-subtitle">125+ digital services</span>
+                      </div>
+                    </a>
+                    <a href="https://rmarmart.in/" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700&q=80"
+                      data-preview-icon="bi-bag-fill"
+                      data-preview-title="rMAR Mart" data-preview-sub="Smart e-commerce"
+                      style="--mobile-order:4" target="_blank" rel="noopener">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #A71501, #A71501);"><i
+                          class="bi bi-bag-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR Mart</span>
+                        <span class="mega-menu-subtitle">Smart e-commerce</span>
+                      </div>
+                    </a>
+                    <a href="rmar-aram.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=700&q=80"
+                      data-preview-icon="bi-people-fill"
+                      data-preview-title="rMAR ARAM" data-preview-sub="Community platform"
+                      style="--mobile-order:10">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #2C6FC4, #063A78);"><i
+                          class="bi bi-people-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR ARAM</span>
+                        <span class="mega-menu-subtitle">Community platform</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="mega-menu-preview" id="megaMenuPreview" aria-hidden="true">
+                  <div class="mega-menu-preview-img" id="megaMenuPreviewImg">
+                    <svg class="mega-preview-art" viewBox="0 0 320 240" role="img"
+                         aria-label="Seven divisions connected to one shared back office"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                          <linearGradient id="mpCore" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#063A78" />
+                            <stop offset="100%" stop-color="#2C6FC4" />
+                          </linearGradient>
+                          <radialGradient id="mpGlow" cx="50%" cy="46%" r="60%">
+                            <stop offset="0%" stop-color="#FFFFFF" stop-opacity=".92" />
+                            <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+                          </radialGradient>
+                          <clipPath id="mpLogoClip"><circle cx="160" cy="118" r="13" /></clipPath>
+                        </defs>
+
+                        <rect width="320" height="240" fill="url(#mpGlow)" />
+
+                        <g class="mp-rings">
+                          <circle cx="160" cy="118" r="74" />
+                          <circle cx="160" cy="118" r="47" />
+                        </g>
+
+                        <g class="mp-links">
+                          <line x1="160.0" y1="86.0" x2="160.0" y2="57.0" />
+                          <line x1="185.0" y1="98.0" x2="207.7" y2="79.9" />
+                          <line x1="191.2" y1="125.1" x2="219.5" y2="131.6" />
+                          <line x1="173.9" y1="146.8" x2="186.5" y2="173.0" />
+                          <line x1="146.1" y1="146.8" x2="133.5" y2="173.0" />
+                          <line x1="128.8" y1="125.1" x2="100.5" y2="131.6" />
+                          <line x1="135.0" y1="98.0" x2="112.3" y2="79.9" />
+                        </g>
+
+                        <g class="mp-nodes">
+                          <g style="--i:0"><circle cx="160.0" cy="44.0" r="11.5" /><circle class="dot" cx="160.0" cy="44.0" r="3.8" /></g>
+                          <g style="--i:1"><circle cx="217.8" cy="71.8" r="11.5" /><circle class="dot" cx="217.8" cy="71.8" r="3.8" /></g>
+                          <g style="--i:2"><circle cx="232.1" cy="134.5" r="11.5" /><circle class="dot" cx="232.1" cy="134.5" r="3.8" /></g>
+                          <g style="--i:3"><circle cx="192.1" cy="184.7" r="11.5" /><circle class="dot" cx="192.1" cy="184.7" r="3.8" /></g>
+                          <g style="--i:4"><circle cx="127.9" cy="184.7" r="11.5" /><circle class="dot" cx="127.9" cy="184.7" r="3.8" /></g>
+                          <g style="--i:5"><circle cx="87.9" cy="134.5" r="11.5" /><circle class="dot" cx="87.9" cy="134.5" r="3.8" /></g>
+                          <g style="--i:6"><circle cx="102.2" cy="71.8" r="11.5" /><circle class="dot" cx="102.2" cy="71.8" r="3.8" /></g>
+                        </g>
+
+                        <polygon class="mp-core" points="160.0,91.0 183.4,104.5 183.4,131.5 160.0,145.0 136.6,131.5 136.6,104.5" fill="url(#mpCore)" />
+                        <circle cx="160" cy="118" r="13" fill="#FFFFFF" />
+                        <image href="images/taamsi-logo-official.png" x="147" y="105" width="26" height="26"
+                               clip-path="url(#mpLogoClip)" preserveAspectRatio="xMidYMid slice" />
+                      </svg>
+                  </div>
+                  <div class="mega-menu-preview-text">
+                    <h4 id="megaMenuPreviewTitle">One Ecosystem</h4>
+                    <p id="megaMenuPreviewSub">Multiple solutions, endless possibilities</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="nav-cta-group">
+            <a href="tel:+917373611500" class="btn-amber btn-call magnetic-btn" aria-label="Call Taamsi Technology on +91 73736 11500"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Call Us</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main">
+
+  <!-- ===== HERO ============================================================
+       Commercial-first hero — deliberately not a copy of Porkudil's split
+       hero-with-amenity-pills layout. Dark navy ground + a single strong
+       visual + a trust row reads as "marketplace/platform", matching the
+       brief's instruction that this must not feel residential.
+       ==================================================================== -->
+  <section class="cx-hero">
+    <div class="mesh-gradient" aria-hidden="true"></div>
+    <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+    <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
+    <div class="hero-blob hero-blob-3" aria-hidden="true"></div>
+    <div class="container">
+      <div class="cx-hero-grid">
+
+        <div class="reveal">
+          <span class="cx-brand"><i class="bi bi-building" aria-hidden="true"></i> rMAR <em>Complex</em></span>
+          <h1 class="cx-hero-title">Find the Right <em>Space</em> for Your Business</h1>
+          <p class="cx-hero-copy">
+            Premium shops, offices, showrooms and commercial spaces for rent in prime
+            locations across Tenkasi.
+          </p>
+
+          <div class="cx-hero-cta">
+            <a href="#listings" class="btn-primary-premium">Explore Spaces <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a href="#schedule" class="btn-outline-premium">Schedule a Visit</a>
+          </div>
+
+          <div class="cx-hero-trust">
+            <span class="cx-hero-trust-item">
+              <span class="cx-hero-trust-ico" aria-hidden="true"><i class="bi bi-geo-alt-fill"></i></span>
+              <span><span class="cx-hero-trust-k">Prime Locations</span><span class="cx-hero-trust-v">Main-road visibility</span></span>
+            </span>
+            <span class="cx-hero-trust-item">
+              <span class="cx-hero-trust-ico" aria-hidden="true"><i class="bi bi-buildings"></i></span>
+              <span><span class="cx-hero-trust-k">Managed by Taamsi</span><span class="cx-hero-trust-v">Single point of contact</span></span>
+            </span>
+            <span class="cx-hero-trust-item">
+              <span class="cx-hero-trust-ico" aria-hidden="true"><i class="bi bi-briefcase-fill"></i></span>
+              <span><span class="cx-hero-trust-k">Business-Ready</span><span class="cx-hero-trust-v">Shops to showrooms</span></span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Real commercial photography, not an illustration — this is a
+             generic aspirational hero image (not a specific unverified
+             property), so it doesn't carry the same "don't overstate what
+             exists" concern as the numbered listings below. Reuses the exact
+             Unsplash asset already assigned to rMAR Complex in the site's own
+             mega-menu preview, so it's a known-working asset in this project. -->
+        <figure class="cx-hero-visual reveal-scale delay-1">
+          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&q=80"
+               alt="Modern commercial office building exterior" loading="lazy" decoding="async">
+          <span class="cx-hero-visual-tag"><i class="bi bi-building" aria-hidden="true"></i> <span>Commercial properties, Tenkasi</span></span>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED COMMERCIAL SPACES ========================================
+       PLACEHOLDER LISTINGS — same integrity rule as Porkudil's apartments:
+       these three (shop, office, showroom) are illustrative examples built
+       for layout, not confirmed inventory. Confirm real areas, rents and
+       addresses with the founder before publishing. Photos are real,
+       representative Unsplash photography (not photos of these specific
+       addresses) chosen to match each property type — swap in actual
+       listing photos once real inventory exists. Commercial attributes
+       only (built-up area, floor, parking, frontage) — no BHK/bedroom/
+       family-oriented language anywhere on this page.
+       ==================================================================== -->
+  <section class="cx-sec cx-sec--tint" id="listings">
+    <div class="container">
+
+      <div class="cx-head reveal">
+        <span class="cx-eyebrow">Featured Spaces</span>
+        <h2 class="cx-title">Explore Our Commercial Spaces</h2>
+        <p class="cx-sub">Find a space that fits your business, location and budget.</p>
+      </div>
+
+      <div class="cx-carousel reveal delay-1">
+        <button type="button" class="cx-nav cx-nav--prev" data-cx-prev aria-label="Previous spaces"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+        <button type="button" class="cx-nav cx-nav--next" data-cx-next aria-label="Next spaces"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+
+        <div class="cx-viewport" data-cx-viewport tabindex="0" role="region"
+             aria-label="Available commercial spaces" aria-roledescription="carousel">
+          <div class="cx-track" data-cx-track>
+
+            <article class="cx-card" data-cx-type="shop" data-cx-location="tenkasi melapettai" data-cx-rent="25000" data-cx-available="true">
+              <div class="cx-shot">
+                <span class="cx-badge">Available</span>
+                <span class="cx-type-tag">Shop</span>
+                <img src="https://images.unsplash.com/photo-1523368749929-6b2bf370dbf8?w=900&q=80" alt="Commercial shop, ground floor, main road access" loading="lazy" decoding="async">
+              </div>
+              <div class="cx-card-body">
+                <h3 class="cx-card-name">Commercial Shop &ndash; Ground Floor</h3>
+                <div class="cx-specs">
+                  <span class="cx-spec"><i class="bi bi-aspect-ratio" aria-hidden="true"></i> 850 sq.ft</span>
+                  <span class="cx-spec"><i class="bi bi-layers" aria-hidden="true"></i> Ground Floor</span>
+                  <span class="cx-spec"><i class="bi bi-p-square" aria-hidden="true"></i> Parking Available</span>
+                </div>
+                <div class="cx-specs">
+                  <span class="cx-spec"><i class="bi bi-signpost-split" aria-hidden="true"></i> Main Road Access</span>
+                  <span class="cx-spec"><i class="bi bi-eye" aria-hidden="true"></i> High Visibility</span>
+                </div>
+                <p class="cx-loc"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Melapettai, Tenkasi</p>
+                <p class="cx-rent">&#8377;25,000 <span>/ month</span></p>
+                <div class="cx-card-cta">
+                  <a class="cx-btn-ghost" href="#schedule">View Details</a>
+                  <a class="cx-btn-solid" href="#schedule">Book a Visit</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="cx-card" data-cx-type="office" data-cx-location="tenkasi sivagiri main road" data-cx-rent="18500" data-cx-available="true">
+              <div class="cx-shot">
+                <span class="cx-badge">Available</span>
+                <span class="cx-type-tag">Office</span>
+                <img src="https://images.unsplash.com/photo-1718220216044-006f43e3a9b1?w=900&q=80" alt="Professional office space, second floor, with lift access" loading="lazy" decoding="async">
+              </div>
+              <div class="cx-card-body">
+                <h3 class="cx-card-name">Professional Office Space &ndash; 2nd Floor</h3>
+                <div class="cx-specs">
+                  <span class="cx-spec"><i class="bi bi-aspect-ratio" aria-hidden="true"></i> 620 sq.ft</span>
+                  <span class="cx-spec"><i class="bi bi-layers" aria-hidden="true"></i> 2nd Floor</span>
+                  <span class="cx-spec"><i class="bi bi-arrow-up-square" aria-hidden="true"></i> Lift Access</span>
+                </div>
+                <div class="cx-specs">
+                  <span class="cx-spec"><i class="bi bi-p-square" aria-hidden="true"></i> Reserved Parking</span>
+                  <span class="cx-spec"><i class="bi bi-briefcase" aria-hidden="true"></i> Suitable for IT/Consulting</span>
+                </div>
+                <p class="cx-loc"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Sivagiri Main Road, Tenkasi</p>
+                <p class="cx-rent">&#8377;18,500 <span>/ month</span></p>
+                <div class="cx-card-cta">
+                  <a class="cx-btn-ghost" href="#schedule">View Details</a>
+                  <a class="cx-btn-solid" href="#schedule">Book a Visit</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="cx-card" data-cx-type="showroom" data-cx-location="tenkasi court road" data-cx-rent="42000" data-cx-available="false">
+              <div class="cx-shot">
+                <span class="cx-badge cx-badge--accent">Most Popular</span>
+                <span class="cx-type-tag">Showroom</span>
+                <img src="https://images.unsplash.com/photo-1692406069831-0bb7ea297645?w=900&q=80" alt="Premium showroom with full glass frontage on main road" loading="lazy" decoding="async">
+              </div>
+              <div class="cx-card-body">
+                <h3 class="cx-card-name">Premium Showroom &ndash; Main Road Facing</h3>
+                <div class="cx-specs">
+                  <span class="cx-spec"><i class="bi bi-aspect-ratio" aria-hidden="true"></i> 1,450 sq.ft</span>
+                  <span class="cx-spec"><i class="bi bi-layers" aria-hidden="true"></i> Ground Floor</span>
+                  <span class="cx-spec"><i class="bi bi-border-width" aria-hidden="true"></i> 40 ft Glass Frontage</span>
+                </div>
+                <div class="cx-specs">
+                  <span class="cx-spec"><i class="bi bi-lightning-charge" aria-hidden="true"></i> 3-Phase Power</span>
+                  <span class="cx-spec"><i class="bi bi-p-square" aria-hidden="true"></i> Customer Parking</span>
+                </div>
+                <p class="cx-loc"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Court Road, Tenkasi</p>
+                <p class="cx-rent">&#8377;42,000 <span>/ month</span></p>
+                <div class="cx-card-cta">
+                  <a class="cx-btn-ghost" href="#schedule">View Details</a>
+                  <a class="cx-btn-solid" href="#schedule">Book a Visit</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="cx-dots" data-cx-dots role="tablist" aria-label="Listing pages"></div>
+        <p class="cx-empty" data-cx-empty hidden>No spaces match those filters right now &mdash; try widening your search, or <a href="#schedule">tell us what you're looking for</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BUSINESS-FIRST VALUE ==============================================
+       Light section, white bordered cards — matches the light theme used
+       throughout the page. Visually distinct from the tinted listing
+       section above (plain cx-sec bg vs cx-sec--tint) and the white forms
+       section below (cards-in-a-grid vs two side-by-side panels), so it
+       still reads as its own composition rather than a repeated shape. -->
+  <section class="cx-sec">
+    <div class="container">
+      <div class="cx-head reveal">
+        <span class="cx-eyebrow">Why rMAR Complex</span>
+        <h2 class="cx-title">A Better Space for Your Business</h2>
+        <p class="cx-sub">Every space is managed with the same standard, whichever category you choose.</p>
+      </div>
+
+      <div class="cx-value reveal delay-1">
+        <div class="cx-value-item">
+          <span class="cx-value-ico" aria-hidden="true"><i class="bi bi-geo-alt-fill"></i></span>
+          <div><h4>Prime Locations</h4><p>Main-road and high-footfall addresses across Tenkasi.</p></div>
+        </div>
+        <div class="cx-value-item">
+          <span class="cx-value-ico" aria-hidden="true"><i class="bi bi-buildings"></i></span>
+          <div><h4>Professional Management</h4><p>One point of contact for maintenance and support.</p></div>
+        </div>
+        <div class="cx-value-item">
+          <span class="cx-value-ico" aria-hidden="true"><i class="bi bi-signpost-split-fill"></i></span>
+          <div><h4>Easy Access</h4><p>Main-road connectivity and dedicated parking where available.</p></div>
+        </div>
+        <div class="cx-value-item">
+          <span class="cx-value-ico" aria-hidden="true"><i class="bi bi-briefcase-fill"></i></span>
+          <div><h4>Business-Friendly Spaces</h4><p>Built for shops, offices, showrooms and more &mdash; not retrofitted homes.</p></div>
+        </div>
+        <div class="cx-value-item">
+          <span class="cx-value-ico" aria-hidden="true"><i class="bi bi-shield-check"></i></span>
+          <div><h4>Reliable Facilities</h4><p>Power, water and upkeep handled so you can focus on business.</p></div>
+        </div>
+        <div class="cx-value-item">
+          <span class="cx-value-ico" aria-hidden="true"><i class="bi bi-sliders"></i></span>
+          <div><h4>Flexible Options</h4><p>Shops, offices, showrooms and hotels &mdash; sized and priced differently.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AVAILABILITY + SITE VISIT ========================================
+       IMPORTANT — there is no backend. "Check Availability" does NOT query a
+       database, same honesty rule as rMAR Porkudil: the result text confirms
+       the enquiry was noted and that a person will confirm, which is true.
+       ==================================================================== -->
+  <section class="cx-sec" id="schedule">
+    <div class="container">
+      <div class="cx-head reveal">
+        <span class="cx-eyebrow">Get Started</span>
+        <h2 class="cx-title">Find Your Next Business Location</h2>
+        <p class="cx-sub">Tell us what you need, or book a time to see a space in person.</p>
+      </div>
+
+      <div class="cx-forms reveal delay-1">
+
+        <div class="cx-panel">
+          <div class="cx-panel-head">
+            <span class="cx-panel-ico" aria-hidden="true"><i class="bi bi-calendar-check"></i></span>
+            <div><h3>Check Availability</h3><p>Tell us what you need and we&rsquo;ll confirm</p></div>
+          </div>
+
+          <div class="cx-field">
+            <label for="cxType">Property Type</label>
+            <select id="cxType">
+              <option value="">Any type</option>
+              <option>Shop</option>
+              <option>Office</option>
+              <option>Showroom</option>
+              <option>Hotel</option>
+              <option>Commercial Space</option>
+            </select>
+          </div>
+          <div class="cx-field">
+            <label for="cxLocation">Preferred Location</label>
+            <input type="text" id="cxLocation" placeholder="e.g. Sivagiri Main Road">
+          </div>
+          <div class="cx-field-row">
+            <div class="cx-field">
+              <label for="cxArea">Required Area (sq.ft)</label>
+              <input type="number" id="cxArea" min="0" placeholder="e.g. 800">
+            </div>
+            <div class="cx-field">
+              <label for="cxBudget">Budget (&#8377;/month)</label>
+              <input type="number" id="cxBudget" min="0" step="500" placeholder="e.g. 25000">
+            </div>
+          </div>
+          <div class="cx-field">
+            <label for="cxDate">Preferred Move-in Date</label>
+            <input type="date" id="cxDate">
+          </div>
+
+          <button type="button" class="cx-submit cx-submit--navy" data-cx-check>Check Availability</button>
+
+          <div class="cx-result" data-cx-result hidden role="status">
+            <b>Request noted</b>
+            <span data-cx-result-text></span>
+          </div>
+        </div>
+
+        <div class="cx-panel">
+          <div class="cx-panel-head">
+            <span class="cx-panel-ico" aria-hidden="true"><i class="bi bi-person-check"></i></span>
+            <div><h3>Schedule a Site Visit</h3><p>Book a free visit to the property</p></div>
+          </div>
+
+          <form data-cx-visit novalidate>
+            <div class="cx-field-row">
+              <div class="cx-field">
+                <label for="cxName">Full Name <span class="req">*</span></label>
+                <input type="text" id="cxName" name="name" required autocomplete="name" placeholder="Enter your full name">
+              </div>
+              <div class="cx-field">
+                <label for="cxPhone">Mobile Number <span class="req">*</span></label>
+                <input type="tel" id="cxPhone" name="phone" required autocomplete="tel" placeholder="Enter mobile number">
+              </div>
+            </div>
+            <div class="cx-field-row">
+              <div class="cx-field">
+                <label for="cxEmail">Email</label>
+                <input type="email" id="cxEmail" name="email" autocomplete="email" placeholder="Enter email address">
+              </div>
+              <div class="cx-field">
+                <label for="cxPrefProperty">Preferred Property</label>
+                <select id="cxPrefProperty" name="property">
+                  <option value="">Select a property</option>
+                  <option>Commercial Shop &ndash; Ground Floor</option>
+                  <option>Professional Office Space &ndash; 2nd Floor</option>
+                  <option>Premium Showroom &ndash; Main Road Facing</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+            </div>
+            <div class="cx-field-row">
+              <div class="cx-field">
+                <label for="cxVisitDate">Preferred Date <span class="req">*</span></label>
+                <input type="date" id="cxVisitDate" name="date" required>
+              </div>
+              <div class="cx-field">
+                <label for="cxVisitTime">Preferred Time <span class="req">*</span></label>
+                <select id="cxVisitTime" name="time" required>
+                  <option value="">Select time</option>
+                  <option>Morning (9 AM &ndash; 12 PM)</option>
+                  <option>Afternoon (12 PM &ndash; 4 PM)</option>
+                  <option>Evening (4 PM &ndash; 8 PM)</option>
+                </select>
+              </div>
+            </div>
+            <div class="cx-field">
+              <label for="cxBizType">Business Type</label>
+              <input type="text" id="cxBizType" name="businessType" placeholder="e.g. Retail, IT services, Restaurant">
+            </div>
+            <div class="cx-field">
+              <label for="cxMsg">Message (Optional)</label>
+              <textarea id="cxMsg" name="message" placeholder="Anything we should know?"></textarea>
+            </div>
+
+            <button type="submit" class="cx-submit cx-submit--accent">Schedule Site Visit</button>
+
+            <div class="cx-result" data-cx-visit-result hidden role="status">
+              <b>Thank you</b>
+              <span>Your visit request is ready to send. Your email app will open with the details &mdash; press send and we&rsquo;ll confirm your slot.</span>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAGE CTA ========================================================== -->
+  <section class="cx-sec cx-sec--navy" style="padding-top:clamp(2rem,3.5vw,2.75rem);padding-bottom:clamp(2rem,3.5vw,2.75rem)">
+    <div class="container">
+      <div class="cx-cta-row reveal">
+        <div>
+          <h2>Ready to Find Your Business Space?</h2>
+          <p>Explore premium commercial spaces designed to help your business grow.</p>
+        </div>
+        <div class="cx-cta-actions">
+          <a href="#listings" class="btn-primary-premium">Explore Spaces <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          <a href="#schedule" class="btn-outline-premium">Schedule a Visit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST STRIP =======================================================
+       Every figure here is structurally true (5 categories genuinely exist on
+       this page) or describes the offer rather than an unverifiable claim —
+       same rule Porkudil's stats strip follows.
+       ==================================================================== -->
+  <section class="cx-sec cx-sec--tint" style="padding-bottom:clamp(2rem,3.5vw,3rem)">
+    <div class="container">
+      <div class="cx-stats reveal">
+        <div class="cx-stat"><i class="bi bi-star-fill" aria-hidden="true"></i><span><span class="cx-stat-n">3</span><span class="cx-stat-l">Featured spaces</span></span></div>
+        <div class="cx-stat"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span><span class="cx-stat-n">Tenkasi</span><span class="cx-stat-l">Prime commercial locations</span></span></div>
+        <div class="cx-stat"><i class="bi bi-buildings" aria-hidden="true"></i><span><span class="cx-stat-n">Taamsi</span><span class="cx-stat-l">Professionally managed</span></span></div>
+        <div class="cx-stat"><i class="bi bi-person-check" aria-hidden="true"></i><span><span class="cx-stat-n">By Appt.</span><span class="cx-stat-l">Site visits available</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer-premium">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="footer-brand-link" aria-label="Taamsi Technology - Home">
+            <span class="brand-logo-footer"><img src="images/taamsi-logo-official.png" alt=""
+                class="brand-logo-img" width="48" height="48" loading="lazy" decoding="async"></span>
+            <span class="footer-brand-text">
+              <span class="brand-text-footer">Taamsi Technology</span>
+              <span class="brand-tagline-footer">One Company. Multiple Solutions.</span>
+            </span>
+          </a>
+          <p class="footer-blurb">Building tomorrow's technology ecosystem.</p>
+
+          <ul class="footer-social" aria-label="Taamsi Technology on social media">
+            <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+
+        <!-- Quick links -->
+        <nav class="footer-col" aria-labelledby="ftLinks">
+          <h2 class="footer-heading" id="ftLinks">Quick Links</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h2 class="footer-heading">Contact</h2>
+          <address class="footer-address">
+            2/8/250, Surrandai Road,<br>
+            Elathur&ndash;627803, Tenkasi,<br>
+            Tamilnadu, India.
+          </address>
+          <ul class="footer-contact">
+            <li><span>Mobile</span><a href="tel:+917373611500">+91 73736 11500</a></li>
+            <li><span>Mail</span><a href="mailto:taamsi.mail@gmail.com">taamsi.mail@gmail.com</a></li>
+          </ul>
+          <a class="footer-maplink"
+             href="https://maps.google.com/maps?q=2%2F8%2F250%2C%20Surrandai%20Road%2C%20Elathur%2C%20Tenkasi%2C%20Tamil%20Nadu"
+             target="_blank" rel="noopener">
+            View location <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; <span data-year>2026</span> Taamsi Technology. All rights reserved.</p>
+        <ul class="footer-legal-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back to top. Kept functional and reduced so it does not compete with the
+       footer. js/site.js drives the ring via #progressCircle and toggles
+       .visible on #backToTop. -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="42" height="42" viewBox="0 0 54 54" aria-hidden="true">
+      <circle class="bg" cx="27" cy="27" r="24" fill="none" stroke-width="2"></circle>
+      <circle class="progress" id="progressCircle" cx="27" cy="27" r="24" fill="none"
+        stroke-width="2" stroke-linecap="round" stroke-dasharray="150.8" stroke-dashoffset="150.8"></circle>
+    </svg>
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/complex.js"></script>
+
+</body>
+
+</html>

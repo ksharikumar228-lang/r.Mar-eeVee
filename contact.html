@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Contact Taamsi Technology, Tenkasi. One desk routes every enquiry to the right division. Offices in Tenkasi and Kadayanallur, open Monday to Saturday.">
+  <title>Contact Us - Taamsi Technology</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Taamsi Technology">
+  <meta property="og:title" content="Contact Us - Taamsi Technology">
+  <meta property="og:description" content="Tell us what you need and we'll route it to the right division.">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#063A78">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/base.css">
+  <!-- The About page is the design reference: this page loads its system and
+       inherits the same token block, then adds only what Contact needs.
+       inner.css is no longer used by any page. -->
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/hero-shared.css">
+
+  <!-- Safety net: without JavaScript the scroll-reveal never runs, and the
+       opacity:0 start states would leave the page permanently blank. -->
+  <noscript>
+    <style>
+      .reveal, .reveal-left, .reveal-right, .reveal-scale {
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+      }
+      /* The [hidden] variant is gone with the tab system — there is only one
+         panel now and it is never hidden. */
+      [data-contact-panel] { display: block !important; }
+    </style>
+  </noscript>
+</head>
+
+<body class="has-header contact-page">
+
+  <a href="#main" class="visually-hidden-focusable position-absolute top-0 start-0 m-2 p-2 bg-white border rounded"
+     style="z-index:2000">Skip to content</a>
+
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="mobile-menu-backdrop" id="mobileBackdrop"></div>
+
+  <!-- ===== HEADER ===== -->
+  <div class="nav-outer-wrap fixed-top" id="navOuterWrap">
+    <nav class="navbar navbar-expand-lg navbar-premium" id="mainNav">
+      <div class="container-fluid px-lg-4">
+        <a class="navbar-brand-custom" href="index.html">
+          <div class="brand-logo-taamsi"><img src="images/taamsi-logo-official.png" alt=""
+              class="brand-logo-img" width="34" height="34" decoding="async"></div>
+          <div>
+            <div class="brand-text">Taamsi Technology</div>
+            <div class="brand-tagline">Innovate • Transform • Grow</div>
+          </div>
+        </a>
+        <button class="navbar-toggler border-0" type="button" id="mobileMenuToggle" aria-label="Toggle navigation"
+          aria-expanded="false" aria-controls="navMenu">
+          <span class="hamburger-icon">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About Us</a></li>
+            <li class="nav-item mega-menu-wrapper" id="megaMenuWrapper">
+              <a class="nav-link nav-link-custom dropdown-toggle" href="index.html#divisions" id="megaMenuTrigger"
+                aria-haspopup="true" aria-expanded="false" aria-controls="divisionsMenu">
+                Divisions <i class="bi bi-chevron-down mega-caret"></i>
+              </a>
+              <div class="mega-menu mega-menu-grid" id="divisionsMenu" role="menu" aria-label="Business divisions">
+                <div class="mega-menu-columns">
+                  <div class="mega-menu-col">
+                    <span class="mega-group-label" style="--mobile-order:1">CORE DIVISIONS</span>
+                    <a href="rmar-eevee.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=700&q=80"
+                      data-preview-icon="bi-lightning-charge-fill"
+                      data-preview-title="rMAR eeVee" data-preview-sub="Electric mobility solutions"
+                      style="--mobile-order:2">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #2C6FC4, #063A78);"><i
+                          class="bi bi-lightning-charge-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR eeVee</span>
+                        <span class="mega-menu-subtitle">Electric mobility solutions</span>
+                      </div>
+                    </a>
+                    <a href="rmar-complex.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&q=80"
+                      data-preview-icon="bi-building"
+                      data-preview-title="rMAR Complex" data-preview-sub="Premium real estate"
+                      style="--mobile-order:7">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #063A78, #003A82);"><i
+                          class="bi bi-building"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR Complex</span>
+                        <span class="mega-menu-subtitle">Premium real estate</span>
+                      </div>
+                    </a>
+                    <span class="mega-group-label" style="--mobile-order:8">MARKETING & COMMUNITY</span>
+                    <a href="ibaz-arti.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&q=80"
+                      data-preview-icon="bi-megaphone-fill"
+                      data-preview-title="iBAZ Arti" data-preview-sub="Strategic marketing"
+                      style="--mobile-order:9">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #2C6FC4, #063A78);"><i
+                          class="bi bi-megaphone-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">iBAZ Arti</span>
+                        <span class="mega-menu-subtitle">Strategic marketing</span>
+                      </div>
+                    </a>
+                    <span class="mega-group-label" style="--mobile-order:5">PROPERTY & GROWTH</span>
+                    <a href="rmar-porkudil.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80"
+                      data-preview-icon="bi-house-door-fill"
+                      data-preview-title="rMAR Porkudil" data-preview-sub="Rental hub solutions"
+                      style="--mobile-order:6">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #A71501, #7E1001);"><i
+                          class="bi bi-house-door-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR Porkudil</span>
+                        <span class="mega-menu-subtitle">Rental hub solutions</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="mega-menu-col">
+                    <a href="https://rmarsaas.in/" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=700&q=80"
+                      data-preview-icon="bi-laptop"
+                      data-preview-title="rMAR SaaS" data-preview-sub="125+ digital services"
+                      style="--mobile-order:3" target="_blank" rel="noopener">
+                      <div class="mega-menu-icon"
+                        style="background: linear-gradient(135deg, var(--color-primary), var(--color-accent));"><i
+                          class="bi bi-laptop"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR SaaS</span>
+                        <span class="mega-menu-subtitle">125+ digital services</span>
+                      </div>
+                    </a>
+                    <a href="https://rmarmart.in/" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700&q=80"
+                      data-preview-icon="bi-bag-fill"
+                      data-preview-title="rMAR Mart" data-preview-sub="Smart e-commerce"
+                      style="--mobile-order:4" target="_blank" rel="noopener">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #A71501, #A71501);"><i
+                          class="bi bi-bag-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR Mart</span>
+                        <span class="mega-menu-subtitle">Smart e-commerce</span>
+                      </div>
+                    </a>
+                    <a href="rmar-aram.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=700&q=80"
+                      data-preview-icon="bi-people-fill"
+                      data-preview-title="rMAR ARAM" data-preview-sub="Community platform"
+                      style="--mobile-order:10">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #2C6FC4, #063A78);"><i
+                          class="bi bi-people-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR ARAM</span>
+                        <span class="mega-menu-subtitle">Community platform</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="mega-menu-preview" id="megaMenuPreview" aria-hidden="true">
+                  <div class="mega-menu-preview-img" id="megaMenuPreviewImg">
+                    <svg class="mega-preview-art" viewBox="0 0 320 240" role="img"
+                         aria-label="Seven divisions connected to one shared back office"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                          <linearGradient id="mpCore" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#063A78" />
+                            <stop offset="100%" stop-color="#2C6FC4" />
+                          </linearGradient>
+                          <radialGradient id="mpGlow" cx="50%" cy="46%" r="60%">
+                            <stop offset="0%" stop-color="#FFFFFF" stop-opacity=".92" />
+                            <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+                          </radialGradient>
+                          <clipPath id="mpLogoClip"><circle cx="160" cy="118" r="13" /></clipPath>
+                        </defs>
+
+                        <rect width="320" height="240" fill="url(#mpGlow)" />
+
+                        <g class="mp-rings">
+                          <circle cx="160" cy="118" r="74" />
+                          <circle cx="160" cy="118" r="47" />
+                        </g>
+
+                        <g class="mp-links">
+                          <line x1="160.0" y1="86.0" x2="160.0" y2="57.0" />
+                          <line x1="185.0" y1="98.0" x2="207.7" y2="79.9" />
+                          <line x1="191.2" y1="125.1" x2="219.5" y2="131.6" />
+                          <line x1="173.9" y1="146.8" x2="186.5" y2="173.0" />
+                          <line x1="146.1" y1="146.8" x2="133.5" y2="173.0" />
+                          <line x1="128.8" y1="125.1" x2="100.5" y2="131.6" />
+                          <line x1="135.0" y1="98.0" x2="112.3" y2="79.9" />
+                        </g>
+
+                        <g class="mp-nodes">
+                          <g style="--i:0"><circle cx="160.0" cy="44.0" r="11.5" /><circle class="dot" cx="160.0" cy="44.0" r="3.8" /></g>
+                          <g style="--i:1"><circle cx="217.8" cy="71.8" r="11.5" /><circle class="dot" cx="217.8" cy="71.8" r="3.8" /></g>
+                          <g style="--i:2"><circle cx="232.1" cy="134.5" r="11.5" /><circle class="dot" cx="232.1" cy="134.5" r="3.8" /></g>
+                          <g style="--i:3"><circle cx="192.1" cy="184.7" r="11.5" /><circle class="dot" cx="192.1" cy="184.7" r="3.8" /></g>
+                          <g style="--i:4"><circle cx="127.9" cy="184.7" r="11.5" /><circle class="dot" cx="127.9" cy="184.7" r="3.8" /></g>
+                          <g style="--i:5"><circle cx="87.9" cy="134.5" r="11.5" /><circle class="dot" cx="87.9" cy="134.5" r="3.8" /></g>
+                          <g style="--i:6"><circle cx="102.2" cy="71.8" r="11.5" /><circle class="dot" cx="102.2" cy="71.8" r="3.8" /></g>
+                        </g>
+
+                        <polygon class="mp-core" points="160.0,91.0 183.4,104.5 183.4,131.5 160.0,145.0 136.6,131.5 136.6,104.5" fill="url(#mpCore)" />
+                        <circle cx="160" cy="118" r="13" fill="#FFFFFF" />
+                        <image href="images/taamsi-logo-official.png" x="147" y="105" width="26" height="26"
+                               clip-path="url(#mpLogoClip)" preserveAspectRatio="xMidYMid slice" />
+                      </svg>
+                  </div>
+                  <div class="mega-menu-preview-text">
+                    <h4 id="megaMenuPreviewTitle">One Ecosystem</h4>
+                    <p id="megaMenuPreviewSub">Multiple solutions, endless possibilities</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link nav-link-custom active" href="contact.html" aria-current="page">Contact</a></li>
+          </ul>
+          <div class="nav-cta-group">
+            <a href="tel:+917373611500" class="btn-amber btn-call magnetic-btn" aria-label="Call Taamsi Technology on +91 73736 11500"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Call Us</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main">
+
+  <!-- ===== HERO — same construction as the About hero ============== -->
+  <section class="ab-hero" id="top">
+    <div class="mesh-gradient" aria-hidden="true"></div>
+    <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+    <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
+    <div class="hero-blob hero-blob-3" aria-hidden="true"></div>
+    <div class="container">
+
+      <div class="reveal">
+        <p class="ab-eyebrow">Contact us</p>
+        <h1 class="ab-hero-title">Let's build something<br><em>great together.</em></h1>
+        <p class="ab-hero-lede">
+          One desk takes every enquiry and routes it to the right division &mdash; so you don't
+          have to know which of the seven you need before you get in touch.
+        </p>
+      </div>
+
+      <div class="ab-hero-strip reveal delay-1">
+        <div>
+          <span class="ab-strip-k">Same working day</span>
+          <span class="ab-strip-v">First reply to every enquiry</span>
+        </div>
+        <div>
+          <span class="ab-strip-k">Two counters</span>
+          <span class="ab-strip-v">Tenkasi and Kadayanallur, Monday to Saturday</span>
+        </div>
+        <div>
+          <span class="ab-strip-k">One point of contact</span>
+          <span class="ab-strip-v">Routed internally across all seven divisions</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT INFORMATION ==================================== -->
+  <section class="ab-section" id="reach">
+    <div class="container">
+
+      <div class="ab-head reveal">
+        <p class="ab-eyebrow">How to reach us</p>
+        <h2 class="ab-title ab-title--wide">Pick whichever <em>suits you</em></h2>
+        <p class="ab-lede">Every route reaches the same team. There is no wrong entrance.</p>
+      </div>
+
+      <div class="ab-matrix ab-matrix--4 reveal delay-1">
+        <article class="ab-cell">
+          <i class="bi bi-geo-alt" aria-hidden="true"></i>
+          <h3>Address</h3>
+          <p>2/8/250, Senkottai, Surrandai Road, Elathur&ndash;627803, Tenkasi, Tamil Nadu, India.</p>
+        </article>
+        <article class="ab-cell">
+          <i class="bi bi-telephone" aria-hidden="true"></i>
+          <h3>Phone</h3>
+          <p>+91 73736 11500<br>+91 94422 25428</p>
+        </article>
+        <article class="ab-cell">
+          <i class="bi bi-envelope" aria-hidden="true"></i>
+          <h3>Email</h3>
+          <p>taamsi.mail@gmail.com<br>Replies the same working day.</p>
+        </article>
+        <article class="ab-cell">
+          <i class="bi bi-clock" aria-hidden="true"></i>
+          <h3>Business hours</h3>
+          <p>Monday to Saturday<br>9:30&nbsp;am &ndash; 7:00&nbsp;pm. Closed Sunday.</p>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== ENQUIRY ================================================ -->
+  <section class="ab-section ab-section--tint" id="enquiry">
+    <div class="container">
+
+      <div class="ab-head reveal">
+        <p class="ab-eyebrow">Send an enquiry</p>
+        <h2 class="ab-title ab-title--wide">Write to us, or <em>price it yourself</em></h2>
+        <p class="ab-lede">
+          Send a plain message and we'll come back to you, or build a line-by-line quotation and
+          send it across ready to discuss.
+        </p>
+      </div>
+
+      <!-- ---------- SEND A MESSAGE ----------
+           The "Create a quotation" tab and panel were removed; this is now the
+           only enquiry form, so the tab switcher went with it. id="send-message"
+           is the deep-link target used by "Get a Quote" across the site. -->
+      <div data-contact-panel id="send-message">
+        <div class="row g-4">
+
+          <div class="col-lg-7 reveal">
+            <div class="cn-form">
+              <form id="contactForm" novalidate>
+                <div class="row g-3">
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="form-label-custom" for="cfName">Full name <span class="req">*</span></label>
+                      <input class="form-control-custom" type="text" id="cfName" name="name"
+                             autocomplete="name" placeholder="How should we address you?" required>
+                      <p class="field-error">Please tell us your name.</p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="form-label-custom" for="cfCompany">Company name</label>
+                      <input class="form-control-custom" type="text" id="cfCompany" name="company"
+                             autocomplete="organization" placeholder="Optional">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="form-label-custom" for="cfEmail">Email address <span class="req">*</span></label>
+                      <input class="form-control-custom" type="email" id="cfEmail" name="email"
+                             autocomplete="email" placeholder="name@example.com" required>
+                      <p class="field-error">Please enter a valid email address.</p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="form-label-custom" for="cfPhone">Phone number</label>
+                      <input class="form-control-custom" type="tel" id="cfPhone" name="phone"
+                             autocomplete="tel" inputmode="tel" placeholder="10-digit mobile number">
+                      <p class="field-error">That doesn't look like a valid Indian mobile number.</p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="form-label-custom" for="cfSubject">Subject</label>
+                      <input class="form-control-custom" type="text" id="cfSubject" name="subject"
+                             placeholder="What is this about?">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="form-label-custom" for="cfService">Service / requirement</label>
+                      <select class="form-control-custom" id="cfService" name="service">
+                        <option value="Not sure">Not sure &mdash; please route it</option>
+                        <option value="rMAR eeVee">rMAR eeVee &mdash; Electric mobility</option>
+                        <option value="rMAR SaaS">rMAR SaaS &mdash; Digital services</option>
+                        <option value="rMAR Complex">rMAR Complex &mdash; Commercial property</option>
+                        <option value="rMAR Mart">rMAR Mart &mdash; Commerce</option>
+                        <option value="rMAR Porkudil">rMAR Porkudil &mdash; Rentals</option>
+                        <option value="iBAZ Arti">iBAZ Arti &mdash; Digital marketing</option>
+                        <option value="rMAR ARAM">rMAR ARAM &mdash; Community</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label class="form-label-custom" for="cfMessage">Message <span class="req">*</span></label>
+                      <textarea class="form-control-custom" id="cfMessage" name="message" rows="6"
+                                placeholder="What are you trying to get done? Any dates you're working towards?" required></textarea>
+                      <p class="field-error">Please tell us a little about what you need.</p>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <button type="submit" class="ab-btn ab-btn--primary">
+                      Send message <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                    </button>
+                    <p class="form-note">
+                      This opens your own email application with the message ready to send. Nothing
+                      is stored on this website.
+                    </p>
+                    <div class="form-alert" id="contactAlert" role="status" hidden></div>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-lg-5 reveal delay-2">
+            <div class="cn-office">
+              <div class="cn-office-head">
+                <span class="ab-ico"><i class="bi bi-clipboard-check" aria-hidden="true"></i></span>
+                <span><h3>Before you send</h3><span class="cn-badge">Faster routing</span></span>
+              </div>
+              <ul class="ab-checks">
+                <li><i class="bi bi-check2" aria-hidden="true"></i>What you're trying to get done, in plain words.</li>
+                <li><i class="bi bi-check2" aria-hidden="true"></i>Which division it sounds like &mdash; or say you're not sure.</li>
+                <li><i class="bi bi-check2" aria-hidden="true"></i>Any date you're working towards.</li>
+                <li><i class="bi bi-check2" aria-hidden="true"></i>The best number to reach you on.</li>
+              </ul>
+              <p class="hours-status" data-hours-status data-open="false">
+                <span class="hours-dot" aria-hidden="true"></span>
+                <span data-hours-label>Mon&ndash;Sat, 9:30&nbsp;am &ndash; 7:00&nbsp;pm</span>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== WHAT HAPPENS NEXT — the About page's ladder ============= -->
+  <section class="ab-section" id="process">
+    <div class="container">
+
+      <div class="ab-head reveal">
+        <p class="ab-eyebrow">What happens next</p>
+        <h2 class="ab-title ab-title--wide">From your message to <em>an answer</em></h2>
+        <p class="ab-lede">No ticket numbers, no phone tree. Three steps, and a named person at the end of them.</p>
+      </div>
+
+      <ol class="ab-ladder reveal delay-1">
+
+        <li class="ab-rung">
+          <span class="ab-rung-n" aria-hidden="true">01</span>
+          <div>
+            <p class="ab-meta">Immediately</p>
+            <h3>It lands on one desk</h3>
+          </div>
+          <p class="ab-body">
+            Every enquiry &mdash; call, email, form or walk-in &mdash; arrives at the same front
+            desk. Nothing is sorted by you.
+          </p>
+        </li>
+
+        <li class="ab-rung">
+          <span class="ab-rung-n" aria-hidden="true">02</span>
+          <div>
+            <p class="ab-meta">Same working day</p>
+            <h3>We work out who should answer</h3>
+          </div>
+          <p class="ab-body">
+            The desk reads what you've asked for and routes it to the division that can actually do
+            it. If it spans two, both get it and one of them owns it.
+          </p>
+        </li>
+
+        <li class="ab-rung">
+          <span class="ab-rung-n" aria-hidden="true">03</span>
+          <div>
+            <p class="ab-meta">Within two working days</p>
+            <h3>A reply, a quote, or a start date</h3>
+          </div>
+          <p class="ab-body">
+            You hear from the person who will handle the work. Where the job needs pricing, a
+            written quotation follows with the GST broken out; where it doesn't, we agree a date.
+          </p>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== OFFICES ================================================ -->
+  <section class="ab-section ab-section--tint" id="offices">
+    <div class="container">
+
+      <div class="ab-head reveal">
+        <p class="ab-eyebrow">Our offices</p>
+        <h2 class="ab-title ab-title--wide">Come and see us <em>in person</em></h2>
+        <p class="ab-lede">Two counters in the Tenkasi district. Walk in during opening hours, or call ahead if you're travelling.</p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-lg-4 reveal">
+          <div class="cn-office">
+            <div class="cn-office-head">
+              <span class="ab-ico"><i class="bi bi-building" aria-hidden="true"></i></span>
+              <span><h3>Tenkasi</h3><span class="cn-badge">Head office</span></span>
+            </div>
+            <ul class="cn-list">
+              <li><i class="bi bi-geo-alt" aria-hidden="true"></i><span>2/8/250, Senkottai, Surrandai Road, Elathur&ndash;627803, Tenkasi, Tamil Nadu, India.</span></li>
+              <li><i class="bi bi-telephone" aria-hidden="true"></i><span><a href="tel:+917373611500">+91 73736 11500</a>, <a href="tel:+919442225428">+91 94422 25428</a></span></li>
+              <li><i class="bi bi-envelope" aria-hidden="true"></i><span><a href="mailto:taamsi.mail@gmail.com">taamsi.mail@gmail.com</a></span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 reveal delay-1">
+          <div class="cn-office">
+            <div class="cn-office-head">
+              <span class="ab-ico"><i class="bi bi-shop" aria-hidden="true"></i></span>
+              <span><h3>Kadayanallur</h3><span class="cn-badge">Branch office</span></span>
+            </div>
+            <ul class="cn-list">
+              <li><i class="bi bi-geo-alt" aria-hidden="true"></i><span>15, Kadayanallur, Tenkasi, Tamil Nadu, India.</span></li>
+              <!-- CONFIRM: the second number below was +91 98523 231232 — 11 digits, which is
+                   not a valid Indian mobile. Left in place so nothing is silently lost. -->
+              <li><i class="bi bi-telephone" aria-hidden="true"></i><span><a href="tel:+919486251630">+91 94862 51630</a>, <a href="tel:+9198523231232">+91 98523 231232</a></span></li>
+              <li><i class="bi bi-envelope" aria-hidden="true"></i><span><a href="mailto:mohideencse@gmail.com">mohideencse@gmail.com</a></span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 reveal delay-2">
+          <div class="cn-office">
+            <div class="cn-office-head">
+              <span class="ab-ico"><i class="bi bi-clock" aria-hidden="true"></i></span>
+              <span><h3>Opening hours</h3><span class="cn-badge">Both counters</span></span>
+            </div>
+            <ul class="cn-hours">
+              <li><span class="cn-hours-day">Monday &ndash; Friday</span><span class="cn-hours-time">9:30 am &ndash; 7:00 pm</span></li>
+              <li><span class="cn-hours-day">Saturday</span><span class="cn-hours-time">9:30 am &ndash; 7:00 pm</span></li>
+              <li class="is-closed"><span class="cn-hours-day">Sunday</span><span class="cn-hours-time">Closed</span></li>
+              <li><span class="cn-hours-day">Public holidays</span><span class="cn-hours-time">Call ahead</span></li>
+            </ul>
+            <p class="hours-status" data-hours-status data-open="false">
+              <span class="hours-dot" aria-hidden="true"></span>
+              <span data-hours-label>Mon&ndash;Sat, 9:30&nbsp;am &ndash; 7:00&nbsp;pm</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAP ====================================================
+       One iframe for both offices; the second is only requested when
+       the visitor asks for it. See initMap() in js/contact.js.
+       ============================================================== -->
+  <section class="ab-section" id="map">
+    <div class="container">
+
+      <div class="ab-head reveal">
+        <p class="ab-eyebrow">Find us</p>
+        <h2 class="ab-title ab-title--wide">On the <em>map</em></h2>
+      </div>
+
+      <div class="reveal delay-1" data-map-switch>
+
+        <div class="map-switch" role="tablist" aria-label="Choose an office to show on the map">
+          <button type="button" role="tab" aria-selected="true"
+                  data-map-title="Map showing the Taamsi Technology head office in Tenkasi"
+                  data-map-src="https://maps.google.com/maps?q=2%2F8%2F250%2C%20Surandai%20Road%2C%20Elathur%2C%20Tenkasi%2C%20Tamil%20Nadu%20627803&amp;z=16&amp;t=m&amp;hl=en&amp;output=embed">
+            Tenkasi
+          </button>
+          <button type="button" role="tab" aria-selected="false"
+                  data-map-title="Map showing the Taamsi Technology branch office in Kadayanallur"
+                  data-map-src="https://maps.google.com/maps?q=Kadayanallur%2C%20Tenkasi%2C%20Tamil%20Nadu%20627751&amp;z=16&amp;t=m&amp;hl=en&amp;output=embed">
+            Kadayanallur
+          </button>
+        </div>
+
+        <div class="map-stage">
+          <iframe data-map-frame
+                  title="Map showing the Taamsi Technology head office in Tenkasi"
+                  src="https://maps.google.com/maps?q=2%2F8%2F250%2C%20Surandai%20Road%2C%20Elathur%2C%20Tenkasi%2C%20Tamil%20Nadu%20627803&amp;z=16&amp;t=m&amp;hl=en&amp;output=embed"
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+
+          <div class="map-caption" data-map-caption>
+            <span><strong>Head office</strong> &middot; 2/8/250, Senkottai, Surrandai Road, Elathur&ndash;627803, Tenkasi</span>
+            <span><i class="bi bi-telephone" aria-hidden="true"></i> <a href="tel:+917373611500">+91 73736 11500</a></span>
+          </div>
+
+          <div class="map-caption" data-map-caption hidden>
+            <span><strong>Branch office</strong> &middot; 15, Kadayanallur, Tenkasi, Tamil Nadu</span>
+            <span><i class="bi bi-telephone" aria-hidden="true"></i> <a href="tel:+919486251630">+91 94862 51630</a></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ==================================================== -->
+  <section class="ab-section ab-section--tint" id="faq">
+    <div class="container">
+      <div class="row g-5">
+
+        <div class="col-lg-4 reveal">
+          <p class="ab-eyebrow">Questions</p>
+          <h2 class="ab-title">Before you <em>get in touch</em></h2>
+          <p class="ab-lede">The things people ask us most often. If yours isn't here, the desk will answer it.</p>
+        </div>
+
+        <div class="col-lg-8 reveal delay-1">
+          <div class="faq">
+
+            <details class="faq-item" name="faq" open>
+              <summary>
+                Which division should I contact?
+                <span class="faq-sign" aria-hidden="true"><i class="bi bi-plus-lg"></i></span>
+              </summary>
+              <p class="faq-answer">
+                You don't need to work that out. Send your enquiry to the main desk and describe what
+                you need in your own words &mdash; we route it internally. If two divisions are
+                involved, one of them takes ownership so you still deal with one person.
+              </p>
+            </details>
+
+            <details class="faq-item" name="faq">
+              <summary>
+                How quickly will someone reply?
+                <span class="faq-sign" aria-hidden="true"><i class="bi bi-plus-lg"></i></span>
+              </summary>
+              <p class="faq-answer">
+                We aim to acknowledge every enquiry the same working day, and to have the right
+                person respond within one working day. Where a written quotation is needed, that
+                usually follows within two working days.
+              </p>
+            </details>
+
+            <details class="faq-item" name="faq">
+              <summary>
+                Does the quotation builder send anything automatically?
+                <span class="faq-sign" aria-hidden="true"><i class="bi bi-plus-lg"></i></span>
+              </summary>
+              <p class="faq-answer">
+                No. Everything is calculated in your own browser and nothing is stored on this site.
+                When you press send, your own email application opens with the quotation written out
+                &mdash; you stay in control of what actually leaves your device.
+              </p>
+            </details>
+
+            <details class="faq-item" name="faq">
+              <summary>
+                Is GST included in the totals?
+                <span class="faq-sign" aria-hidden="true"><i class="bi bi-plus-lg"></i></span>
+              </summary>
+              <p class="faq-answer">
+                GST is shown as a separate line so you can see exactly what is tax and what is not.
+                Set the rate per item in the table; the subtotal, GST total and grand total update as
+                you type.
+              </p>
+            </details>
+
+            <details class="faq-item" name="faq">
+              <summary>
+                Do you work with customers outside the Tenkasi district?
+                <span class="faq-sign" aria-hidden="true"><i class="bi bi-plus-lg"></i></span>
+              </summary>
+              <p class="faq-answer">
+                Yes. The counters are in Tenkasi and Kadayanallur, but digital services, web and
+                enterprise work are handled remotely for customers elsewhere. Tell us where you are
+                and we'll say plainly whether we're the right people for it.
+              </p>
+            </details>
+
+            <details class="faq-item" name="faq">
+              <summary>
+                Can I just walk in?
+                <span class="faq-sign" aria-hidden="true"><i class="bi bi-plus-lg"></i></span>
+              </summary>
+              <p class="faq-answer">
+                Of course &mdash; both counters are open Monday to Saturday, 9:30&nbsp;am to
+                7:00&nbsp;pm. If you're travelling any distance, a quick call first means the right
+                person is there when you arrive.
+              </p>
+            </details>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA — the same component as the About page ============== -->
+  <section class="ab-section ab-section--sm">
+    <div class="container">
+      <div class="ab-cta reveal">
+        <div>
+          <h2 class="ab-statement">Have a project <em>in mind?</em></h2>
+          <p class="ab-body">
+            Let's discuss how Taamsi Technology can help turn your idea into reality. One desk takes
+            the enquiry, and the right division answers it.
+          </p>
+        </div>
+        <div class="ab-cta-actions">
+          <a class="ab-btn ab-btn--primary" href="#enquiry">Talk to our team <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          <a class="ab-btn ab-btn--ghost" href="tel:+917373611500">Call +91 73736 11500</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer-premium">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="footer-brand-link" aria-label="Taamsi Technology - Home">
+            <span class="brand-logo-footer"><img src="images/taamsi-logo-official.png" alt=""
+                class="brand-logo-img" width="48" height="48" loading="lazy" decoding="async"></span>
+            <span class="footer-brand-text">
+              <span class="brand-text-footer">Taamsi Technology</span>
+              <span class="brand-tagline-footer">One Company. Multiple Solutions.</span>
+            </span>
+          </a>
+          <p class="footer-blurb">Building tomorrow's technology ecosystem.</p>
+
+          <ul class="footer-social" aria-label="Taamsi Technology on social media">
+            <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+
+        <!-- Quick links -->
+        <nav class="footer-col" aria-labelledby="ftLinks">
+          <h2 class="footer-heading" id="ftLinks">Quick Links</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h2 class="footer-heading">Contact</h2>
+          <address class="footer-address">
+            2/8/250, Surrandai Road,<br>
+            Elathur&ndash;627803, Tenkasi,<br>
+            Tamilnadu, India.
+          </address>
+          <ul class="footer-contact">
+            <li><span>Mobile</span><a href="tel:+917373611500">+91 73736 11500</a></li>
+            <li><span>Mail</span><a href="mailto:taamsi.mail@gmail.com">taamsi.mail@gmail.com</a></li>
+          </ul>
+          <a class="footer-maplink"
+             href="https://maps.google.com/maps?q=2%2F8%2F250%2C%20Surandai%20Road%2C%20Elathur%2C%20Tenkasi%2C%20Tamil%20Nadu%20627803&amp;z=16"
+             target="_blank" rel="noopener">
+            View location <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; <span data-year>2026</span> Taamsi Technology. All rights reserved.</p>
+        <ul class="footer-legal-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back to top. Kept functional and reduced so it does not compete with the
+       footer. js/site.js drives the ring via #progressCircle and toggles
+       .visible on #backToTop. -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="42" height="42" viewBox="0 0 54 54" aria-hidden="true">
+      <circle class="bg" cx="27" cy="27" r="24" fill="none" stroke-width="2"></circle>
+      <circle class="progress" id="progressCircle" cx="27" cy="27" r="24" fill="none"
+        stroke-width="2" stroke-linecap="round" stroke-dasharray="150.8" stroke-dashoffset="150.8"></circle>
+    </svg>
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+
+</html>

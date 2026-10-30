@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="iBAZ Arti — the digital marketing division of Taamsi Technology. SEO, social media, paid ads and analytics built around measurable business growth.">
+  <title>iBAZ Arti — Digital Marketing | Taamsi Technology</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Taamsi Technology">
+  <meta property="og:title" content="iBAZ Arti — Digital Marketing | Taamsi Technology">
+  <meta property="og:description" content="We drive traffic. You get customers. Digital marketing built around measurable business growth.">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#063A78">
+
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/base.css">
+  <!-- inner.css is NOT loaded here: contact.html depends on 33 classes in it,
+       so this page's design lives in its own isolated stylesheet, same as
+       rMAR Porkudil. complex.css uses the same tokens as porkudil.css under
+       a "cx-" prefix — same ecosystem, distinct commercial-marketplace look. -->
+  <link rel="stylesheet" href="css/arti.css">
+
+  <!-- Safety net: if JavaScript is disabled, the scroll-reveal never runs and
+       the opacity:0 start states would leave the page permanently blank. -->
+  <noscript>
+    <style>
+      .reveal, .reveal-left, .reveal-right, .reveal-scale {
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+      }
+    </style>
+  </noscript>
+
+</head>
+
+<body class="has-header arti-page">
+
+  <a href="#main" class="visually-hidden-focusable position-absolute top-0 start-0 m-2 p-2 bg-white border rounded"
+     style="z-index:2000">Skip to content</a>
+
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="mobile-menu-backdrop" id="mobileBackdrop"></div>
+
+  <!-- ===== HEADER ===== -->
+  <div class="nav-outer-wrap fixed-top" id="navOuterWrap">
+    <nav class="navbar navbar-expand-lg navbar-premium" id="mainNav">
+      <div class="container-fluid px-lg-4">
+        <a class="navbar-brand-custom" href="index.html">
+          <div class="brand-logo-taamsi"><img src="images/taamsi-logo-official.png" alt=""
+              class="brand-logo-img" width="34" height="34" decoding="async"></div>
+          <div>
+            <div class="brand-text">Taamsi Technology</div>
+            <div class="brand-tagline">Innovate • Transform • Grow</div>
+          </div>
+        </a>
+        <button class="navbar-toggler border-0" type="button" id="mobileMenuToggle" aria-label="Toggle navigation"
+          aria-expanded="false" aria-controls="navMenu">
+          <span class="hamburger-icon">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About Us</a></li>
+            <li class="nav-item mega-menu-wrapper" id="megaMenuWrapper">
+              <a class="nav-link nav-link-custom dropdown-toggle" href="index.html#divisions" id="megaMenuTrigger"
+                aria-haspopup="true" aria-expanded="false" aria-controls="divisionsMenu">
+                Divisions <i class="bi bi-chevron-down mega-caret"></i>
+              </a>
+              <div class="mega-menu mega-menu-grid" id="divisionsMenu" role="menu" aria-label="Business divisions">
+                <div class="mega-menu-columns">
+                  <div class="mega-menu-col">
+                    <span class="mega-group-label" style="--mobile-order:1">CORE DIVISIONS</span>
+                    <a href="rmar-eevee.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=700&q=80"
+                      data-preview-icon="bi-lightning-charge-fill"
+                      data-preview-title="rMAR eeVee" data-preview-sub="Electric mobility solutions"
+                      style="--mobile-order:2">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #2C6FC4, #063A78);"><i
+                          class="bi bi-lightning-charge-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR eeVee</span>
+                        <span class="mega-menu-subtitle">Electric mobility solutions</span>
+                      </div>
+                    </a>
+                    <a href="rmar-complex.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&q=80"
+                      data-preview-icon="bi-building"
+                      data-preview-title="rMAR Complex" data-preview-sub="Premium real estate"
+                      style="--mobile-order:7">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #063A78, #003A82);"><i
+                          class="bi bi-building"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR Complex</span>
+                        <span class="mega-menu-subtitle">Premium real estate</span>
+                      </div>
+                    </a>
+                    <span class="mega-group-label" style="--mobile-order:8">MARKETING & COMMUNITY</span>
+                    <a href="ibaz-arti.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&q=80"
+                      data-preview-icon="bi-megaphone-fill"
+                      data-preview-title="iBAZ Arti" data-preview-sub="Strategic marketing"
+                      style="--mobile-order:9">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #2C6FC4, #063A78);"><i
+                          class="bi bi-megaphone-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">iBAZ Arti</span>
+                        <span class="mega-menu-subtitle">Strategic marketing</span>
+                      </div>
+                    </a>
+                    <span class="mega-group-label" style="--mobile-order:5">PROPERTY & GROWTH</span>
+                    <a href="rmar-porkudil.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80"
+                      data-preview-icon="bi-house-door-fill"
+                      data-preview-title="rMAR Porkudil" data-preview-sub="Rental hub solutions"
+                      style="--mobile-order:6">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #A71501, #7E1001);"><i
+                          class="bi bi-house-door-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR Porkudil</span>
+                        <span class="mega-menu-subtitle">Rental hub solutions</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="mega-menu-col">
+                    <a href="https://rmarsaas.in/" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=700&q=80"
+                      data-preview-icon="bi-laptop"
+                      data-preview-title="rMAR SaaS" data-preview-sub="125+ digital services"
+                      style="--mobile-order:3" target="_blank" rel="noopener">
+                      <div class="mega-menu-icon"
+                        style="background: linear-gradient(135deg, var(--color-primary), var(--color-accent));"><i
+                          class="bi bi-laptop"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR SaaS</span>
+                        <span class="mega-menu-subtitle">125+ digital services</span>
+                      </div>
+                    </a>
+                    <a href="https://rmarmart.in/" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700&q=80"
+                      data-preview-icon="bi-bag-fill"
+                      data-preview-title="rMAR Mart" data-preview-sub="Smart e-commerce"
+                      style="--mobile-order:4" target="_blank" rel="noopener">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #A71501, #A71501);"><i
+                          class="bi bi-bag-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR Mart</span>
+                        <span class="mega-menu-subtitle">Smart e-commerce</span>
+                      </div>
+                    </a>
+                    <a href="rmar-aram.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=700&q=80"
+                      data-preview-icon="bi-people-fill"
+                      data-preview-title="rMAR ARAM" data-preview-sub="Community platform"
+                      style="--mobile-order:10">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #2C6FC4, #063A78);"><i
+                          class="bi bi-people-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR ARAM</span>
+                        <span class="mega-menu-subtitle">Community platform</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="mega-menu-preview" id="megaMenuPreview" aria-hidden="true">
+                  <div class="mega-menu-preview-img" id="megaMenuPreviewImg">
+                    <svg class="mega-preview-art" viewBox="0 0 320 240" role="img"
+                         aria-label="Seven divisions connected to one shared back office"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                          <linearGradient id="mpCore" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#063A78" />
+                            <stop offset="100%" stop-color="#2C6FC4" />
+                          </linearGradient>
+                          <radialGradient id="mpGlow" cx="50%" cy="46%" r="60%">
+                            <stop offset="0%" stop-color="#FFFFFF" stop-opacity=".92" />
+                            <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+                          </radialGradient>
+                          <clipPath id="mpLogoClip"><circle cx="160" cy="118" r="13" /></clipPath>
+                        </defs>
+
+                        <rect width="320" height="240" fill="url(#mpGlow)" />
+
+                        <g class="mp-rings">
+                          <circle cx="160" cy="118" r="74" />
+                          <circle cx="160" cy="118" r="47" />
+                        </g>
+
+                        <g class="mp-links">
+                          <line x1="160.0" y1="86.0" x2="160.0" y2="57.0" />
+                          <line x1="185.0" y1="98.0" x2="207.7" y2="79.9" />
+                          <line x1="191.2" y1="125.1" x2="219.5" y2="131.6" />
+                          <line x1="173.9" y1="146.8" x2="186.5" y2="173.0" />
+                          <line x1="146.1" y1="146.8" x2="133.5" y2="173.0" />
+                          <line x1="128.8" y1="125.1" x2="100.5" y2="131.6" />
+                          <line x1="135.0" y1="98.0" x2="112.3" y2="79.9" />
+                        </g>
+
+                        <g class="mp-nodes">
+                          <g style="--i:0"><circle cx="160.0" cy="44.0" r="11.5" /><circle class="dot" cx="160.0" cy="44.0" r="3.8" /></g>
+                          <g style="--i:1"><circle cx="217.8" cy="71.8" r="11.5" /><circle class="dot" cx="217.8" cy="71.8" r="3.8" /></g>
+                          <g style="--i:2"><circle cx="232.1" cy="134.5" r="11.5" /><circle class="dot" cx="232.1" cy="134.5" r="3.8" /></g>
+                          <g style="--i:3"><circle cx="192.1" cy="184.7" r="11.5" /><circle class="dot" cx="192.1" cy="184.7" r="3.8" /></g>
+                          <g style="--i:4"><circle cx="127.9" cy="184.7" r="11.5" /><circle class="dot" cx="127.9" cy="184.7" r="3.8" /></g>
+                          <g style="--i:5"><circle cx="87.9" cy="134.5" r="11.5" /><circle class="dot" cx="87.9" cy="134.5" r="3.8" /></g>
+                          <g style="--i:6"><circle cx="102.2" cy="71.8" r="11.5" /><circle class="dot" cx="102.2" cy="71.8" r="3.8" /></g>
+                        </g>
+
+                        <polygon class="mp-core" points="160.0,91.0 183.4,104.5 183.4,131.5 160.0,145.0 136.6,131.5 136.6,104.5" fill="url(#mpCore)" />
+                        <circle cx="160" cy="118" r="13" fill="#FFFFFF" />
+                        <image href="images/taamsi-logo-official.png" x="147" y="105" width="26" height="26"
+                               clip-path="url(#mpLogoClip)" preserveAspectRatio="xMidYMid slice" />
+                      </svg>
+                  </div>
+                  <div class="mega-menu-preview-text">
+                    <h4 id="megaMenuPreviewTitle">One Ecosystem</h4>
+                    <p id="megaMenuPreviewSub">Multiple solutions, endless possibilities</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="nav-cta-group">
+            <a href="tel:+917373611500" class="btn-amber btn-call magnetic-btn" aria-label="Call Taamsi Technology on +91 73736 11500"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Call Us</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main">
+
+  <!-- ===== HERO ============================================================ -->
+  <section class="at-hero">
+    <div class="container">
+      <div class="at-hero-grid">
+
+        <div class="reveal">
+          <span class="at-pill">Digital marketing that delivers results</span>
+          <h1 class="at-hero-title">We Drive Traffic.<em>You Get Customers.</em></h1>
+          <p class="at-hero-copy">
+            iBAZ Arti helps businesses grow with digital marketing strategies that drive traffic,
+            generate leads and increase sales.
+          </p>
+          <div class="at-hero-cta">
+            <a href="contact.html#send-message" class="btn-primary-premium">Get Free Strategy Call <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a href="#services" class="btn-outline-premium">View Our Services</a>
+          </div>
+
+          <!-- SAMPLE FIGURES — from the reference mockup, not TAAMSI data. -->
+          <div class="at-hero-stats">
+            <div class="at-hstat"><i class="bi bi-megaphone-fill" aria-hidden="true"></i><span><b>150+</b><span>Campaigns</span></span></div>
+            <div class="at-hstat"><i class="bi bi-people-fill" aria-hidden="true"></i><span><b>75+</b><span>Happy Clients</span></span></div>
+            <div class="at-hstat"><i class="bi bi-patch-check-fill" aria-hidden="true"></i><span><b>98%</b><span>Success Rate</span></span></div>
+            <div class="at-hstat"><i class="bi bi-clock" aria-hidden="true"></i><span><b>5+</b><span>Years Experience</span></span></div>
+          </div>
+        </div>
+
+        <!-- Marketing dashboard composition: an SVG line chart + donut, with
+             six floating service chips. Built in CSS/SVG — no dashboard or
+             illustration assets exist in this project. -->
+        <div class="at-dash reveal-scale delay-1">
+          <div class="at-dash-screen">
+            <span class="at-dash-label">Total Revenue</span>
+            <div class="at-dash-value">&#8377;58,642</div>
+            <span class="at-dash-delta">&#9650; 18.4% vs last month</span>
+
+            <svg class="at-chart" viewBox="0 0 320 90" width="100%" height="90" role="img" aria-label="Revenue trend chart">
+              <defs>
+                <linearGradient id="atFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#2C6FC4" stop-opacity="0.28"/>
+                  <stop offset="100%" stop-color="#2C6FC4" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0,74 L45,66 L90,70 L135,50 L180,54 L225,32 L270,24 L320,10 L320,90 L0,90 Z" fill="url(#atFill)"/>
+              <path d="M0,74 L45,66 L90,70 L135,50 L180,54 L225,32 L270,24 L320,10"
+                    fill="none" stroke="#2C6FC4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="320" cy="10" r="4" fill="#2C6FC4"/>
+            </svg>
+
+            <div class="at-dash-row">
+              <div>
+                <span class="at-dash-label">New Leads</span>
+                <div style="font-size:1.05rem;font-weight:800;color:var(--color-primary)">1,465</div>
+                <span class="at-dash-delta">&#9650; 12.6%</span>
+              </div>
+              <svg class="at-donut" viewBox="0 0 42 42" role="img" aria-label="Conversion share">
+                <circle cx="21" cy="21" r="16" fill="none" stroke="#E3EBF5" stroke-width="7"/>
+                <circle cx="21" cy="21" r="16" fill="none" stroke="#159447" stroke-width="7"
+                        stroke-dasharray="100.5" stroke-dashoffset="30" stroke-linecap="round" transform="rotate(-90 21 21)"/>
+              </svg>
+            </div>
+          </div>
+
+          <span class="at-float at-f1"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> SEO</span>
+          <span class="at-float at-f2"><i class="bi bi-megaphone-fill" aria-hidden="true"></i> Google Ads</span>
+          <span class="at-float at-f3"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> Social Media</span>
+          <span class="at-float at-f4"><i class="bi bi-speedometer2" aria-hidden="true"></i> Analytics</span>
+          <span class="at-float at-f5"><i class="bi bi-people-fill" aria-hidden="true"></i> Meta Ads</span>
+          <span class="at-float at-f6"><i class="bi bi-cpu" aria-hidden="true"></i> AI Marketing</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST STRIP =======================================================
+       CLIENT NAMES AND RATING ARE PLACEHOLDERS from the reference mockup —
+       TAAMSI has no verified client list or Google rating in this project.
+       Replace with real permissioned client names, or delete this section.
+       ==================================================================== -->
+  <section class="at-trust">
+    <div class="container">
+      <p class="at-trust-title">Trusted by Growing Businesses</p>
+      <div class="at-trust-row reveal">
+        <span class="at-logo">MaxPro</span>
+        <span class="at-logo">techwave</span>
+        <span class="at-logo">VisionX</span>
+        <span class="at-logo">Kanba</span>
+        <span class="at-logo">solutionz</span>
+        <span class="at-logo">Datafy</span>
+        <span class="at-rating">
+          <span><span style="font-size:0.62rem;color:var(--color-text-muted)">Google Rating</span><b>4.9</b></span>
+          <span><span class="at-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>100+ Reviews</span></span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHALLENGES ======================================================== -->
+  <section class="at-sec">
+    <div class="container">
+      <div class="at-head reveal">
+        <span class="at-pill">Challenges we solve</span>
+        <h2 class="at-title">Getting Traffic But Not Enough Customers?</h2>
+        <p class="at-sub">We help you overcome these common digital marketing challenges.</p>
+      </div>
+      <div class="at-grid-6 reveal delay-1">
+        <div class="at-card"><span class="at-card-ico" style="background:rgba(44,111,196,.10);color:#2C6FC4"><i class="bi bi-people-fill"></i></span><h4>Low Website Traffic</h4><p>Your website isn't attracting enough right visitors.</p></div>
+        <div class="at-card"><span class="at-card-ico" style="background:rgba(167,21,1,.09);color:#A71501"><i class="bi bi-envelope-fill"></i></span><h4>Poor Engagement</h4><p>Low likes, shares and comments on social media.</p></div>
+        <div class="at-card"><span class="at-card-ico" style="background:rgba(21,148,71,.10);color:#159447"><i class="bi bi-cash-coin"></i></span><h4>Ads Not Converting</h4><p>High ad spend but low conversions and ROI.</p></div>
+        <div class="at-card"><span class="at-card-ico" style="background:rgba(124,58,237,.10);color:#7C3AED"><i class="bi bi-person-check"></i></span><h4>No Consistent Leads</h4><p>Unpredictable lead flow affecting your business growth.</p></div>
+        <div class="at-card"><span class="at-card-ico" style="background:rgba(233,154,0,.12);color:#E99A00"><i class="bi bi-shield-check"></i></span><h4>Weak Brand Presence</h4><p>Your brand isn't standing out in the market.</p></div>
+        <div class="at-card"><span class="at-card-ico" style="background:rgba(22,119,255,.10);color:#1677FF"><i class="bi bi-geo-alt-fill"></i></span><h4>No Clear Strategy</h4><p>No proper strategy means wasted time and money.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ========================================================== -->
+  <section class="at-sec at-sec--tint" id="services">
+    <div class="container">
+      <div class="at-head reveal">
+        <span class="at-pill">Our services</span>
+        <h2 class="at-title">Digital Marketing Services That Drive Results</h2>
+      </div>
+      <div class="at-grid-4 reveal delay-1">
+        <div class="at-card at-svc"><span class="at-card-ico" style="background:rgba(44,111,196,.10);color:#2C6FC4"><i class="bi bi-geo-alt-fill"></i></span><div><h4>SEO</h4><p>Rank higher on Google and drive organic traffic that converts.</p><a href="contact.html#send-message">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+        <div class="at-card at-svc"><span class="at-card-ico" style="background:rgba(22,119,255,.10);color:#1677FF"><i class="bi bi-hand-thumbs-up"></i></span><div><h4>Social Media Marketing</h4><p>Build your brand, engage audience and grow your community.</p><a href="contact.html#send-message">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+        <div class="at-card at-svc"><span class="at-card-ico" style="background:rgba(233,154,0,.12);color:#E99A00"><i class="bi bi-megaphone-fill"></i></span><div><h4>Google Ads</h4><p>Reach your ideal customers with targeted Google Ads campaigns.</p><a href="contact.html#send-message">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+        <div class="at-card at-svc"><span class="at-card-ico" style="background:rgba(44,111,196,.10);color:#2C6FC4"><i class="bi bi-people-fill"></i></span><div><h4>Meta Ads</h4><p>Run high-performing Facebook &amp; Instagram ads that deliver results.</p><a href="contact.html#send-message">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+        <div class="at-card at-svc"><span class="at-card-ico" style="background:rgba(124,58,237,.10);color:#7C3AED"><i class="bi bi-list-ul"></i></span><div><h4>Content Marketing</h4><p>Engaging content that builds trust and drives consistent traffic.</p><a href="contact.html#send-message">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+        <div class="at-card at-svc"><span class="at-card-ico" style="background:rgba(167,21,1,.09);color:#A71501"><i class="bi bi-star-fill"></i></span><div><h4>Branding &amp; Design</h4><p>Create a strong brand identity that stands out from your competitors.</p><a href="contact.html#send-message">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+        <div class="at-card at-svc"><span class="at-card-ico" style="background:rgba(21,148,71,.10);color:#159447"><i class="bi bi-speedometer2"></i></span><div><h4>Analytics &amp; Tracking</h4><p>Track performance, analyze data and make smart decisions.</p><a href="contact.html#send-message">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+        <div class="at-card at-svc"><span class="at-card-ico" style="background:rgba(22,119,255,.10);color:#1677FF"><i class="bi bi-cpu"></i></span><div><h4>AI Marketing</h4><p>Leverage AI tools and automation to scale your marketing.</p><a href="contact.html#send-message">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS =========================================================== -->
+  <section class="at-sec">
+    <div class="container">
+      <div class="at-process reveal">
+        <div>
+          <span class="at-pill">Our process</span>
+          <h2 class="at-title" style="text-align:left">How We Grow Your Business</h2>
+          <p class="at-sub" style="text-align:left;margin-inline:0">A proven 4-step process to attract, engage and convert your ideal customers.</p>
+          <a href="contact.html#send-message" class="btn-primary-premium" style="margin-top:1.1rem">Start Your Growth Journey <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="at-steps">
+          <div class="at-step"><span class="at-step-ico"><i class="bi bi-person-check"></i></span><span class="at-step-n">01</span><h4>Research</h4><p>We analyze your business, industry, competitors and audience.</p></div>
+          <div class="at-step"><span class="at-step-ico"><i class="bi bi-geo-alt-fill"></i></span><span class="at-step-n">02</span><h4>Strategy</h4><p>We create a customized strategy tailored to your business goals.</p></div>
+          <div class="at-step"><span class="at-step-ico"><i class="bi bi-megaphone-fill"></i></span><span class="at-step-n">03</span><h4>Execute</h4><p>We implement campaigns across the right digital channels.</p></div>
+          <div class="at-step"><span class="at-step-ico"><i class="bi bi-speedometer2"></i></span><span class="at-step-n">04</span><h4>Optimize</h4><p>We analyze results and continuously optimize for better performance.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESULTS / CASE STUDIES ============================================
+       ALL METRICS AND CASE STUDIES ARE PLACEHOLDERS from the reference —
+       no campaign results are verified anywhere in this project. Replace
+       with real, permissioned client results before publishing.
+       ==================================================================== -->
+  <section class="at-sec at-sec--tint">
+    <div class="container">
+      <div class="at-head reveal">
+        <span class="at-pill">Proven results</span>
+        <h2 class="at-title">Real Results For Real Businesses</h2>
+      </div>
+      <div class="at-results reveal delay-1">
+        <div class="at-metrics">
+          <div class="at-metric"><span class="at-metric-ico"><i class="bi bi-speedometer2"></i></span><span><b>+185%</b><span>Increase in Website Traffic</span></span></div>
+          <div class="at-metric"><span class="at-metric-ico"><i class="bi bi-person-check"></i></span><span><b>+72%</b><span>Increase in Leads Generated</span></span></div>
+          <div class="at-metric"><span class="at-metric-ico"><i class="bi bi-cash-coin"></i></span><span><b>3.8X</b><span>Return on Ad Spend (ROAS)</span></span></div>
+          <div class="at-metric"><span class="at-metric-ico"><i class="bi bi-patch-check-fill"></i></span><span><b>&minus;34%</b><span>Reduction in Cost Per Lead</span></span></div>
+        </div>
+        <div class="at-cases">
+          <div class="at-case">
+            <div class="at-case-shot"><i class="bi bi-bag-fill" aria-hidden="true"></i><span class="at-case-tag">E-Commerce Store</span></div>
+            <div class="at-case-body"><h4>Fashion Hub</h4><p>Increased sales by 215% in 6 months with our strategy.</p><a href="contact.html#send-message">View Case Study <i class="bi bi-arrow-right"></i></a></div>
+          </div>
+          <div class="at-case">
+            <div class="at-case-shot"><i class="bi bi-cpu" aria-hidden="true"></i><span class="at-case-tag">SaaS Company</span></div>
+            <div class="at-case-body"><h4>TechSoft AI</h4><p>Generated 320% more leads with targeted campaigns.</p><a href="contact.html#send-message">View Case Study <i class="bi bi-arrow-right"></i></a></div>
+          </div>
+          <div class="at-case">
+            <div class="at-case-shot"><i class="bi bi-building" aria-hidden="true"></i><span class="at-case-tag">Local Business</span></div>
+            <div class="at-case-body"><h4>Dental Care</h4><p>Grew local leads by 150% through SEO &amp; Ads.</p><a href="contact.html#send-message">View Case Study <i class="bi bi-arrow-right"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===========================================================
+       ALL PRICING IS PLACEHOLDER from the reference mockup. No rates are
+       verified anywhere in this project. Confirm before publishing.
+       ==================================================================== -->
+  <section class="at-sec">
+    <div class="container">
+      <div class="at-head reveal">
+        <span class="at-pill">Pricing plans</span>
+        <h2 class="at-title">Simple Pricing, Maximum Results</h2>
+      </div>
+      <div class="at-plans reveal delay-1">
+        <div class="at-plan">
+          <h3>Starter</h3>
+          <p class="at-plan-note">Perfect for small businesses getting started.</p>
+          <div class="at-plan-price">&#8377;14,999 <span>/month</span></div>
+          <ul>
+            <li><i class="bi bi-check2"></i> Social Media Marketing</li>
+            <li><i class="bi bi-check2"></i> Basic SEO</li>
+            <li><i class="bi bi-check2"></i> Monthly Report</li>
+            <li><i class="bi bi-check2"></i> Email Support</li>
+          </ul>
+          <a href="contact.html#send-message" class="btn-outline-premium">Get Started</a>
+        </div>
+        <div class="at-plan at-plan--pop">
+          <span class="at-plan-badge">Most Popular</span>
+          <h3>Growth</h3>
+          <p class="at-plan-note">Best for growing businesses wanting more leads.</p>
+          <div class="at-plan-price">&#8377;24,999 <span>/month</span></div>
+          <ul>
+            <li><i class="bi bi-check2"></i> Everything in Starter</li>
+            <li><i class="bi bi-check2"></i> Google Ads</li>
+            <li><i class="bi bi-check2"></i> Content Marketing</li>
+            <li><i class="bi bi-check2"></i> Analytics &amp; Reporting</li>
+          </ul>
+          <a href="contact.html#send-message" class="btn-primary-premium">Get Started</a>
+        </div>
+        <div class="at-plan">
+          <h3>Scale</h3>
+          <p class="at-plan-note">For businesses ready to scale aggressively.</p>
+          <div class="at-plan-price">&#8377;49,999 <span>/month</span></div>
+          <ul>
+            <li><i class="bi bi-check2"></i> Everything in Growth</li>
+            <li><i class="bi bi-check2"></i> Advanced Ads</li>
+            <li><i class="bi bi-check2"></i> Marketing Automation</li>
+            <li><i class="bi bi-check2"></i> Priority Support</li>
+          </ul>
+          <a href="contact.html#send-message" class="btn-outline-premium">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ========================================================= -->
+  <section class="at-cta">
+    <div class="container">
+      <div class="at-cta-row reveal">
+        <div>
+          <h2>Ready to Turn Clicks Into Customers?</h2>
+          <p>Let's build a digital marketing strategy designed around your business growth.</p>
+        </div>
+        <div class="at-cta-actions">
+          <a href="contact.html#send-message" class="btn-primary-premium">Get Free Consultation <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          <a href="https://wa.me/917373611500" class="btn-outline-premium" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Chat on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer-premium">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="footer-brand-link" aria-label="Taamsi Technology - Home">
+            <span class="brand-logo-footer"><img src="images/taamsi-logo-official.png" alt=""
+                class="brand-logo-img" width="48" height="48" loading="lazy" decoding="async"></span>
+            <span class="footer-brand-text">
+              <span class="brand-text-footer">Taamsi Technology</span>
+              <span class="brand-tagline-footer">One Company. Multiple Solutions.</span>
+            </span>
+          </a>
+          <p class="footer-blurb">Building tomorrow's technology ecosystem.</p>
+
+          <ul class="footer-social" aria-label="Taamsi Technology on social media">
+            <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+
+        <!-- Quick links -->
+        <nav class="footer-col" aria-labelledby="ftLinks">
+          <h2 class="footer-heading" id="ftLinks">Quick Links</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h2 class="footer-heading">Contact</h2>
+          <address class="footer-address">
+            2/8/250, Surrandai Road,<br>
+            Elathur&ndash;627803, Tenkasi,<br>
+            Tamilnadu, India.
+          </address>
+          <ul class="footer-contact">
+            <li><span>Mobile</span><a href="tel:+917373611500">+91 73736 11500</a></li>
+            <li><span>Mail</span><a href="mailto:taamsi.mail@gmail.com">taamsi.mail@gmail.com</a></li>
+          </ul>
+          <a class="footer-maplink"
+             href="https://maps.google.com/maps?q=2%2F8%2F250%2C%20Surrandai%20Road%2C%20Elathur%2C%20Tenkasi%2C%20Tamil%20Nadu"
+             target="_blank" rel="noopener">
+            View location <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; <span data-year>2026</span> Taamsi Technology. All rights reserved.</p>
+        <ul class="footer-legal-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back to top. Kept functional and reduced so it does not compete with the
+       footer. js/site.js drives the ring via #progressCircle and toggles
+       .visible on #backToTop. -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="42" height="42" viewBox="0 0 54 54" aria-hidden="true">
+      <circle class="bg" cx="27" cy="27" r="24" fill="none" stroke-width="2"></circle>
+      <circle class="progress" id="progressCircle" cx="27" cy="27" r="24" fill="none"
+        stroke-width="2" stroke-linecap="round" stroke-dasharray="150.8" stroke-dashoffset="150.8"></circle>
+    </svg>
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="js/site.js"></script>
+</body>
+
+</html>

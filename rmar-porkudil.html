@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="rMAR Porkudil — premium low-rise rental apartments in Tenkasi from Taamsi Technology. Check availability, view apartments and schedule a visit.">
+  <title>rMAR Porkudil — Rental Apartments | Taamsi Technology</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Taamsi Technology">
+  <meta property="og:title" content="rMAR Porkudil — Rental Apartments | Taamsi Technology">
+  <meta property="og:description" content="Premium low-rise rental apartments in Tenkasi. Safe, secure and comfortable living.">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#063A78">
+
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/base.css">
+  <!-- inner.css is NOT loaded here: contact.html depends on 33 classes in it,
+       so the About redesign lives in its own isolated stylesheet. -->
+  <link rel="stylesheet" href="css/porkudil.css">
+  <link rel="stylesheet" href="css/hero-shared.css">
+
+  <!-- Safety net: if JavaScript is disabled, the scroll-reveal never runs and
+       the opacity:0 start states would leave the page permanently blank. -->
+  <noscript>
+    <style>
+      .reveal, .reveal-left, .reveal-right, .reveal-scale {
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+      }
+    </style>
+  </noscript>
+
+</head>
+
+<body class="has-header porkudil-page">
+
+  <a href="#main" class="visually-hidden-focusable position-absolute top-0 start-0 m-2 p-2 bg-white border rounded"
+     style="z-index:2000">Skip to content</a>
+
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="mobile-menu-backdrop" id="mobileBackdrop"></div>
+
+  <!-- ===== HEADER ===== -->
+  <div class="nav-outer-wrap fixed-top" id="navOuterWrap">
+    <nav class="navbar navbar-expand-lg navbar-premium" id="mainNav">
+      <div class="container-fluid px-lg-4">
+        <a class="navbar-brand-custom" href="index.html">
+          <div class="brand-logo-taamsi"><img src="images/taamsi-logo-official.png" alt=""
+              class="brand-logo-img" width="34" height="34" decoding="async"></div>
+          <div>
+            <div class="brand-text">Taamsi Technology</div>
+            <div class="brand-tagline">Innovate • Transform • Grow</div>
+          </div>
+        </a>
+        <button class="navbar-toggler border-0" type="button" id="mobileMenuToggle" aria-label="Toggle navigation"
+          aria-expanded="false" aria-controls="navMenu">
+          <span class="hamburger-icon">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About Us</a></li>
+            <li class="nav-item mega-menu-wrapper" id="megaMenuWrapper">
+              <a class="nav-link nav-link-custom dropdown-toggle" href="index.html#divisions" id="megaMenuTrigger"
+                aria-haspopup="true" aria-expanded="false" aria-controls="divisionsMenu">
+                Divisions <i class="bi bi-chevron-down mega-caret"></i>
+              </a>
+              <div class="mega-menu mega-menu-grid" id="divisionsMenu" role="menu" aria-label="Business divisions">
+                <div class="mega-menu-columns">
+                  <div class="mega-menu-col">
+                    <span class="mega-group-label" style="--mobile-order:1">CORE DIVISIONS</span>
+                    <a href="rmar-eevee.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=700&q=80"
+                      data-preview-icon="bi-lightning-charge-fill"
+                      data-preview-title="rMAR eeVee" data-preview-sub="Electric mobility solutions"
+                      style="--mobile-order:2">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #2C6FC4, #063A78);"><i
+                          class="bi bi-lightning-charge-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR eeVee</span>
+                        <span class="mega-menu-subtitle">Electric mobility solutions</span>
+                      </div>
+                    </a>
+                    <a href="rmar-complex.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&q=80"
+                      data-preview-icon="bi-building"
+                      data-preview-title="rMAR Complex" data-preview-sub="Premium real estate"
+                      style="--mobile-order:7">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #063A78, #003A82);"><i
+                          class="bi bi-building"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR Complex</span>
+                        <span class="mega-menu-subtitle">Premium real estate</span>
+                      </div>
+                    </a>
+                    <span class="mega-group-label" style="--mobile-order:8">MARKETING & COMMUNITY</span>
+                    <a href="ibaz-arti.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&q=80"
+                      data-preview-icon="bi-megaphone-fill"
+                      data-preview-title="iBAZ Arti" data-preview-sub="Strategic marketing"
+                      style="--mobile-order:9">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #2C6FC4, #063A78);"><i
+                          class="bi bi-megaphone-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">iBAZ Arti</span>
+                        <span class="mega-menu-subtitle">Strategic marketing</span>
+                      </div>
+                    </a>
+                    <span class="mega-group-label" style="--mobile-order:5">PROPERTY & GROWTH</span>
+                    <a href="rmar-porkudil.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80"
+                      data-preview-icon="bi-house-door-fill"
+                      data-preview-title="rMAR Porkudil" data-preview-sub="Rental hub solutions"
+                      style="--mobile-order:6">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #A71501, #7E1001);"><i
+                          class="bi bi-house-door-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR Porkudil</span>
+                        <span class="mega-menu-subtitle">Rental hub solutions</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="mega-menu-col">
+                    <a href="https://rmarsaas.in/" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=700&q=80"
+                      data-preview-icon="bi-laptop"
+                      data-preview-title="rMAR SaaS" data-preview-sub="125+ digital services"
+                      style="--mobile-order:3" target="_blank" rel="noopener">
+                      <div class="mega-menu-icon"
+                        style="background: linear-gradient(135deg, var(--color-primary), var(--color-accent));"><i
+                          class="bi bi-laptop"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR SaaS</span>
+                        <span class="mega-menu-subtitle">125+ digital services</span>
+                      </div>
+                    </a>
+                    <a href="https://rmarmart.in/" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700&q=80"
+                      data-preview-icon="bi-bag-fill"
+                      data-preview-title="rMAR Mart" data-preview-sub="Smart e-commerce"
+                      style="--mobile-order:4" target="_blank" rel="noopener">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #A71501, #A71501);"><i
+                          class="bi bi-bag-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR Mart</span>
+                        <span class="mega-menu-subtitle">Smart e-commerce</span>
+                      </div>
+                    </a>
+                    <a href="rmar-aram.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=700&q=80"
+                      data-preview-icon="bi-people-fill"
+                      data-preview-title="rMAR ARAM" data-preview-sub="Community platform"
+                      style="--mobile-order:10">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #2C6FC4, #063A78);"><i
+                          class="bi bi-people-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR ARAM</span>
+                        <span class="mega-menu-subtitle">Community platform</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="mega-menu-preview" id="megaMenuPreview" aria-hidden="true">
+                  <div class="mega-menu-preview-img" id="megaMenuPreviewImg">
+                    <svg class="mega-preview-art" viewBox="0 0 320 240" role="img"
+                         aria-label="Seven divisions connected to one shared back office"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                          <linearGradient id="mpCore" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#063A78" />
+                            <stop offset="100%" stop-color="#2C6FC4" />
+                          </linearGradient>
+                          <radialGradient id="mpGlow" cx="50%" cy="46%" r="60%">
+                            <stop offset="0%" stop-color="#FFFFFF" stop-opacity=".92" />
+                            <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+                          </radialGradient>
+                          <clipPath id="mpLogoClip"><circle cx="160" cy="118" r="13" /></clipPath>
+                        </defs>
+
+                        <rect width="320" height="240" fill="url(#mpGlow)" />
+
+                        <g class="mp-rings">
+                          <circle cx="160" cy="118" r="74" />
+                          <circle cx="160" cy="118" r="47" />
+                        </g>
+
+                        <g class="mp-links">
+                          <line x1="160.0" y1="86.0" x2="160.0" y2="57.0" />
+                          <line x1="185.0" y1="98.0" x2="207.7" y2="79.9" />
+                          <line x1="191.2" y1="125.1" x2="219.5" y2="131.6" />
+                          <line x1="173.9" y1="146.8" x2="186.5" y2="173.0" />
+                          <line x1="146.1" y1="146.8" x2="133.5" y2="173.0" />
+                          <line x1="128.8" y1="125.1" x2="100.5" y2="131.6" />
+                          <line x1="135.0" y1="98.0" x2="112.3" y2="79.9" />
+                        </g>
+
+                        <g class="mp-nodes">
+                          <g style="--i:0"><circle cx="160.0" cy="44.0" r="11.5" /><circle class="dot" cx="160.0" cy="44.0" r="3.8" /></g>
+                          <g style="--i:1"><circle cx="217.8" cy="71.8" r="11.5" /><circle class="dot" cx="217.8" cy="71.8" r="3.8" /></g>
+                          <g style="--i:2"><circle cx="232.1" cy="134.5" r="11.5" /><circle class="dot" cx="232.1" cy="134.5" r="3.8" /></g>
+                          <g style="--i:3"><circle cx="192.1" cy="184.7" r="11.5" /><circle class="dot" cx="192.1" cy="184.7" r="3.8" /></g>
+                          <g style="--i:4"><circle cx="127.9" cy="184.7" r="11.5" /><circle class="dot" cx="127.9" cy="184.7" r="3.8" /></g>
+                          <g style="--i:5"><circle cx="87.9" cy="134.5" r="11.5" /><circle class="dot" cx="87.9" cy="134.5" r="3.8" /></g>
+                          <g style="--i:6"><circle cx="102.2" cy="71.8" r="11.5" /><circle class="dot" cx="102.2" cy="71.8" r="3.8" /></g>
+                        </g>
+
+                        <polygon class="mp-core" points="160.0,91.0 183.4,104.5 183.4,131.5 160.0,145.0 136.6,131.5 136.6,104.5" fill="url(#mpCore)" />
+                        <circle cx="160" cy="118" r="13" fill="#FFFFFF" />
+                        <image href="images/taamsi-logo-official.png" x="147" y="105" width="26" height="26"
+                               clip-path="url(#mpLogoClip)" preserveAspectRatio="xMidYMid slice" />
+                      </svg>
+                  </div>
+                  <div class="mega-menu-preview-text">
+                    <h4 id="megaMenuPreviewTitle">One Ecosystem</h4>
+                    <p id="megaMenuPreviewSub">Multiple solutions, endless possibilities</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="nav-cta-group">
+            <a href="tel:+917373611500" class="btn-amber btn-call magnetic-btn" aria-label="Call Taamsi Technology on +91 73736 11500"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Call Us</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main">
+
+  <!-- ===== HERO ============================================================ -->
+  <section class="pk-hero">
+    <div class="mesh-gradient" aria-hidden="true"></div>
+    <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+    <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
+    <div class="hero-blob hero-blob-3" aria-hidden="true"></div>
+    <div class="container">
+      <div class="pk-hero-grid">
+
+        <div class="reveal">
+          <span class="pk-brand"><i class="bi bi-house-door-fill" aria-hidden="true"></i> rMAR <em>Porkudil</em></span>
+          <h1 class="pk-hero-title">Find Your Perfect<br>Home for <em>Rental</em></h1>
+          <p class="pk-hero-copy">
+            Premium low-rise apartments for comfortable living in Tenkasi. Safe, secure and
+            professionally managed by Taamsi Technology.
+          </p>
+
+          <div class="pk-hl">
+            <span class="pk-hl-item">
+              <span class="pk-hl-ico" aria-hidden="true"><i class="bi bi-building"></i></span>
+              <span><span class="pk-hl-k">Low Rise</span><span class="pk-hl-v">3 floor building</span></span>
+            </span>
+            <span class="pk-hl-item">
+              <span class="pk-hl-ico" aria-hidden="true"><i class="bi bi-shield-check"></i></span>
+              <span><span class="pk-hl-k">Secure Living</span><span class="pk-hl-v">CCTV &amp; security</span></span>
+            </span>
+            <span class="pk-hl-item">
+              <span class="pk-hl-ico" aria-hidden="true"><i class="bi bi-geo-alt-fill"></i></span>
+              <span><span class="pk-hl-k">Prime Location</span><span class="pk-hl-v">Tenkasi District</span></span>
+            </span>
+          </div>
+
+          <div class="pk-hero-cta">
+            <a href="#apartments" class="btn-primary-premium">View Apartments <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a href="#schedule" class="btn-outline-premium">Book a Visit</a>
+          </div>
+        </div>
+
+        <!-- STOCK PHOTOGRAPHY, hotlinked from Unsplash — the same source and
+             the same pattern the homepage division cards already use. This
+             specific photo is the one index.html already associates with rMAR
+             Porkudil, so the division looks consistent across both pages.
+
+             NOT actual rMAR Porkudil buildings. Replace with real photographs
+             of the properties when available; the CSS needs no change, since
+             every image is framed by aspect-ratio + object-fit: cover.
+
+             Note this is a hotlink: the images load from Unsplash's CDN rather
+             than your server. That removes a deploy step, but it also means the
+             page depends on an external host. Download them locally if you
+             would rather not have that dependency.
+
+             IMPORTANT — every photo ID used here is one ALREADY LIVE on
+             index.html's division menu, not an ID chosen from memory. This
+             environment has no outbound access to image hosts (all requests
+             return 403), so an unverified ID cannot be tested and would ship
+             as a broken image. Reuse a known-good ID, or verify a new one in
+             a browser first. -->
+        <figure class="pk-hero-visual reveal-scale delay-1">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80" alt="rMAR Porkudil low-rise apartment building" width="1200" height="800" fetchpriority="high" decoding="async">
+        </figure>
+
+        <div class="pk-amen reveal delay-2">
+          <div class="pk-amen-item"><i class="bi bi-droplet-fill" aria-hidden="true"></i><span><span class="pk-amen-k">24&times;7 Water</span><span class="pk-amen-v">Continuous supply</span></span></div>
+          <div class="pk-amen-item"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i><span><span class="pk-amen-k">Power Backup</span><span class="pk-amen-v">Common area</span></span></div>
+          <div class="pk-amen-item"><i class="bi bi-p-square-fill" aria-hidden="true"></i><span><span class="pk-amen-k">Parking</span><span class="pk-amen-v">Dedicated space</span></span></div>
+          <div class="pk-amen-item"><i class="bi bi-signpost-split-fill" aria-hidden="true"></i><span><span class="pk-amen-k">Easy Access</span><span class="pk-amen-v">Near main road</span></span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== APARTMENTS =======================================================
+       PORKUDIL 1-3: rents, addresses and configurations come from the
+       founder's own reference mockup — founder-supplied, but NOT
+       independently verified. Confirm before publishing.
+
+       PORKUDIL 4-6: SAMPLE DATA. These three flats were added to fill out the
+       list; their rents (Rs 11,000 / 14,000 / 8,500), addresses, BHK counts
+       and floors are INVENTED, not supplied. Replace every value with real
+       property details before this page goes live, or delete the three cards.
+       The carousel recounts its pages automatically, so removing them needs
+       no code change.
+       ==================================================================== -->
+  <section class="pk-sec pk-sec--tint" id="apartments">
+    <div class="container">
+
+      <div class="pk-head reveal">
+        <span class="pk-eyebrow">Our Apartments</span>
+        <h2 class="pk-title">Choose the apartment that suits you</h2>
+        <p class="pk-sub">Three low-rise apartments across Tenkasi, professionally managed.</p>
+      </div>
+
+      <div class="pk-carousel reveal delay-1">
+        <button type="button" class="pk-nav pk-nav--prev" data-pk-prev aria-label="Previous apartments"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+        <button type="button" class="pk-nav pk-nav--next" data-pk-next aria-label="Next apartments"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+
+        <div class="pk-viewport" data-pk-viewport tabindex="0" role="region"
+             aria-label="Available apartments" aria-roledescription="carousel">
+          <div class="pk-track" data-pk-track>
+
+            <article class="pk-card">
+              <div class="pk-shot">
+                <span class="pk-badge">Available</span>
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" alt="Porkudil 1 apartment building" width="800" height="600" loading="lazy" decoding="async">
+              </div>
+              <div class="pk-card-body">
+                <h3 class="pk-card-name">Porkudil &ndash; 1</h3>
+                <div class="pk-specs">
+                  <span class="pk-spec"><i class="bi bi-door-open" aria-hidden="true"></i> 2 BHK</span>
+                  <span class="pk-spec"><i class="bi bi-droplet" aria-hidden="true"></i> 2 Bath</span>
+                  <span class="pk-spec"><i class="bi bi-layers" aria-hidden="true"></i> 3rd Floor</span>
+                </div>
+                <p class="pk-loc"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Melapettai, Tenkasi</p>
+                <p class="pk-rent">&#8377;12,000 <span>/ month</span></p>
+                <div class="pk-card-cta">
+                  <a class="pk-btn-ghost" href="#schedule">View Details</a>
+                  <a class="pk-btn-solid" href="#schedule">Book Now</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="pk-card">
+              <div class="pk-shot">
+                <span class="pk-badge pk-badge--accent">Most Popular</span>
+                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Porkudil 2 apartment building" width="800" height="600" loading="lazy" decoding="async">
+              </div>
+              <div class="pk-card-body">
+                <h3 class="pk-card-name">Porkudil &ndash; 2</h3>
+                <div class="pk-specs">
+                  <span class="pk-spec"><i class="bi bi-door-open" aria-hidden="true"></i> 2 BHK</span>
+                  <span class="pk-spec"><i class="bi bi-droplet" aria-hidden="true"></i> 2 Bath</span>
+                  <span class="pk-spec"><i class="bi bi-layers" aria-hidden="true"></i> 2nd Floor</span>
+                </div>
+                <p class="pk-loc"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Sivagiri Main Road, Tenkasi</p>
+                <p class="pk-rent">&#8377;11,500 <span>/ month</span></p>
+                <div class="pk-card-cta">
+                  <a class="pk-btn-ghost" href="#schedule">View Details</a>
+                  <a class="pk-btn-solid" href="#schedule">Book Now</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="pk-card">
+              <div class="pk-shot">
+                <span class="pk-badge">Available</span>
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80" alt="Porkudil 3 apartment building" width="800" height="600" loading="lazy" decoding="async">
+              </div>
+              <div class="pk-card-body">
+                <h3 class="pk-card-name">Porkudil &ndash; 3</h3>
+                <div class="pk-specs">
+                  <span class="pk-spec"><i class="bi bi-door-open" aria-hidden="true"></i> 3 BHK</span>
+                  <span class="pk-spec"><i class="bi bi-droplet" aria-hidden="true"></i> 3 Bath</span>
+                  <span class="pk-spec"><i class="bi bi-layers" aria-hidden="true"></i> 1st Floor</span>
+                </div>
+                <p class="pk-loc"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Court Road, Tenkasi</p>
+                <p class="pk-rent">&#8377;15,000 <span>/ month</span></p>
+                <div class="pk-card-cta">
+                  <a class="pk-btn-ghost" href="#schedule">View Details</a>
+                  <a class="pk-btn-solid" href="#schedule">Book Now</a>
+                </div>
+              </div>
+            </article>
+            <article class="pk-card">
+              <div class="pk-shot">
+                <span class="pk-badge">Available</span>
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" alt="Porkudil 4 apartment building"
+                     width="800" height="600" loading="lazy" decoding="async">
+              </div>
+              <div class="pk-card-body">
+                <h3 class="pk-card-name">Porkudil &ndash; 4</h3>
+                <div class="pk-specs">
+                  <span class="pk-spec"><i class="bi bi-door-open" aria-hidden="true"></i> 2 BHK</span>
+                  <span class="pk-spec"><i class="bi bi-droplet" aria-hidden="true"></i> 2 Bath</span>
+                  <span class="pk-spec"><i class="bi bi-layers" aria-hidden="true"></i> 2nd Floor</span>
+                </div>
+                <p class="pk-loc"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Kadayanallur Road, Tenkasi</p>
+                <p class="pk-rent">&#8377;11,000 <span>/ month</span></p>
+                <div class="pk-card-cta">
+                  <a class="pk-btn-ghost" href="#schedule">View Details</a>
+                  <a class="pk-btn-solid" href="#schedule">Book Now</a>
+                </div>
+              </div>
+            </article>
+            <article class="pk-card">
+              <div class="pk-shot">
+                <span class="pk-badge">Available</span>
+                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Porkudil 5 apartment building"
+                     width="800" height="600" loading="lazy" decoding="async">
+              </div>
+              <div class="pk-card-body">
+                <h3 class="pk-card-name">Porkudil &ndash; 5</h3>
+                <div class="pk-specs">
+                  <span class="pk-spec"><i class="bi bi-door-open" aria-hidden="true"></i> 3 BHK</span>
+                  <span class="pk-spec"><i class="bi bi-droplet" aria-hidden="true"></i> 2 Bath</span>
+                  <span class="pk-spec"><i class="bi bi-layers" aria-hidden="true"></i> 3rd Floor</span>
+                </div>
+                <p class="pk-loc"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Bus Stand Area, Tenkasi</p>
+                <p class="pk-rent">&#8377;14,000 <span>/ month</span></p>
+                <div class="pk-card-cta">
+                  <a class="pk-btn-ghost" href="#schedule">View Details</a>
+                  <a class="pk-btn-solid" href="#schedule">Book Now</a>
+                </div>
+              </div>
+            </article>
+            <article class="pk-card">
+              <div class="pk-shot">
+                <span class="pk-badge pk-badge--accent">New</span>
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80" alt="Porkudil 6 apartment building"
+                     width="800" height="600" loading="lazy" decoding="async">
+              </div>
+              <div class="pk-card-body">
+                <h3 class="pk-card-name">Porkudil &ndash; 6</h3>
+                <div class="pk-specs">
+                  <span class="pk-spec"><i class="bi bi-door-open" aria-hidden="true"></i> 1 BHK</span>
+                  <span class="pk-spec"><i class="bi bi-droplet" aria-hidden="true"></i> 1 Bath</span>
+                  <span class="pk-spec"><i class="bi bi-layers" aria-hidden="true"></i> 1st Floor</span>
+                </div>
+                <p class="pk-loc"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Surandai Road, Tenkasi</p>
+                <p class="pk-rent">&#8377;8,500 <span>/ month</span></p>
+                <div class="pk-card-cta">
+                  <a class="pk-btn-ghost" href="#schedule">View Details</a>
+                  <a class="pk-btn-solid" href="#schedule">Book Now</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="pk-dots" data-pk-dots role="tablist" aria-label="Apartment pages"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== ENQUIRY: AVAILABILITY + VISIT ====================================
+       IMPORTANT — there is no backend. "Check Availability" does NOT query a
+       database. The founder's reference showed it returning "Good News! This
+       apartment is available", which would be an assertion this site cannot
+       actually make. It is implemented here as an enquiry: the result text
+       confirms the request was noted and that a person will confirm, which is
+       true. Both forms hand off to the existing contact route.
+       ==================================================================== -->
+  <section class="pk-sec" id="schedule">
+    <div class="container">
+      <div class="pk-forms reveal">
+
+        <div class="pk-panel">
+          <div class="pk-panel-head">
+            <span class="pk-panel-ico" aria-hidden="true"><i class="bi bi-calendar-check"></i></span>
+            <div><h3>Check Availability</h3><p>Tell us what you need and we&rsquo;ll confirm</p></div>
+          </div>
+
+          <div class="pk-field">
+            <label for="pkApt">Select Apartment</label>
+            <select id="pkApt">
+              <option>Porkudil &ndash; 1 (2 BHK, Melapettai)</option>
+              <option>Porkudil &ndash; 2 (2 BHK, Sivagiri Main Road)</option>
+              <option>Porkudil &ndash; 3 (3 BHK, Court Road)</option>
+              <option>Porkudil &ndash; 4 (2 BHK, Kadayanallur Road)</option>
+              <option>Porkudil &ndash; 5 (3 BHK, Bus Stand Area)</option>
+              <option>Porkudil &ndash; 6 (1 BHK, Surandai Road)</option>
+            </select>
+          </div>
+          <div class="pk-field">
+            <label for="pkDate">Move-in Date</label>
+            <input type="date" id="pkDate">
+          </div>
+          <div class="pk-field">
+            <label for="pkDuration">Rental Duration</label>
+            <select id="pkDuration">
+              <option>11 Months</option>
+              <option>1 Year</option>
+              <option>2 Years</option>
+              <option>Long term</option>
+            </select>
+          </div>
+
+          <button type="button" class="pk-submit pk-submit--navy" data-pk-check>Check Availability</button>
+
+          <div class="pk-result" data-pk-result hidden role="status">
+            <b>Request noted</b>
+            <span data-pk-result-text></span>
+          </div>
+        </div>
+
+        <div class="pk-panel">
+          <div class="pk-panel-head">
+            <span class="pk-panel-ico" aria-hidden="true"><i class="bi bi-person-check"></i></span>
+            <div><h3>Schedule a Visit</h3><p>Book a free visit to the apartment</p></div>
+          </div>
+
+          <form data-pk-visit novalidate>
+            <div class="pk-field-row">
+              <div class="pk-field">
+                <label for="pkName">Full Name <span class="req">*</span></label>
+                <input type="text" id="pkName" name="name" required autocomplete="name" placeholder="Enter your full name">
+              </div>
+              <div class="pk-field">
+                <label for="pkPhone">Mobile Number <span class="req">*</span></label>
+                <input type="tel" id="pkPhone" name="phone" required autocomplete="tel" placeholder="Enter mobile number">
+              </div>
+            </div>
+            <div class="pk-field-row">
+              <div class="pk-field">
+                <label for="pkEmail">Email</label>
+                <input type="email" id="pkEmail" name="email" autocomplete="email" placeholder="Enter email address">
+              </div>
+              <div class="pk-field">
+                <label for="pkPrefApt">Preferred Apartment <span class="req">*</span></label>
+                <select id="pkPrefApt" name="apartment" required>
+                  <option value="">Select apartment</option>
+                  <option>Porkudil &ndash; 1</option>
+                  <option>Porkudil &ndash; 2</option>
+                  <option>Porkudil &ndash; 3</option>
+                  <option>Porkudil &ndash; 4</option>
+                  <option>Porkudil &ndash; 5</option>
+                  <option>Porkudil &ndash; 6</option>
+                </select>
+              </div>
+            </div>
+            <div class="pk-field-row">
+              <div class="pk-field">
+                <label for="pkVisitDate">Preferred Date <span class="req">*</span></label>
+                <input type="date" id="pkVisitDate" name="date" required>
+              </div>
+              <div class="pk-field">
+                <label for="pkVisitTime">Preferred Time <span class="req">*</span></label>
+                <select id="pkVisitTime" name="time" required>
+                  <option value="">Select time</option>
+                  <option>Morning (9 AM &ndash; 12 PM)</option>
+                  <option>Afternoon (12 PM &ndash; 4 PM)</option>
+                  <option>Evening (4 PM &ndash; 8 PM)</option>
+                </select>
+              </div>
+            </div>
+            <div class="pk-field">
+              <label for="pkMsg">Message (Optional)</label>
+              <textarea id="pkMsg" name="message" placeholder="Any special request?"></textarea>
+            </div>
+
+            <button type="submit" class="pk-submit pk-submit--accent">Schedule Visit</button>
+
+            <div class="pk-result" data-pk-visit-result hidden role="status">
+              <b>Thank you</b>
+              <span>Your visit request is ready to send. Your email app will open with the details &mdash; press send and we&rsquo;ll confirm your slot.</span>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFITS ========================================================= -->
+  <section class="pk-sec pk-sec--tint">
+    <div class="container">
+      <div class="pk-benefits reveal">
+        <div class="pk-benefit"><i class="bi bi-tools" aria-hidden="true"></i><h4>Low Maintenance</h4><p>Easy to maintain and clean</p></div>
+        <div class="pk-benefit"><i class="bi bi-compass" aria-hidden="true"></i><h4>Vastu Compliant</h4><p>Positive energy, well designed</p></div>
+        <div class="pk-benefit"><i class="bi bi-tree" aria-hidden="true"></i><h4>Peaceful Area</h4><p>Calm residential environment</p></div>
+        <div class="pk-benefit"><i class="bi bi-people" aria-hidden="true"></i><h4>Family Friendly</h4><p>Comfortable for families</p></div>
+        <div class="pk-benefit"><i class="bi bi-shop" aria-hidden="true"></i><h4>Nearby Essentials</h4><p>Schools, shops, hospitals</p></div>
+        <div class="pk-benefit"><i class="bi bi-headset" aria-hidden="true"></i><h4>Support</h4><p>Managed by Taamsi Technology</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ============================================================== -->
+  <section class="pk-sec pk-sec--navy" style="padding-top:clamp(2rem,3.5vw,2.75rem);padding-bottom:clamp(2rem,3.5vw,2.75rem)">
+    <div class="container">
+      <div class="pk-cta-row reveal">
+        <div>
+          <h2>Ready to Move In?</h2>
+          <p>Book your apartment today and experience comfortable living.</p>
+        </div>
+        <div class="pk-cta-actions">
+          <a href="#schedule" class="btn-primary-premium">Book Now <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          <a href="tel:+917373611500" class="btn-outline-premium"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Call Us Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST STRIP ======================================================
+       "100+ Happy Families" from the reference is deliberately NOT here — it is
+       the same unverifiable customer-count claim removed twice already from
+       this project. Every figure below is either structurally true (3
+       apartments exist on this page) or describes the offer rather than
+       claiming a measured result.
+       ==================================================================== -->
+  <section class="pk-sec" style="padding-top:0">
+    <div class="container">
+      <div class="pk-stats reveal">
+        <div class="pk-stat"><i class="bi bi-building" aria-hidden="true"></i><span><span class="pk-stat-n">3</span><span class="pk-stat-l">Apartments available</span></span></div>
+        <div class="pk-stat"><i class="bi bi-shield-check" aria-hidden="true"></i><span><span class="pk-stat-n">24&times;7</span><span class="pk-stat-l">Security &amp; CCTV</span></span></div>
+        <div class="pk-stat"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span><span class="pk-stat-n">Tenkasi</span><span class="pk-stat-l">Prime locations</span></span></div>
+        <div class="pk-stat"><i class="bi bi-buildings" aria-hidden="true"></i><span><span class="pk-stat-n">Taamsi</span><span class="pk-stat-l">Professionally managed</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer-premium">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="footer-brand-link" aria-label="Taamsi Technology - Home">
+            <span class="brand-logo-footer"><img src="images/taamsi-logo-official.png" alt=""
+                class="brand-logo-img" width="48" height="48" loading="lazy" decoding="async"></span>
+            <span class="footer-brand-text">
+              <span class="brand-text-footer">Taamsi Technology</span>
+              <span class="brand-tagline-footer">One Company. Multiple Solutions.</span>
+            </span>
+          </a>
+          <p class="footer-blurb">Building tomorrow's technology ecosystem.</p>
+
+          <ul class="footer-social" aria-label="Taamsi Technology on social media">
+            <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="#" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+
+        <!-- Quick links -->
+        <nav class="footer-col" aria-labelledby="ftLinks">
+          <h2 class="footer-heading" id="ftLinks">Quick Links</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h2 class="footer-heading">Contact</h2>
+          <address class="footer-address">
+            2/8/250, Surrandai Road,<br>
+            Elathur&ndash;627803, Tenkasi,<br>
+            Tamilnadu, India.
+          </address>
+          <ul class="footer-contact">
+            <li><span>Mobile</span><a href="tel:+917373611500">+91 73736 11500</a></li>
+            <li><span>Mail</span><a href="mailto:taamsi.mail@gmail.com">taamsi.mail@gmail.com</a></li>
+          </ul>
+          <a class="footer-maplink"
+             href="https://maps.google.com/maps?q=2%2F8%2F250%2C%20Surrandai%20Road%2C%20Elathur%2C%20Tenkasi%2C%20Tamil%20Nadu"
+             target="_blank" rel="noopener">
+            View location <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; <span data-year>2026</span> Taamsi Technology. All rights reserved.</p>
+        <ul class="footer-legal-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back to top. Kept functional and reduced so it does not compete with the
+       footer. js/site.js drives the ring via #progressCircle and toggles
+       .visible on #backToTop. -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="42" height="42" viewBox="0 0 54 54" aria-hidden="true">
+      <circle class="bg" cx="27" cy="27" r="24" fill="none" stroke-width="2"></circle>
+      <circle class="progress" id="progressCircle" cx="27" cy="27" r="24" fill="none"
+        stroke-width="2" stroke-linecap="round" stroke-dasharray="150.8" stroke-dashoffset="150.8"></circle>
+    </svg>
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/site.js"></script>
+  <script>
+    /* ---------- Apartment carousel ----------
+       Cards-per-view mirrors the CSS breakpoints exactly (3 / 2 / 1) so the
+       two can never disagree.
+
+       AUTO-SLIDE: 3 seconds, infinite loop. The earlier version deliberately
+       had none — a visitor comparing rents should not have the card move
+       mid-read — so the autoplay here PAUSES on hover, on focus, and while
+       the section is off-screen. It also stops permanently the first time the
+       visitor uses the arrows or dots, because at that point they are driving
+       and the carousel should not fight them. */
+    (function () {
+      var track = document.querySelector('[data-pk-track]');
+      if (!track) return;
+      var viewport = document.querySelector('[data-pk-viewport]');
+      var dotsWrap = document.querySelector('[data-pk-dots]');
+      var prev = document.querySelector('[data-pk-prev]');
+      var next = document.querySelector('[data-pk-next]');
+      var cards = Array.prototype.slice.call(track.children);
+      if (!cards.length) return;
+
+      var lg = window.matchMedia('(min-width: 992px)');
+      var sm = window.matchMedia('(min-width: 576px)');
+      var page = 0;
+
+      function perView() { return lg.matches ? 3 : (sm.matches ? 2 : 1); }
+      function pages() { return Math.max(1, Math.ceil(cards.length / perView())); }
+
+      function render() {
+        var n = pages();
+        if (page > n - 1) page = n - 1;
+        if (page < 0) page = 0;
+        var gap = parseFloat(getComputedStyle(track).gap) || 20;
+        track.style.transform = 'translateX(' + (-page * (viewport.clientWidth + gap)) + 'px)';
+
+        if (prev) prev.disabled = page === 0;
+        if (next) next.disabled = page >= n - 1;
+
+        var pv = perView();
+        cards.forEach(function (c, i) {
+          c.setAttribute('aria-hidden', (i >= page * pv && i < (page + 1) * pv) ? 'false' : 'true');
+        });
+        dots(n);
+      }
+
+      function dots(n) {
+        if (!dotsWrap) return;
+        if (dotsWrap.children.length !== n) {
+          dotsWrap.innerHTML = '';
+          for (var i = 0; i < n; i++) {
+            var b = document.createElement('button');
+            b.type = 'button';
+            b.setAttribute('role', 'tab');
+            b.setAttribute('aria-label', 'Apartment page ' + (i + 1));
+            b.addEventListener('click', (function (k) {
+              return function () { page = k; render(); };
+            })(i));
+            dotsWrap.appendChild(b);
+          }
+        }
+        Array.prototype.forEach.call(dotsWrap.children, function (d, i) {
+          d.setAttribute('aria-current', i === page ? 'true' : 'false');
+        });
+      }
+
+      if (prev) prev.addEventListener('click', function () { page--; render(); });
+      if (next) next.addEventListener('click', function () { page++; render(); });
+
+      viewport.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') { e.preventDefault(); page--; render(); }
+        if (e.key === 'ArrowRight') { e.preventDefault(); page++; render(); }
+      });
+
+      var t;
+      window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(render, 150); });
+      [lg, sm].forEach(function (mq) { if (mq.addEventListener) mq.addEventListener('change', render); });
+
+      /* ---- auto-slide ---- */
+      var DELAY = 3000;
+      var timer = null;
+      var userTookOver = false;
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+      function step() { page = (page + 1) % pages(); render(); }
+
+      function start() {
+        if (userTookOver || reduce.matches || pages() < 2) return;
+        stop();
+        timer = setInterval(step, DELAY);
+      }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+      /* Any deliberate navigation hands control to the visitor for good. */
+      function surrender() { userTookOver = true; stop(); }
+      if (prev) prev.addEventListener('click', surrender);
+      if (next) next.addEventListener('click', surrender);
+      if (dotsWrap) dotsWrap.addEventListener('click', surrender);
+      viewport.addEventListener('keydown', surrender);
+
+      viewport.addEventListener('mouseenter', stop);
+      viewport.addEventListener('mouseleave', start);
+      viewport.addEventListener('focusin', stop);
+      viewport.addEventListener('focusout', start);
+
+      /* Don't animate a carousel nobody is looking at. */
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (es) {
+          es.forEach(function (e) { e.isIntersecting ? start() : stop(); });
+        }, { threshold: 0.25 }).observe(viewport);
+      } else { start(); }
+
+      if (reduce.addEventListener) reduce.addEventListener('change', function () {
+        reduce.matches ? stop() : start();
+      });
+
+      render();
+    })();
+
+    /* ---------- Availability enquiry ----------
+       Deliberately does NOT claim live availability — there is no backend to
+       check against. It echoes the visitor's own selection back and states
+       that a person will confirm, which is accurate. */
+    (function () {
+      var btn = document.querySelector('[data-pk-check]');
+      if (!btn) return;
+      var box = document.querySelector('[data-pk-result]');
+      var out = document.querySelector('[data-pk-result-text]');
+
+      btn.addEventListener('click', function () {
+        var apt = document.getElementById('pkApt');
+        var date = document.getElementById('pkDate');
+        var dur = document.getElementById('pkDuration');
+        var when = (date && date.value) ? new Date(date.value).toLocaleDateString('en-IN', {
+          day: 'numeric', month: 'long', year: 'numeric'
+        }) : 'your preferred date';
+
+        out.textContent = 'We have noted your interest in ' + apt.value +
+          ' from ' + when + ' for ' + dur.value +
+          '. Our team will confirm availability and get back to you shortly.';
+        box.hidden = false;
+        box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    })();
+
+    /* ---------- Visit request ----------
+       Hands off via mailto:, matching how the existing contact form on this
+       site already works — no new backend dependency introduced. */
+    (function () {
+      var form = document.querySelector('[data-pk-visit]');
+      if (!form) return;
+      var done = document.querySelector('[data-pk-visit-result]');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var required = form.querySelectorAll('[required]');
+        var ok = true;
+        Array.prototype.forEach.call(required, function (f) {
+          if (!f.value.trim()) { ok = false; f.style.borderColor = '#A71501'; }
+          else { f.style.borderColor = ''; }
+        });
+        if (!ok) { required[0].focus(); return; }
+
+        var get = function (id) { var el = document.getElementById(id); return el ? el.value : ''; };
+        var body =
+          'Apartment visit request — rMAR Porkudil\n\n' +
+          'Name: ' + get('pkName') + '\n' +
+          'Mobile: ' + get('pkPhone') + '\n' +
+          'Email: ' + (get('pkEmail') || '—') + '\n' +
+          'Apartment: ' + get('pkPrefApt') + '\n' +
+          'Preferred date: ' + get('pkVisitDate') + '\n' +
+          'Preferred time: ' + get('pkVisitTime') + '\n\n' +
+          'Message:\n' + (get('pkMsg') || '—');
+
+        done.hidden = false;
+        window.location.href = 'mailto:taamsi.mail@gmail.com' +
+          '?subject=' + encodeURIComponent('Apartment visit request — rMAR Porkudil') +
+          '&body=' + encodeURIComponent(body);
+      });
+    })();
+  </script>
+
+</body>
+
+</html>

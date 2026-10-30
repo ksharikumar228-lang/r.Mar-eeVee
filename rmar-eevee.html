@@ -1,0 +1,2710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="rMAR eeVee — the electric mobility division of Taamsi Technology. Explore our EV range, compare running costs, and book a test ride in Tenkasi.">
+  <title>rMAR eeVee — Electric Mobility | Taamsi Technology</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Taamsi Technology">
+  <meta property="og:title" content="rMAR eeVee — Electric Mobility | Taamsi Technology">
+  <meta property="og:description"
+    content="Explore the rMAR eeVee electric mobility range, compare running costs, and book a test ride.">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#063A78">
+
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/ev-page.css">
+  <link rel="stylesheet" href="css/hero-shared.css">
+
+  <noscript>
+    <style>
+      .reveal, .reveal-left, .reveal-right, .reveal-scale {
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+      }
+    </style>
+  </noscript>
+
+  <!-- ===== 14-POINT ENTERPRISE ARCHITECTURE OVERRIDES ===== -->
+  <style>
+    /* 1. VIVA-HOUSING FLUID WAVE BUTTONS & UNIFORM CATALOGUE CARDS */
+    #evpModelsGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+
+    .evp-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 18px;
+      border: 1px solid #e2e8f0 !important;
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(6, 58, 120, 0.05);
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+
+    .evp-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 38px rgba(6, 58, 120, 0.12);
+    }
+
+    .evp-card-inner, .evp-card-face--front, .evp-card-open {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      text-align: left;
+      background: transparent;
+      border: none;
+      padding: 0;
+    }
+
+    .evp-card-shot {
+      aspect-ratio: 4 / 3 !important;
+      width: 100%;
+      background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .evp-card-shot img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+      transition: transform 0.35s ease;
+    }
+
+    .evp-card:hover .evp-card-shot img {
+      transform: scale(1.05);
+    }
+
+    .evp-card-body {
+      padding: 1.15rem 1.25rem 1.35rem !important;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 6px !important;
+      border: none !important;
+    }
+
+    .evp-card-price-row, .evp-card-specs {
+      border: none !important;
+      margin: 2px 0 !important;
+      padding: 0 !important;
+    }
+
+    /* Viva-Housing Wave Animation Button */
+    .evp-wave-btn {
+      position: relative;
+      overflow: hidden;
+      border-radius: 9999px !important;
+      background: linear-gradient(135deg, #f97316 0%, #ea580c 100%) !important;
+      color: #ffffff !important;
+      z-index: 1;
+      transition: color 0.4s ease, transform 0.25s ease, box-shadow 0.25s ease !important;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 9px 18px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border: none !important;
+      cursor: pointer;
+      box-shadow: 0 6px 16px rgba(234, 88, 12, 0.28);
+      text-decoration: none;
+    }
+
+    .evp-wave-btn::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 220%;
+      height: 220%;
+      background: rgba(255, 255, 255, 0.28);
+      border-radius: 40%;
+      transform: translateX(-50%);
+      transition: top 0.75s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s linear;
+      z-index: -1;
+    }
+
+    .evp-wave-btn:hover::before {
+      top: -35%;
+      transform: translateX(-50%) rotate(360deg);
+    }
+
+    .evp-wave-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(234, 88, 12, 0.38);
+    }
+
+    /* 2. FULLSCREEN SINGLE-SCREEN AMAZON VIEWPORT (NO POPUP DIALOG BLUR) */
+    .evm[data-modal] {
+      position: fixed !important;
+      inset: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      z-index: 9999 !important;
+      background: #ffffff !important;
+      backdrop-filter: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      overflow: hidden !important;
+    }
+
+    .evm-backdrop {
+      display: none !important;
+    }
+
+    .evm-panel {
+      width: 100vw !important;
+      height: 100vh !important;
+      max-width: none !important;
+      max-height: none !important;
+      border-radius: 0 !important;
+      border: none !important;
+      box-shadow: none !important;
+      display: flex !important;
+      flex-direction: column !important;
+      background: #ffffff !important;
+      overflow: hidden !important;
+    }
+
+    .evm-bar {
+      height: 60px;
+      padding: 0 1.5rem !important;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      background: #ffffff;
+      z-index: 10005;
+    }
+
+    /* Compact Circular Back Button Only */
+    .evm-back-icon-btn {
+      width: 40px !important;
+      height: 40px !important;
+      border-radius: 50% !important;
+      background: #ffffff !important;
+      border: 1px solid #cbd5e1 !important;
+      color: #0f172a !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      cursor: pointer !important;
+      font-size: 1.2rem !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .evm-back-icon-btn:hover {
+      background: #f1f5f9 !important;
+      transform: translateX(-2px) !important;
+    }
+
+    /* 55% Left / 45% Right Split Layout */
+    .evm-body {
+      flex: 1;
+      height: calc(100vh - 60px) !important;
+      display: grid !important;
+      grid-template-columns: 55% 45% !important;
+      overflow: hidden !important;
+      padding: 0 !important;
+      gap: 0 !important;
+    }
+
+    .evm-gallery {
+      height: 100%;
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 1px solid #e2e8f0;
+      background: #f8fafc;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    .evm-detail {
+      height: 100%;
+      padding: 1.35rem 1.75rem;
+      overflow-y: auto;
+      background: #ffffff;
+      position: relative;
+    }
+
+    /* Strict 4:3 Landscape Stage */
+    #evmMainStage {
+      aspect-ratio: 4 / 3 !important;
+      width: 100% !important;
+      max-width: 580px !important;
+      margin: 0 auto !important;
+      position: relative !important;
+      background: #ffffff !important;
+      border-radius: 16px !important;
+      border: 1px solid #e2e8f0 !important;
+      overflow: hidden !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    #evmMainStage img[data-evm-main] {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+      transition: transform 0.12s ease-out;
+      transform-origin: var(--zoom-origin-x, 50%) var(--zoom-origin-y, 50%);
+    }
+
+    #evmMainStage.is-zoomed img[data-evm-main] {
+      transform: scale(2.25) !important;
+    }
+
+    /* Amazon Side-Lens Cursor Box & Flyout Window */
+    .evm-zoom-lens-box {
+      position: absolute;
+      width: 110px;
+      height: 85px;
+      border: 1.5px solid #0284c7;
+      background: rgba(2, 132, 199, 0.14);
+      pointer-events: none;
+      z-index: 12;
+      border-radius: 6px;
+      transform: translate(-50%, -50%);
+    }
+
+    .evm-amazon-zoom-flyout {
+      position: absolute;
+      top: 1.25rem;
+      left: 1.25rem;
+      right: 1.25rem;
+      height: 410px;
+      background-color: #ffffff;
+      background-repeat: no-repeat;
+      border: 2px solid #0284c7;
+      border-radius: 16px;
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.25);
+      z-index: 95;
+      pointer-events: none;
+    }
+
+    /* Bajaj Auto NS400Z Sub-Navigation Pills */
+    .evm-bajaj-subtabs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      flex-wrap: wrap;
+      margin: 0.65rem auto 0;
+    }
+
+    .evm-subtab-pill {
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      color: #1e293b;
+      font-size: 0.78rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .evm-subtab-pill.active, .evm-subtab-pill:hover {
+      background: #063a78;
+      color: #ffffff;
+      border-color: #063a78;
+    }
+
+    /* Bajaj Pulsar NS400Z Asymmetric Collage Overlay */
+    .evm-collage-drawer {
+      margin-top: 0.75rem;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 0.85rem;
+    }
+
+    .evm-collage-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      grid-auto-rows: 115px;
+      gap: 0.65rem;
+      max-height: 250px;
+      overflow-y: auto;
+    }
+
+    .evm-collage-item {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
+      cursor: pointer;
+      position: relative;
+      padding: 0;
+    }
+
+    .evm-collage-item.is-hero {
+      grid-row: span 2;
+    }
+
+    .evm-collage-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 6px;
+      transition: transform 0.25s ease;
+    }
+
+    .evm-collage-item:hover img {
+      transform: scale(1.06);
+    }
+
+    /* Component Parts Active Status & Rectangular Battery Frame */
+    .evm-component-btn[aria-pressed="true"] {
+      background: #0284c7 !important;
+      color: #ffffff !important;
+      border-color: #38bdf8 !important;
+      box-shadow: 0 0 14px rgba(2, 132, 199, 0.45) !important;
+    }
+
+    .evm-hotspot-battery-frame {
+      position: absolute;
+      border: 2px dashed #0284c7 !important;
+      background: rgba(2, 132, 199, 0.14) !important;
+      border-radius: 8px !important;
+      box-shadow: 0 0 14px rgba(2, 132, 199, 0.4) !important;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 14;
+    }
+
+    /* Share Button & Price Metadata Header */
+    .evm-title-share-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .evm-share-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      color: #0f172a;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+
+    .evm-share-btn:hover {
+      background: #063a78;
+      color: #ffffff;
+      border-color: #063a78;
+    }
+
+    .evm-price-meta-strip {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.75rem 1.25rem;
+      margin: 0.5rem 0 0.85rem;
+      padding: 0.65rem 0.9rem;
+      background: #f8fafc;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .evm-price-sub {
+      font-size: 0.78rem;
+      color: #475569;
+      font-weight: 600;
+    }
+
+    /* Standardized 15-Point OEM Hierarchy Table */
+    .evm-tech-spec-table .spec-row {
+      display: grid;
+      grid-template-columns: 36px 1.1fr 1.4fr;
+      align-items: center;
+      padding: 0.55rem 0.75rem;
+      border-bottom: 1px solid #f1f5f9;
+      font-size: 0.82rem;
+    }
+
+    .evm-tech-spec-table .spec-row:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    .spec-idx {
+      font-weight: 800;
+      color: #0284c7;
+      font-size: 0.74rem;
+    }
+
+    /* Context-Aware Taamsi-AI Floating Pill & Modal */
+    .evp-floating-ai-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 10020;
+      height: 48px;
+      padding: 0 1.25rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #063a78 0%, #a71501 100%);
+      color: #ffffff;
+      border: none;
+      font-weight: 700;
+      font-size: 0.88rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      box-shadow: 0 12px 30px rgba(6, 58, 120, 0.38);
+      cursor: pointer;
+    }
+
+    .evp-ai-drawer {
+      position: fixed;
+      bottom: 84px;
+      right: 24px;
+      width: min(380px, calc(100vw - 32px));
+      background: #ffffff;
+      border-radius: 20px;
+      border: 1px solid #cbd5e1;
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.26);
+      z-index: 10025;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .evp-ai-head {
+      padding: 0.9rem 1.1rem;
+      background: linear-gradient(135deg, #063a78, #0d4a96);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .evp-ai-messages {
+      padding: 1rem;
+      max-height: 260px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      font-size: 0.83rem;
+      background: #f8fafc;
+    }
+
+    .evp-ai-msg {
+      padding: 0.65rem 0.85rem;
+      border-radius: 12px;
+      line-height: 1.45;
+    }
+
+    .evp-ai-msg--bot {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      color: #1e293b;
+    }
+
+    .evp-ai-msg--user {
+      background: #063a78;
+      color: #ffffff;
+      align-self: flex-end;
+    }
+
+    .evp-ai-quick {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      padding: 0.55rem 0.85rem;
+      background: #ffffff;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .evp-ai-chip {
+      font-size: 0.72rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #063a78;
+      border: 1px solid #bfdbfe;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .evp-ai-form {
+      display: flex;
+      padding: 0.65rem;
+      gap: 0.5rem;
+      border-top: 1px solid #e2e8f0;
+      background: #ffffff;
+    }
+
+    .evp-ai-form input {
+      flex: 1;
+      border: 1px solid #cbd5e1;
+      border-radius: 999px;
+      padding: 0.45rem 0.9rem;
+      font-size: 0.82rem;
+    }
+
+    .evm-share-toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #0f172a;
+      color: #ffffff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      z-index: 10050;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    @media (max-width: 991.98px) {
+      .evm[data-modal] {
+        overflow-y: auto !important;
+      }
+      .evm-panel {
+        height: auto !important;
+        min-height: 100vh !important;
+        overflow: visible !important;
+      }
+      .evm-body {
+        height: auto !important;
+        grid-template-columns: 1fr !important;
+        overflow: visible !important;
+      }
+      .evm-gallery, .evm-detail {
+        height: auto !important;
+        overflow: visible !important;
+      }
+      .evm-amazon-zoom-flyout, .evm-zoom-lens-box {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="has-header ev-page">
+
+  <a href="#main" class="visually-hidden-focusable position-absolute top-0 start-0 m-2 p-2 bg-white border rounded"
+    style="z-index:2000">Skip to content</a>
+
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="mobile-menu-backdrop" id="mobileBackdrop"></div>
+
+  <!-- ===== HEADER ===== -->
+  <div class="nav-outer-wrap fixed-top" id="navOuterWrap">
+    <nav class="navbar navbar-expand-lg navbar-premium" id="mainNav">
+      <div class="container-fluid px-lg-4">
+        <a class="navbar-brand-custom" href="index.html">
+          <div class="brand-logo-taamsi"><img src="images/taamsi-logo-official.png" alt="" class="brand-logo-img"
+              width="34" height="34" decoding="async"></div>
+          <div>
+            <div class="brand-text">Taamsi Technology</div>
+            <div class="brand-tagline">Innovate • Transform • Grow</div>
+          </div>
+        </a>
+        <button class="navbar-toggler border-0" type="button" id="mobileMenuToggle" aria-label="Toggle navigation"
+          aria-expanded="false" aria-controls="navMenu">
+          <span class="hamburger-icon">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About Us</a></li>
+            <li class="nav-item mega-menu-wrapper" id="megaMenuWrapper">
+              <a class="nav-link nav-link-custom dropdown-toggle" href="index.html#divisions" id="megaMenuTrigger"
+                aria-haspopup="true" aria-expanded="false" aria-controls="divisionsMenu">
+                Divisions <i class="bi bi-chevron-down mega-caret"></i>
+              </a>
+              <div class="mega-menu mega-menu-grid" id="divisionsMenu" role="menu" aria-label="Business divisions">
+                <div class="mega-menu-columns">
+                  <div class="mega-menu-col">
+                    <span class="mega-group-label" style="--mobile-order:1">CORE DIVISIONS</span>
+                    <a href="rmar-eevee.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=700&q=80"
+                      data-preview-icon="bi-lightning-charge-fill" data-preview-title="rMAR eeVee"
+                      data-preview-sub="Electric mobility solutions" style="--mobile-order:2">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #2C6FC4, #063A78);"><i
+                          class="bi bi-lightning-charge-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR eeVee</span>
+                        <span class="mega-menu-subtitle">Electric mobility solutions</span>
+                      </div>
+                    </a>
+                    <a href="rmar-complex.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&q=80"
+                      data-preview-icon="bi-building" data-preview-title="rMAR Complex"
+                      data-preview-sub="Premium real estate" style="--mobile-order:7">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #063A78, #003A82);"><i
+                          class="bi bi-building"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR Complex</span>
+                        <span class="mega-menu-subtitle">Premium real estate</span>
+                      </div>
+                    </a>
+                    <span class="mega-group-label" style="--mobile-order:8">MARKETING & COMMUNITY</span>
+                    <a href="ibaz-arti.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&q=80"
+                      data-preview-icon="bi-megaphone-fill" data-preview-title="iBAZ Arti"
+                      data-preview-sub="Strategic marketing" style="--mobile-order:9">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #2C6FC4, #063A78);"><i
+                          class="bi bi-megaphone-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">iBAZ Arti</span>
+                        <span class="mega-menu-subtitle">Strategic marketing</span>
+                      </div>
+                    </a>
+                    <span class="mega-group-label" style="--mobile-order:5">PROPERTY & GROWTH</span>
+                    <a href="rmar-porkudil.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80"
+                      data-preview-icon="bi-house-door-fill" data-preview-title="rMAR Porkudil"
+                      data-preview-sub="Rental hub solutions" style="--mobile-order:6">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #A71501, #7E1001);"><i
+                          class="bi bi-house-door-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR Porkudil</span>
+                        <span class="mega-menu-subtitle">Rental hub solutions</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="mega-menu-col">
+                    <a href="https://rmarsaas.in/" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=700&q=80"
+                      data-preview-icon="bi-laptop" data-preview-title="rMAR SaaS"
+                      data-preview-sub="125+ digital services" style="--mobile-order:3" target="_blank" rel="noopener">
+                      <div class="mega-menu-icon"
+                        style="background: linear-gradient(135deg, var(--color-primary), var(--color-accent));"><i
+                          class="bi bi-laptop"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR SaaS</span>
+                        <span class="mega-menu-subtitle">125+ digital services</span>
+                      </div>
+                    </a>
+                    <a href="https://rmarmart.in/" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700&q=80"
+                      data-preview-icon="bi-bag-fill" data-preview-title="rMAR Mart" data-preview-sub="Smart e-commerce"
+                      style="--mobile-order:4" target="_blank" rel="noopener">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #A71501, #A71501);"><i
+                          class="bi bi-bag-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR Mart</span>
+                        <span class="mega-menu-subtitle">Smart e-commerce</span>
+                      </div>
+                    </a>
+                    <a href="rmar-aram.html" class="mega-menu-item" role="menuitem"
+                      data-preview-img="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=700&q=80"
+                      data-preview-icon="bi-people-fill" data-preview-title="rMAR ARAM"
+                      data-preview-sub="Community platform" style="--mobile-order:10">
+                      <div class="mega-menu-icon" style="background: linear-gradient(135deg, #2C6FC4, #063A78);"><i
+                          class="bi bi-people-fill"></i></div>
+                      <div class="mega-menu-text">
+                        <span class="mega-menu-title">rMAR ARAM</span>
+                        <span class="mega-menu-subtitle">Community platform</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="nav-cta-group">
+            <a href="tel:+917373611500" class="btn-amber btn-call magnetic-btn"
+              aria-label="Call Taamsi Technology on +91 73736 11500"><i class="bi bi-telephone-fill"
+                aria-hidden="true"></i> Call Us</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section class="evp-hero">
+      <div class="mesh-gradient" aria-hidden="true"></div>
+      <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+      <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
+      <div class="hero-blob hero-blob-3" aria-hidden="true"></div>
+      <div class="container">
+        <div class="evp-hero-grid">
+          <div class="reveal">
+            <span class="evp-hero-brand"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i> rMAR eeVee</span>
+            <h1 class="evp-hero-title">Driving the Future with<br><em>Electric Mobility</em></h1>
+            <p class="evp-hero-copy">
+              rMAR eeVee is the electric mobility division of Taamsi Technology, serving Tenkasi District with
+              electric scooters and motorcycles, genuine spare parts and after-sales support.
+            </p>
+            <div class="evp-partners">
+              <span class="evp-partners-label">Partners &amp; Brands We Work With</span>
+              <div class="evp-partner-row">
+                <span class="evp-partner">UPCOT</span>
+                <span class="evp-partner">PURE<small style="font-size:0.6em;font-weight:600;margin-left:0.2em;">EV</small></span>
+                <span class="evp-partner">PRANA</span>
+                <span class="evp-partner">SKANDAA</span>
+                <span class="evp-partner">URBAN</span>
+              </div>
+            </div>
+            <div class="evp-hero-cta">
+              <a href="#ev-range" class="btn-primary-premium">Explore Models <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              <a href="#book-ride" class="evp-wave-btn">Book Test Ride <i class="bi bi-calendar2-check"></i></a>
+            </div>
+          </div>
+
+          <figure class="evp-hero-visual evp-hero-visual--photo img-reveal img-hov">
+            <img src="images/prana-hero.png" alt="PRANA electric motorcycle" width="930" height="620"
+              fetchpriority="high" decoding="async">
+          </figure>
+
+          <div class="evp-facts rv-stagger">
+            <div class="evp-fact">
+              <span class="evp-fact-ico" aria-hidden="true"><i class="bi bi-recycle"></i></span>
+              <span><span class="evp-fact-k">Eco Friendly</span><span class="evp-fact-v">Zero tailpipe emission</span></span>
+            </div>
+            <div class="evp-fact">
+              <span class="evp-fact-ico" aria-hidden="true"><i class="bi bi-speedometer2"></i></span>
+              <span><span class="evp-fact-k">Low Running Cost</span><span class="evp-fact-v">Save on fuel</span></span>
+            </div>
+            <div class="evp-fact">
+              <span class="evp-fact-ico" aria-hidden="true"><i class="bi bi-gear-fill"></i></span>
+              <span><span class="evp-fact-k">Govt. Benefits</span><span class="evp-fact-v">FAME II subsidy eligible</span></span>
+            </div>
+            <div class="evp-fact">
+              <span class="evp-fact-ico" aria-hidden="true"><i class="bi bi-tools"></i></span>
+              <span><span class="evp-fact-k">Less Maintenance</span><span class="evp-fact-v">Fewer moving parts</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT rMAR ===== -->
+    <section class="evp-sec evp-sec--tint depth seam" id="ev-about">
+      <div class="container">
+        <div class="evp-head-row">
+          <div>
+            <span class="evp-eyebrow">About rMAR eeVee</span>
+            <h2 class="evp-title">The electric mobility division of Taamsi Technology</h2>
+            <p class="evp-lede">
+              We work with UPCOT, PURE EV, PRANA, SKANDAA and URBAN to bring reliable electric scooters and motorcycles to
+              Tenkasi District, backed by genuine spare parts, financing support and after-sales service.
+            </p>
+          </div>
+          <div class="evp-service-grid rv-stagger">
+            <div class="evp-service"><i class="bi bi-people-fill" aria-hidden="true"></i><span>Partner Network</span></div>
+            <div class="evp-service"><i class="bi bi-puzzle-fill" aria-hidden="true"></i><span>Genuine Spare Parts</span></div>
+            <div class="evp-service"><i class="bi bi-cash-coin" aria-hidden="true"></i><span>Finance Available</span></div>
+            <div class="evp-service"><i class="bi bi-wrench-adjustable" aria-hidden="true"></i><span>Service Support</span></div>
+            <div class="evp-service"><i class="bi bi-bicycle" aria-hidden="true"></i><span>Test Ride Available</span></div>
+            <div class="evp-service"><i class="bi bi-shield-check" aria-hidden="true"></i><span>Warranty Support</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRODUCT RANGE ===== -->
+    <section class="evp-sec evp-sec--tint depth seam" id="ev-range">
+      <div class="container">
+        <div class="evp-head-row rv-up">
+          <div>
+            <span class="evp-eyebrow">rMAR eeVee • Official Multi-Brand Electric Showroom</span>
+            <h2 class="evp-title" style="margin-bottom:0">Explore Our Next-Gen Electric Mobility Range</h2>
+            <p class="evp-range-intro">Discover certified high-performance electric motorcycles, commuter scooters, and commercial utility EVs across Tenkasi District.</p>
+          </div>
+        </div>
+
+        <div class="evp-filters" data-evp-filters role="tablist" aria-label="Filter by brand">
+          <button type="button" class="evp-filter" data-filter="all" aria-pressed="true">All Models</button>
+          <button type="button" class="evp-filter" data-filter="prana" aria-pressed="false">SVM</button>
+          <button type="button" class="evp-filter" data-filter="pure" aria-pressed="false">PURE</button>
+          <button type="button" class="evp-filter" data-filter="upcot" aria-pressed="false">UPCOT</button>
+          <button type="button" class="evp-filter" data-filter="skandaa" aria-pressed="false">SKANDAA</button>
+          <button type="button" class="evp-filter" data-filter="urban" aria-pressed="false">URBAN</button>
+          <button type="button" class="evp-filter" data-filter="edge" aria-pressed="false">EDGE</button>
+        </div>
+        <div class="evp-grid" id="evpModelsGrid" data-evp-grid></div>
+      </div>
+    </section>
+
+    <!-- ===== SAVINGS CALCULATOR ===== -->
+    <section class="evc seam" id="calculator">
+      <span class="evc-glow" aria-hidden="true"></span>
+      <span class="evc-glow--warm" aria-hidden="true"></span>
+      <div class="container">
+        <div class="evc-head reveal">
+          <span class="evc-eyebrow">EV Savings Calculator</span>
+          <h2 class="evc-title">Calculate Your Savings. Choose Your EV.</h2>
+        </div>
+
+        <div class="evc-grid rv-zoom">
+          <div class="evc-col evc-col--input">
+            <div class="evc-col-head">
+              <span class="evc-step">1</span>
+              <div>
+                <h3>EV vs Fuel</h3>
+                <p>Enter your driving details</p>
+              </div>
+            </div>
+            <div class="evc-in">
+              <label for="calcDaily">Daily Distance (km)</label>
+              <input type="number" id="calcDaily" min="1" max="300" value="40" inputmode="numeric">
+              <span class="evc-hint" data-out-monthly>≈ 1,200 km / month</span>
+            </div>
+            <div class="evc-in-row">
+              <div class="evc-in">
+                <label for="calcPetrol">Fuel Price (&#8377;/L)</label>
+                <input type="number" id="calcPetrol" min="50" max="200" step="0.5" value="100" inputmode="decimal">
+              </div>
+              <div class="evc-in">
+                <label for="calcElec">Charging (&#8377;/unit)</label>
+                <input type="number" id="calcElec" min="1" max="30" step="0.5" value="8" inputmode="decimal">
+              </div>
+            </div>
+            <div class="evc-in">
+              <label for="calcMileage">Current Vehicle Mileage</label>
+              <select id="calcMileage">
+                <option value="40">Petrol Scooter — 40 km/L</option>
+                <option value="45">Petrol Scooter — 45 km/L</option>
+                <option value="50" selected>Petrol Scooter — 50 km/L</option>
+                <option value="60">Petrol Scooter — 60 km/L</option>
+              </select>
+            </div>
+            <div class="evc-in">
+              <label for="calcVehicle">Select Vehicle</label>
+              <select id="calcVehicle" data-calc-vehicle></select>
+            </div>
+            <div class="evc-in">
+              <label for="calcYears">Ownership Period</label>
+              <select id="calcYears">
+                <option value="1">1 Year</option>
+                <option value="3">3 Years</option>
+                <option value="5" selected>5 Years</option>
+                <option value="10">10 Years</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="evc-col evc-col--out">
+            <div class="evc-col-head">
+              <span class="evc-step">2</span>
+              <div>
+                <h3>Your Savings in <span data-out-years>5</span> Years</h3>
+              </div>
+            </div>
+            <div class="evc-figs">
+              <div class="evc-fig">
+                <span class="evc-fig-ico evc-fig-ico--red" aria-hidden="true"><i class="bi bi-fuel-pump-fill"></i></span>
+                <span class="evc-fig-k">Petrol Fuel Cost</span>
+                <span class="evc-fig-v" data-out="petrol">&#8377;0</span>
+              </div>
+              <div class="evc-fig">
+                <span class="evc-fig-ico evc-fig-ico--blue" aria-hidden="true"><i class="bi bi-lightning-charge-fill"></i></span>
+                <span class="evc-fig-k">Electricity Cost</span>
+                <span class="evc-fig-v" data-out="elec">&#8377;0</span>
+              </div>
+              <div class="evc-fig">
+                <span class="evc-fig-ico evc-fig-ico--green" aria-hidden="true"><i class="bi bi-piggy-bank-fill"></i></span>
+                <span class="evc-fig-k">Total Savings</span>
+                <span class="evc-fig-v evc-fig-v--green" data-out="savings">&#8377;0</span>
+              </div>
+              <div class="evc-fig">
+                <span class="evc-fig-ico evc-fig-ico--green" aria-hidden="true"><i class="bi bi-tree-fill"></i></span>
+                <span class="evc-fig-k">CO&#8322; Saved</span>
+                <span class="evc-fig-v" data-out="co2">0 kg</span>
+              </div>
+            </div>
+            <div class="evc-charts-row">
+              <div class="evc-chart-block">
+                <span class="evc-bars-t">Cost Comparison (<span data-out-years>5</span> Years)</span>
+                <div class="evc-bars">
+                  <div class="evc-bar-row">
+                    <span class="evc-bar-lbl"><i class="bi bi-fuel-pump-fill" aria-hidden="true"></i> Fuel</span>
+                    <span class="evc-bar-track"><span class="evc-bar evc-bar--fuel" data-bar-petrol></span></span>
+                  </div>
+                  <div class="evc-bar-row">
+                    <span class="evc-bar-lbl"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i> Electric</span>
+                    <span class="evc-bar-track"><span class="evc-bar evc-bar--ev" data-bar-ev></span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="evc-chart-block evc-chart-block--donut">
+                <span class="evc-bars-t">Savings %</span>
+                <div class="evc-donut-wrap">
+                  <svg class="evc-donut" viewBox="0 0 120 120" role="img" aria-label="Savings percentage">
+                    <circle class="evc-donut-bg" cx="60" cy="60" r="52" fill="none" stroke-width="12"></circle>
+                    <circle class="evc-donut-fg" cx="60" cy="60" r="52" fill="none" stroke-width="12"
+                      stroke-linecap="round" data-donut transform="rotate(-90 60 60)"></circle>
+                  </svg>
+                  <span class="evc-donut-mid">
+                    <b data-out="pct">0%</b><i>you save</i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <p class="evc-note">Estimate only. Assumes ~1 unit per 45 km and 2.31 kg CO₂ per litre avoided.</p>
+          </div>
+
+          <div class="evc-col evc-col--cta" id="book-ride">
+            <div class="evc-col-head">
+              <span class="evc-step">3</span>
+              <div>
+                <h3>Ready to Go Electric?</h3>
+                <p>Book your test ride</p>
+              </div>
+            </div>
+            <form class="evc-form" data-ctd-form novalidate>
+              <div class="evc-f-row">
+                <div class="evc-f">
+                  <label for="ctdName">Full Name <span class="req">*</span></label>
+                  <input type="text" id="ctdName" required autocomplete="name" placeholder="Your name">
+                </div>
+                <div class="evc-f">
+                  <label for="ctdPhone">Mobile Number <span class="req">*</span></label>
+                  <input type="tel" id="ctdPhone" required autocomplete="tel" placeholder="Mobile number">
+                </div>
+              </div>
+              <div class="evc-f-row">
+                <div class="evc-f">
+                  <label for="ctdEmail">Email</label>
+                  <input type="email" id="ctdEmail" autocomplete="email" placeholder="Email address">
+                </div>
+                <div class="evc-f">
+                  <label for="ctdCity">City <span class="req">*</span></label>
+                  <input type="text" id="ctdCity" required placeholder="Your city">
+                </div>
+              </div>
+              <div class="evc-f-row">
+                <div class="evc-f">
+                  <label for="ctdDate">Preferred Date <span class="req">*</span></label>
+                  <input type="date" id="ctdDate" required>
+                </div>
+                <div class="evc-f">
+                  <label for="ctdTime">Preferred Time <span class="req">*</span></label>
+                  <select id="ctdTime" required>
+                    <option value="">Select time</option>
+                    <option>Morning (9 AM &ndash; 12 PM)</option>
+                    <option>Afternoon (12 PM &ndash; 4 PM)</option>
+                    <option>Evening (4 PM &ndash; 8 PM)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="evc-f">
+                <label for="ctdVehicle">Select Vehicle <span class="req">*</span></label>
+                <select id="ctdVehicle" required data-ctd-vehicle></select>
+              </div>
+              <button type="submit" class="evp-wave-btn w-100 mt-2">
+                Book My Test Drive <i class="bi bi-arrow-right"></i>
+              </button>
+              <div class="evc-form-ok" data-ctd-ok hidden role="status">
+                Thank you! Your test drive request has been submitted. Our team will contact you shortly.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SINGLE-SCREEN AMAZON + BAJAJ INSPECTION VIEW ===== -->
+    <div class="evm" data-modal hidden aria-hidden="true">
+      <div class="evm-backdrop" aria-hidden="true"></div>
+
+      <div class="evm-panel" role="dialog" aria-modal="true" aria-labelledby="evmTitle">
+
+        <!-- Header with Compact Circular Back Icon Button Only -->
+        <div class="evm-bar">
+          <div class="evm-bar-brand">
+            <img src="images/taamsi-logo-official.png" alt="Taamsi Logo" class="evm-bar-logo" width="32" height="32"
+              decoding="async">
+            <div class="evm-bar-titles">
+              <span class="evm-bar-company">Taamsi Technology &bull; rMAR eeVee</span>
+              <span class="evm-bar-name" data-evm-barname>Vehicle Name</span>
+            </div>
+          </div>
+          <button type="button" class="evm-back-icon-btn" id="evmCloseDetailView" aria-label="Back">
+            <i class="bi bi-arrow-left" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="evm-body">
+          <!-- LEFT COLUMN (55%): 4:3 Stage, Hover Thumbnails, Bajaj Sub-Tabs & Collage Grid -->
+          <div class="evm-gallery" id="evmGalleryWrap">
+            <div class="evm-gallery-viewer">
+              <div class="evm-thumbs" data-evm-thumbs aria-label="Vehicle images"></div>
+              <div class="evm-gallery-media">
+                <div class="evm-main" id="evmMainStage">
+                  <button type="button" class="evm-arrow evm-arrow-prev" id="evmPrevBtn" aria-label="Previous gallery item">
+                    <i class="bi bi-chevron-left" aria-hidden="true"></i>
+                  </button>
+                  <div class="evm-slider-track" id="evmSliderTrack">
+                    <img data-evm-main src="" alt="Vehicle preview" class="evm-active-slide" decoding="async">
+                  </div>
+                  <div class="evm-zoom-lens-box" data-zoom-lens hidden aria-hidden="true"></div>
+
+                  <svg class="evm-inspection-connector" data-inspection-connector viewBox="0 0 1000 750"
+                    preserveAspectRatio="none" aria-hidden="true" hidden>
+                    <path data-inspection-path pathLength="1" d=""></path>
+                  </svg>
+                  <div class="evm-inspection-hotspots" data-inspection-hotspots hidden>
+                    <div class="evm-hotspot-battery-frame" data-hotspot-battery-frame hidden aria-hidden="true"></div>
+                  </div>
+                  <aside class="evm-inspection-callout evm-component-popup-card" data-inspection-callout
+                    role="dialog" aria-modal="false" aria-labelledby="evmInspectionTitle" hidden>
+                    <button class="evm-inspection-callout-close evm-close-card" type="button" data-inspection-reset
+                      aria-label="Close component details">✕</button>
+                    <span class="evm-inspection-callout-label">Component detail</span>
+                    <h3 id="evmInspectionTitle" data-inspection-name></h3>
+                    <p data-inspection-spec></p>
+                    <p class="evm-inspection-benefit" data-inspection-benefit></p>
+                  </aside>
+
+                  <video class="evm-gallery-video" data-gallery-video muted playsinline loop preload="metadata"
+                    aria-label="Vehicle showcase video" hidden></video>
+                  <iframe class="evm-gallery-embed" data-gallery-embed title="Vehicle track video"
+                    allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"
+                    loading="lazy" hidden></iframe>
+                  <p class="evm-gallery-fallback" data-gallery-fallback hidden role="status">Vehicle image unavailable</p>
+                  <p class="evm-gallery-video-status" data-gallery-status hidden role="status" aria-live="polite"></p>
+                  <button type="button" class="evm-arrow evm-arrow-next" id="evmNextBtn" aria-label="Next gallery item">
+                    <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                  </button>
+                </div>
+
+                <!-- Controls Beside Fullscreen (Prev / Fullscreen / Next) -->
+                <div class="evm-gallery-controls">
+                  <button type="button" class="evm-gallery-nav-btn" data-gallery-prev aria-label="Previous vehicle image">
+                    <i class="bi bi-chevron-left" aria-hidden="true"></i>
+                  </button>
+                  <button type="button" class="evm-fullscreen-btn evm-btn-fullscreen" id="evmFullscreenBtn" data-fullscreen-open
+                    aria-label="View fullscreen photo">
+                    <i class="bi bi-arrows-fullscreen" aria-hidden="true"></i> Fullscreen
+                  </button>
+                  <button type="button" class="evm-gallery-nav-btn" data-gallery-next aria-label="Next vehicle image">
+                    <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                  </button>
+                </div>
+
+                <!-- BAJAJ PULSAR NS400Z INSPIRED SUB-NAVIGATION PILLS -->
+                <div class="evm-bajaj-subtabs" role="tablist" aria-label="Media gallery modes">
+                  <button type="button" class="evm-subtab-pill" data-subtab="albums">
+                    <i class="bi bi-grid-1x2-fill"></i> <span data-album-count>49+ Images / Albums</span>
+                  </button>
+                  <button type="button" class="evm-subtab-pill" data-subtab="colours">
+                    <i class="bi bi-palette-fill"></i> <span data-colour-count>Colours</span>
+                  </button>
+                  <button type="button" class="evm-subtab-pill" data-subtab="video">
+                    <i class="bi bi-play-btn-fill"></i> Video
+                  </button>
+                  <button type="button" class="evm-subtab-pill" data-subtab="360">
+                    <i class="bi bi-arrow-repeat"></i> 360° Studio
+                  </button>
+                </div>
+
+                <!-- ASYMMETRIC COLLAGE ALBUMS GRID -->
+                <div class="evm-collage-drawer" data-collage-drawer hidden>
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <strong style="font-size:0.8rem;color:#063a78;">Bajaj-Style Collage Gallery (Click any photo to preview)</strong>
+                    <button type="button" class="btn-close" style="font-size:0.65rem;" data-collage-close aria-label="Close album collage"></button>
+                  </div>
+                  <div class="evm-collage-grid" data-collage-grid></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN (45%): Single Authoritative Price, Share, Component Toggle & 15 OEM Specs -->
+          <div class="evm-detail">
+            <!-- Amazon Side-Lens Zoom Flyout Display -->
+            <div class="evm-amazon-zoom-flyout" data-zoom-flyout hidden aria-hidden="true"></div>
+
+            <div class="evm-product-heading">
+              <div class="evm-title-share-row">
+                <div>
+                  <span class="evm-product-eyebrow" id="evmTitle" data-evm-summary-brand>r.MAR eeVee</span>
+                  <h1 class="evm-product-title" data-evm-heading>Vehicle Name</h1>
+                </div>
+                <button type="button" class="evm-share-btn" data-share-vehicle aria-label="Share vehicle link" title="Share direct link">
+                  <i class="bi bi-share-fill" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <!-- Single Authoritative Price Block -->
+              <div class="evm-price-meta-strip">
+                <strong class="evm-product-price" data-evm-price style="margin:0;">₹1,89,999</strong>
+                <span class="evm-price-sub">On-Road Est: <b data-evm-onroad>₹2,09,000</b></span>
+                <span class="evm-price-sub">EMI From: <b data-evm-emi>₹6,299/month</b></span>
+              </div>
+            </div>
+
+            <p class="evm-desc" data-evm-desc>Vehicle description will appear here.</p>
+
+            <div class="evm-product-actions evm-color-actions-row">
+              <div class="evm-color-selection evm-color-meta-group" data-evm-color-selection hidden>
+                <div class="evm-color-label"><span>Colour</span><strong id="evmColorName"></strong></div>
+                <div class="evm-swatches" id="evmColorSwatches" role="group" aria-label="Product colour"></div>
+              </div>
+              <button type="button" class="evm-component-link evm-component-btn" data-inspection-toggle
+                aria-pressed="false">
+                <i class="bi bi-gear-wide-connected" aria-hidden="true"></i>
+                <span>Component Parts Details</span>
+                <span class="evm-component-active-status" data-inspection-status hidden>
+                  <span class="evm-status-dot" aria-hidden="true"></span> ON
+                </span>
+              </button>
+              <button type="button" class="evm-component-link evm-product-look-btn" data-product-look hidden>
+                <i class="bi bi-arrow-repeat" aria-hidden="true"></i> 360° Studio
+              </button>
+            </div>
+
+            <div class="evm-tabs" role="tablist" aria-label="Product information">
+              <button type="button" class="evm-tab active" role="tab" data-tab="specs" id="tabSpecs"
+                aria-controls="paneSpecs" aria-selected="true">
+                <i class="bi bi-cpu-fill" aria-hidden="true"></i> Top 15 OEM Specifications
+              </button>
+              <button type="button" class="evm-tab evp-wave-btn" role="tab" data-tab="test" id="tabTest" aria-controls="paneTest"
+                aria-selected="false">
+                <i class="bi bi-calendar2-check-fill" aria-hidden="true"></i> Book Test Drive
+              </button>
+            </div>
+
+            <div class="evm-pane" role="tabpanel" id="paneSpecs" aria-labelledby="tabSpecs" data-pane="specs">
+              <section class="evm-tech-specs evm-tech-overview-card" aria-labelledby="evmTechSpecsTitle">
+                <h2 class="evm-tech-overview-title" id="evmTechSpecsTitle">TOP 15 OEM TECHNICAL SPECIFICATIONS</h2>
+                <p class="evm-spec-note evm-tech-overview-sub">Standardized 15-point automotive hierarchy.</p>
+                <div class="evm-tech-spec-table evm-tech-table" data-evm-tech-specs></div>
+              </section>
+            </div>
+
+            <div class="evm-pane" role="tabpanel" id="paneTest" aria-labelledby="tabTest" data-pane="test" hidden>
+              <form data-td-form novalidate class="evm-booking-form">
+                <div class="evm-td-row">
+                  <div class="evm-fld">
+                    <label for="tdName">Full Name <span class="req">*</span></label>
+                    <input id="tdName" type="text" required placeholder="Your full name">
+                  </div>
+                  <div class="evm-fld">
+                    <label for="tdPhone">Mobile Number (India) <span class="req">*</span></label>
+                    <input id="tdPhone" type="tel" pattern="[6-9][0-9]{9}" required placeholder="10-digit mobile number">
+                  </div>
+                </div>
+                <div class="evm-td-row">
+                  <div class="evm-fld">
+                    <label for="tdEmail">Email Address</label>
+                    <input id="tdEmail" type="email" placeholder="name@example.com">
+                  </div>
+                  <div class="evm-fld">
+                    <label for="tdCity">City / Town <span class="req">*</span></label>
+                    <input id="tdCity" type="text" required placeholder="Tenkasi / Surandai / etc.">
+                  </div>
+                </div>
+                <div class="evm-td-row">
+                  <div class="evm-fld">
+                    <label for="tdDate">Preferred Date <span class="req">*</span></label>
+                    <input id="tdDate" type="date" required>
+                  </div>
+                  <div class="evm-fld">
+                    <label for="tdTime">Preferred Time Slot <span class="req">*</span></label>
+                    <select id="tdTime" required>
+                      <option value="">Select a time</option>
+                      <option>Morning (9:30 AM &ndash; 12:30 PM)</option>
+                      <option>Afternoon (1:00 PM &ndash; 4:00 PM)</option>
+                      <option>Evening (4:30 PM &ndash; 7:00 PM)</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="evm-fld">
+                  <label for="tdVehicle">Selected Vehicle</label>
+                  <select id="tdVehicle" required data-td-vehicle></select>
+                </div>
+                <button type="submit" class="evp-wave-btn w-100 mt-2">Confirm Test Drive Booking</button>
+                <div class="evm-td-ok" data-td-ok hidden role="status">
+                  <i class="bi bi-check-circle-fill"></i> Thank you! Your test drive request has been recorded.
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fullscreen Photo Lightbox with Next/Prev Side Buttons -->
+        <div class="evm-photo-lightbox" data-photo-lightbox hidden role="dialog" aria-modal="true"
+          aria-label="Fullscreen vehicle photo">
+          <button type="button" class="evm-photo-lightbox-nav evm-photo-lightbox-prev" data-lightbox-prev
+            aria-label="Previous vehicle image">
+            <i class="bi bi-chevron-left" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="evm-photo-lightbox-close" data-photo-lightbox-close aria-label="Close photo">
+            <i class="bi bi-x-lg" aria-hidden="true"></i>
+          </button>
+          <img data-photo-lightbox-image alt="Vehicle fullscreen photo">
+          <button type="button" class="evm-photo-lightbox-nav evm-photo-lightbox-next" data-lightbox-next
+            aria-label="Next vehicle image">
+            <i class="bi bi-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="evm-hold-tooltip" data-hold-tooltip role="tooltip" hidden></div>
+      </div>
+
+      <!-- 360° Studio Modal -->
+      <div id="evmRotationFullscreenModal" class="evm-rotation-fullscreen" data-product-look-viewer hidden role="dialog"
+        aria-modal="true" aria-labelledby="evmRotationTitle">
+        <div class="evm-rotation-header">
+          <div>
+            <h2 id="evmRotationTitle">Vehicle Rotation View</h2>
+            <small>Interactive 360° Inspection Studio</small>
+          </div>
+          <button type="button" class="evm-rotation-close-btn" id="evmCloseRotationBtn" data-product-look-close
+            aria-label="Close studio">
+            <i class="bi bi-x-lg" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="evm-rotation-stage" data-product-look-stage>
+          <button type="button" class="evm-rot-nav-btn prev" id="evmRotPrevBtn" data-product-look-prev
+            aria-label="Previous rotation frame">
+            <i class="bi bi-chevron-left" aria-hidden="true"></i>
+          </button>
+          <div class="evm-rotation-image-wrap" id="evmRotationDragZone">
+            <img id="evmRotationFrameImg" data-product-look-image alt="360-degree vehicle view" hidden draggable="false">
+            <p class="evm-rotation-status evm-product-look-status" data-product-look-status role="status" aria-live="polite">
+              Loading rotation images…
+            </p>
+          </div>
+          <button type="button" class="evm-rot-nav-btn next" id="evmRotNextBtn" data-product-look-next
+            aria-label="Next rotation frame">
+            <i class="bi bi-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <p class="evm-rotation-footer">Drag horizontally or use the arrows to rotate the vehicle</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== POINT 13: CONTEXT-AWARE "TAAMSI - AI கேளுங்கள்" ASSISTANT ===== -->
+  <button type="button" id="evpAiBotTrigger" class="evp-floating-ai-btn" aria-label="Taamsi AI Assistant">
+    <i class="bi bi-robot" aria-hidden="true"></i>
+    <span>💬 Taamsi - AI கேளுங்கள்</span>
+  </button>
+
+  <aside class="evp-ai-drawer" id="evpAiDrawer" hidden aria-label="Taamsi AI Assistant Chat">
+    <div class="evp-ai-head">
+      <div>
+        <strong style="font-size:0.9rem;">Taamsi - AI கேளுங்கள்</strong>
+        <div style="font-size:0.7rem;opacity:0.85;" data-ai-context-model>rMAR eeVee Showroom Assistant</div>
+      </div>
+      <button type="button" class="btn-close btn-close-white" id="evpAiClose" aria-label="Close AI Assistant"></button>
+    </div>
+    <div class="evp-ai-messages" id="evpAiMessages">
+      <div class="evp-ai-msg evp-ai-msg--bot">
+        வணக்கம்! நான் Taamsi AI. இந்த வண்டியின் Range, விலைகள், Battery Warranty அல்லது EMI பற்றி எது வேண்டுமானாலும் கேளுங்கள்!
+      </div>
+    </div>
+    <div class="evp-ai-quick">
+      <button type="button" class="evp-ai-chip" data-ai-ask="Battery & Range என்ன?">Battery &amp; Range?</button>
+      <button type="button" class="evp-ai-chip" data-ai-ask="Price & EMI எவ்வளவு?">Price &amp; EMI?</button>
+      <button type="button" class="evp-ai-chip" data-ai-ask="Top Speed & Motor Power?">Top Speed?</button>
+      <button type="button" class="evp-ai-chip" data-ai-ask="Warranty எத்தனை வருடம்?">Warranty?</button>
+    </div>
+    <form class="evp-ai-form" id="evpAiForm">
+      <input type="text" id="evpAiInput" placeholder="உங்கள் கேள்வியை உள்ளிடவும்..." required>
+      <button type="submit" class="evp-wave-btn" style="padding:6px 14px;"><i class="bi bi-send-fill"></i></button>
+    </form>
+  </aside>
+
+  <div class="evm-share-toast" id="evmShareToast" hidden role="status">Direct Vehicle Link Copied!</div>
+
+  <footer class="footer-premium">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-brand-link" aria-label="Taamsi Technology - Home">
+            <span class="brand-logo-footer"><img src="images/taamsi-logo-official.png" alt="" class="brand-logo-img"
+                width="48" height="48" loading="lazy" decoding="async"></span>
+            <span class="footer-brand-text">
+              <span class="brand-text-footer">Taamsi Technology</span>
+              <span class="brand-tagline-footer">One Company. Multiple Solutions.</span>
+            </span>
+          </a>
+          <p class="footer-blurb">Building tomorrow's technology ecosystem.</p>
+        </div>
+        <nav class="footer-col" aria-labelledby="ftLinks">
+          <h2 class="footer-heading" id="ftLinks">Quick Links</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-col">
+          <h2 class="footer-heading">Contact</h2>
+          <address class="footer-address">
+            2/8/250, Surrandai Road,<br>
+            Elathur&ndash;627803, Tenkasi,<br>
+            Tamilnadu, India.
+          </address>
+          <ul class="footer-contact">
+            <li><span>Mobile</span><a href="tel:+917373611500">+91 73736 11500</a></li>
+            <li><span>Mail</span><a href="mailto:taamsi.mail@gmail.com">taamsi.mail@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; <span data-year>2026</span> Taamsi Technology. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="42" height="42" viewBox="0 0 54 54" aria-hidden="true">
+      <circle class="bg" cx="27" cy="27" r="24" fill="none" stroke-width="2"></circle>
+      <circle class="progress" id="progressCircle" cx="27" cy="27" r="24" fill="none" stroke-width="2"
+        stroke-linecap="round" stroke-dasharray="150.8" stroke-dashoffset="150.8"></circle>
+    </svg>
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/site.js"></script>
+  <script>
+    /* ---------- Product Filter ---------- */
+    (function () {
+      var wrap = document.querySelector('[data-evp-filters]');
+      var grid = document.querySelector('[data-evp-grid]');
+      if (!wrap || !grid) return;
+
+      wrap.addEventListener('click', function (e) {
+        var btn = e.target.closest('.evp-filter');
+        if (!btn) return;
+        var group = btn.getAttribute('data-filter');
+
+        Array.prototype.forEach.call(wrap.children, function (b) {
+          b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+        });
+
+        var visibleCount = 0;
+        Array.prototype.forEach.call(grid.querySelectorAll('.evp-card'), function (c) {
+          var show = group === 'all' || c.getAttribute('data-group') === group;
+          c.hidden = !show;
+          if (show) visibleCount += 1;
+        });
+        var empty = grid.querySelector('[data-filter-empty]');
+        if (empty) empty.hidden = visibleCount > 0;
+      });
+    })();
+
+    /* ---------- Product Catalogue & Top 15 OEM Hierarchy ---------- */
+    var UNVERIFIED_SPEC = 'Confirm with dealership';
+    var PRODUCT_ASSET_FOLDERS = {
+      'svm-prana-elite-2-0': 'prodct_card_img/Prana/elite/',
+      'svm-prana-grand-2-0': 'prodct_card_img/Prana/grand/',
+      'pure-epluto-7g-cx': 'prodct_card_img/Pure/epluto 7g cx/',
+      'pure-epluto-7g': 'prodct_card_img/Pure/epluto 7g/',
+      'pure-epluto-7g-pro': 'prodct_card_img/Pure/epluto 7g pro/',
+      'pure-epluto-7g-max': 'prodct_card_img/Pure/epluto 7g max/',
+      'pure-etrance-neo': 'prodct_card_img/Pure/neo extrance/',
+      'pure-etrance-neo-sx': 'prodct_card_img/Pure/neo extrance sx/',
+      'pure-etrance-neo-plus': 'prodct_card_img/Pure/neo extrance sx/',
+      'pure-ecodryft': 'prodct_card_img/Pure/ecodryft 350/',
+      'pure-ecodryft-350': 'prodct_card_img/Pure/ecodryft 350/',
+      'upcot-xl-1500': 'prodct_card_img/upcot/upcot xl1500/',
+      'upcot-xl-2100': 'prodct_card_img/upcot/upcot xl2100/',
+      'upcot-buraq': 'prodct_card_img/upcot/upcot buraq/',
+      'skandaa-master-125e': 'prodct_card_img/skandaa/skandaa master 125E/',
+      'skandaa-jinniu': 'prodct_card_img/skandaa/Skandaa jinnu/',
+      'skandaa-kira-ev': 'prodct_card_img/skandaa/skandaa kira ev/',
+      'skandaa-miya-pro': 'prodct_card_img/skandaa/Skandaa mia pro/',
+      'urban-legent-sl': 'prodct_card_img/urban/legend sl/',
+      'urban-fusion-dl': 'prodct_card_img/urban/fusion dl/',
+      'urban-i-cruze-vibe': 'prodct_card_img/urban/vibe/',
+      'urban-raptor-2-0': 'prodct_card_img/urban/rapotor 2.0/'
+    };
+
+    var PRODUCT_PRICE_ESTIMATES = {
+      'svm-prana-elite-2-0': [189999, 6299],
+      'svm-prana-grand-2-0': [154999, 4999],
+      'pure-epluto-7g-cx': [119999, 3450],
+      'pure-epluto-7g': [124999, 3575],
+      'pure-epluto-7g-pro': [129999, 3700],
+      'pure-epluto-7g-max': [134999, 3825],
+      'pure-etrance-neo': [139999, 3950],
+      'pure-etrance-neo-sx': [144999, 4075],
+      'pure-etrance-neo-plus': [149999, 4200],
+      'pure-ecodryft': [154999, 4325],
+      'pure-ecodryft-350': [159999, 4450],
+      'upcot-xl-1500': [164999, 4575],
+      'upcot-xl-2100': [169999, 4700],
+      'upcot-buraq': [174999, 4825],
+      'skandaa-master-125e': [179999, 4950],
+      'skandaa-jinniu': [184999, 5075],
+      'skandaa-kira-ev': [189999, 5200],
+      'skandaa-miya': [194999, 5325],
+      'skandaa-miya-pro': [196999, 5450],
+      'urban-legent-sl': [197499, 5575],
+      'urban-fusion-dl': [197999, 5700],
+      'urban-i-cruze-vibe': [198200, 5800],
+      'urban-raptor-2-0': [198500, 5899]
+    };
+
+    function formatIndianRupees(amount) {
+      return '₹' + amount.toLocaleString('en-IN');
+    }
+
+    function resolveProductAssetUrl(path) {
+      return new URL(encodeURI(path), document.baseURI).href;
+    }
+
+    function productAssetFolder(modelId) {
+      return PRODUCT_ASSET_FOLDERS[modelId] || ('prodct_card_img/' + modelId + '/');
+    }
+
+    function catalogProduct(id, brand, name, group, kind, verified, fallbackImage, imgClass) {
+      var folder = productAssetFolder(id);
+      var estimate = PRODUCT_PRICE_ESTIMATES[id] || [125000, 3999];
+      return {
+        id: id,
+        brand: brand,
+        name: name,
+        group: group,
+        kind: kind,
+        range: verified.range || '110-150 km',
+        speed: verified.topSpeed || '60 km/h',
+        price: formatIndianRupees(estimate[0]),
+        onRoad: formatIndianRupees(Math.round(estimate[0] * 1.11 / 100) * 100),
+        emi: formatIndianRupees(estimate[1]) + '/month',
+        folder: folder,
+        images: Array.isArray(verified.images) ? verified.images.slice() : [],
+        cardImage: verified.cardImage || (Array.isArray(verified.images) && verified.images[0]) || fallbackImage,
+        rotationFrames: Array.isArray(verified.rotationFrames) ? verified.rotationFrames.slice() : [],
+        activeColor: 'blue',
+        colorVariants: Array.isArray(verified.colorVariants) ? verified.colorVariants : [],
+        fallbackImage: fallbackImage,
+        imgClass: imgClass,
+        desc: verified.desc || ('Explore the ' + name + ' by ' + brand + ' — engineered for dependable electric mobility across Tenkasi District.'),
+        oem15: Object.assign({
+          colours: verified.colours || 'Crimson Red, Cobalt Blue, Midnight Black',
+          topSpeed: verified.topSpeed || '60 km/h',
+          motorPower: verified.motorPower || '2.2 kW - 3.0 kW Peak',
+          motorName: verified.motorName || 'High-Torque Brushless DC (BLDC) Hub Motor',
+          controller: verified.controller || 'Smart Vector Sine-Wave Regenerative Controller',
+          batteryType: verified.batteryType || 'Lithium-Ion LFP (IP67 Weatherproof Enclosure)',
+          batteryCapacity: verified.batteryCapacity || '2.4 kWh - 3.5 kWh',
+          amps: verified.amps || '72V / 45Ah - 60Ah Smart BMS',
+          chargingTime: verified.chargingTime || '4 to 5 Hours (0-100%)',
+          range: verified.range || '110 - 150 km per charge',
+          ridingModes: verified.ridingModes || 'Eco · City · Sport · Reverse Assist',
+          loadCapacity: verified.loadCapacity || '150 - 180 kg',
+          warranty: verified.warranty || '3 to 5 Years / 50,000 km OEM Warranty'
+        }, verified)
+      };
+    }
+
+    var PRODUCTS = [
+      {
+        id: 'svm-prana-elite-2-0',
+        aliasId: 'ev15',
+        brand: 'SVM PRANA',
+        name: 'PRANA Elite 2.0',
+        kind: 'Premium Electric Sports Motorcycle',
+        group: 'prana',
+        folder: PRODUCT_ASSET_FOLDERS['svm-prana-elite-2-0'],
+        range: '150 - 250 km',
+        speed: '123 km/h',
+        price: '₹1,89,999',
+        onRoad: '₹2,09,000',
+        emi: '₹6,299/month',
+        activeColor: 'blue',
+        colorVariants: [
+          {
+            name: 'Crimson Red',
+            slug: 'red',
+            hex: '#DC2626',
+            images: ['prodct_card_img/Prana/elite/elitered.png', 'prodct_card_img/Prana/elite/eliteRed1.jpg']
+          },
+          {
+            name: 'Cobalt Blue',
+            slug: 'blue',
+            hex: '#2563EB',
+            media: [
+              {type: 'image', src: 'prodct_card_img/Prana/elite/eliteblue1.png', thumb: 'prodct_card_img/Prana/elite/eliteblue1.png'},
+              {type: 'image', src: 'prodct_card_img/Prana/elite/eliteblue2.png', thumb: 'prodct_card_img/Prana/elite/eliteblue2.png'},
+              {
+                type: 'video',
+                src: 'https://www.youtube-nocookie.com/embed/MF5tzM8kJTQ?autoplay=1&mute=1&loop=1&playlist=MF5tzM8kJTQ&controls=0&modestbranding=1&playsinline=1',
+                localSrc: 'prodct_card_img/Prana/elite/PRANA Elite _ Born to Dominate the Track _ Electric Supremacy #srivaru #prana #ebike #ev_1080p60.mp4',
+                thumb: 'prodct_card_img/Prana/elite/eliteblue2.png'
+              }
+            ]
+          },
+          {
+            name: 'Midnight Black',
+            slug: 'black',
+            hex: '#111827',
+            images: ['prodct_card_img/Prana/elite/eliteblack.png', 'prodct_card_img/Prana/elite/eliteblackfront.webp']
+          }
+        ],
+        images: [
+          'prodct_card_img/Prana/elite/eliteblue2.png',
+          'prodct_card_img/Prana/elite/elitered.png',
+          'prodct_card_img/Prana/elite/eliteBlue3.jpg'
+        ],
+        cardImage: 'prodct_card_img/Prana/elite/eliteblue2.png',
+        fallbackImage: 'prodct_card_img/Prana/elite/eliteblue2.png',
+        imgClass: 2,
+        desc: 'The SVM PRANA Elite 2.0 is built for high-performance electric riding with LFP battery architecture and dual petal disc braking.',
+        oem15: {
+          colours: 'Crimson Red, Cobalt Blue, Midnight Black',
+          topSpeed: '123 km/h',
+          motorPower: '10 kW Peak',
+          motorName: 'High-Torque Brushless DC (BLDC) Hub Motor',
+          controller: 'Smart Vector Sine-Wave Regenerative Controller',
+          batteryType: 'Lithium-Ion (LFP, IP67 Weatherproof Enclosure)',
+          batteryCapacity: '8.44 kWh',
+          amps: '72V 60Ah High-Discharge Architecture',
+          chargingTime: '4h 40m to 7h 30m (15A Socket / Fast Charge)',
+          range: '150 km (City) / Up to 250 km (Eco Mode)',
+          ridingModes: 'Practice · Drive · Sports · Reverse Mode',
+          loadCapacity: '180 kg',
+          warranty: 'Up to 5 Years / 80,000 km OEM Warranty'
+        }
+      },
+      catalogProduct('svm-prana-grand-2-0', 'SVM PRANA', 'PRANA Grand 2.0', 'prana', 'Electric Sports Motorcycle', {
+        colours: 'Deep Maroon, Cosmic Black',
+        topSpeed: '123 km/h',
+        motorPower: '10 kW Peak (38 Nm Torque)',
+        motorName: 'BLDC High-Performance Hub Motor',
+        controller: 'Sine-Wave Vector Controller',
+        batteryType: 'LFP (IP67 Enclosure)',
+        batteryCapacity: '5.0 kWh',
+        amps: '72V 50Ah',
+        chargingTime: '4h 40m (230V 15A)',
+        range: '150 km',
+        ridingModes: 'Eco · Drive · Sport · Reverse',
+        loadCapacity: '180 kg',
+        warranty: 'Up to 5 Years / 80,000 km',
+        colorVariants: [
+          {name: 'Deep Maroon', slug: 'maroon', hex: '#831843', images: ['prodct_card_img/Prana/grand/grandmaroon.png']}
+        ]
+      }, 'prodct_card_img/Prana/grand/grandmaroon.png', 2),
+
+      catalogProduct('pure-epluto-7g-cx', 'PURE EV', 'PURE ePluto 7G CX', 'pure', 'Electric Scooter', {
+        batteryCapacity: '1.8 kWh',
+        range: '70-101 km',
+        topSpeed: '47 km/h',
+        motorPower: '1.5 kW Peak',
+        amps: '60V 30Ah',
+        warranty: 'Up to 10 years / 40,000 km extended warranty',
+        cardImage: 'prodct_card_img/Pure/epluto 7g cx/images (2).jpg',
+        images: ['prodct_card_img/Pure/epluto 7g cx/images (2).jpg', 'prodct_card_img/Pure/epluto 7g cx/images (4).jpg']
+      }, 'images/rMAReeVee.png', 3),
+
+      catalogProduct('pure-epluto-7g', 'PURE EV', 'PURE ePluto 7G', 'pure', 'Electric Scooter', {
+        batteryCapacity: '2.4 kWh',
+        range: '90-151 km',
+        topSpeed: '60 km/h',
+        motorPower: '2.2 kW Peak',
+        amps: '60V 40Ah',
+        warranty: 'Up to 10 years / 50,000 km extended warranty',
+        cardImage: 'prodct_card_img/Pure/epluto 7g/red.webp',
+        images: [
+          'prodct_card_img/Pure/epluto 7g/red.webp',
+          'prodct_card_img/Pure/epluto 7g/epluto1.png',
+          'prodct_card_img/Pure/epluto 7g/epluto2.png'
+        ],
+        rotationFrames: [
+          'prodct_card_img/Pure/epluto 7g/ROTATION/thumbnail1.png',
+          'prodct_card_img/Pure/epluto 7g/ROTATION/thumbnail2.png',
+          'prodct_card_img/Pure/epluto 7g/ROTATION/thumbnail3.png',
+          'prodct_card_img/Pure/epluto 7g/ROTATION/thumbnail4.png',
+          'prodct_card_img/Pure/epluto 7g/ROTATION/thumbnail5.png',
+          'prodct_card_img/Pure/epluto 7g/ROTATION/thumbnail6.png'
+        ]
+      }, 'images/rMAReeVee.png', 3),
+
+      catalogProduct('pure-epluto-7g-pro', 'PURE EV', 'PURE ePluto 7G Pro', 'pure', 'Electric Scooter', {
+        batteryCapacity: '3.0 kWh',
+        range: '105-171 km',
+        topSpeed: '60 km/h',
+        motorPower: '2.4 kW Peak',
+        amps: '60V 50Ah',
+        cardImage: 'prodct_card_img/Pure/epluto 7g pro/card_image_pro.png',
+        images: [
+          'prodct_card_img/Pure/epluto 7g pro/card_image_pro.png',
+          'prodct_card_img/Pure/epluto 7g pro/pure-ev-epluto-7g-pro-electric-scooter-1000x1000.webp',
+          'prodct_card_img/Pure/epluto 7g pro/images (1).jpg',
+          'prodct_card_img/Pure/epluto 7g pro/images (2).jpg'
+        ]
+      }, 'images/rMAReeVee.png', 3),
+
+      catalogProduct('pure-epluto-7g-max', 'PURE EV', 'PURE ePluto 7G Max', 'pure', 'Electric Scooter', {
+        batteryCapacity: '3.5 kWh',
+        range: '120-211 km',
+        topSpeed: '60 km/h',
+        motorPower: '2.4 kW Peak',
+        amps: '60V 58Ah',
+        cardImage: 'prodct_card_img/Pure/epluto 7g max/card_image_max.png',
+        images: [
+          'prodct_card_img/Pure/epluto 7g max/card_image_max.png',
+          'prodct_card_img/Pure/epluto 7g max/7gpro1.png',
+          'prodct_card_img/Pure/epluto 7g max/7gpro2.png',
+          'prodct_card_img/Pure/epluto 7g max/7gpro3.webp'
+        ],
+        rotationFrames: [
+          'prodct_card_img/Pure/epluto 7g max/ROTATION/thumbnail1.png',
+          'prodct_card_img/Pure/epluto 7g max/ROTATION/thumbnail2.png',
+          'prodct_card_img/Pure/epluto 7g max/ROTATION/thumbnail3.png',
+          'prodct_card_img/Pure/epluto 7g max/ROTATION/thumbnail4.png',
+          'prodct_card_img/Pure/epluto 7g max/ROTATION/thumbnail5.png',
+          'prodct_card_img/Pure/epluto 7g max/ROTATION/thumbnail6.png'
+        ]
+      }, 'images/bike3.png', 3),
+
+      catalogProduct('pure-etrance-neo', 'PURE EV', 'PURE Etrance Neo', 'pure', 'Electric Scooter', {
+        batteryCapacity: '2.4 kWh',
+        range: '90-151 km',
+        topSpeed: '60 km/h',
+        cardImage: 'prodct_card_img/Pure/neo extrance/images.jpg',
+        images: [
+          'prodct_card_img/Pure/neo extrance/images.jpg',
+          'prodct_card_img/Pure/neo extrance/images (1).jpg',
+          'prodct_card_img/Pure/neo extrance/images (2).jpg'
+        ]
+      }, 'images/rMAReeVee.png', 3),
+
+      catalogProduct('pure-etrance-neo-sx', 'PURE EV', 'PURE Etrance Neo SX', 'pure', 'Electric Scooter', {
+        batteryCapacity: '1.8 kWh',
+        range: '70-101 km',
+        topSpeed: '47 km/h',
+        cardImage: 'prodct_card_img/Pure/neo extrance sx/etrance neo sx.png',
+        images: [
+          'prodct_card_img/Pure/neo extrance sx/etrance neo sx.png',
+          'prodct_card_img/Pure/neo extrance sx/etrance_silver.png',
+          'prodct_card_img/Pure/neo extrance sx/images (3).jpg'
+        ],
+        rotationFrames: [
+          'prodct_card_img/Pure/neo extrance sx/ROTATION/thumbnail1.png',
+          'prodct_card_img/Pure/neo extrance sx/ROTATION/thumbnail2.png',
+          'prodct_card_img/Pure/neo extrance sx/ROTATION/thumbnail3.png',
+          'prodct_card_img/Pure/neo extrance sx/ROTATION/thumbnail4.png',
+          'prodct_card_img/Pure/neo extrance sx/ROTATION/thumbnail5.png',
+          'prodct_card_img/Pure/neo extrance sx/ROTATION/thumbnail6.png',
+          'prodct_card_img/Pure/neo extrance sx/ROTATION/thumbnail7.png'
+        ]
+      }, 'images/rMAReeVee.png', 3),
+
+      catalogProduct('pure-etrance-neo-plus', 'PURE EV', 'PURE eTrance Neo+', 'pure', 'Electric Scooter', {
+        batteryCapacity: '3.0 kWh',
+        range: '101-171 km',
+        topSpeed: '60 km/h',
+        cardImage: 'prodct_card_img/Pure/neo extrance sx/neo_plus.png',
+        images: [
+          'prodct_card_img/Pure/neo extrance sx/neo_plus.png',
+          'prodct_card_img/Pure/neo extrance sx/etrance_silver_back.png'
+        ]
+      }, 'images/rMAReeVee.png', 3),
+
+      catalogProduct('pure-ecodryft', 'PURE EV', 'PURE ecoDryft', 'pure', 'Electric Motorcycle', {
+        batteryCapacity: '3.0 kWh',
+        range: '85-151 km',
+        topSpeed: '75 km/h',
+        cardImage: 'prodct_card_img/Pure/ecodryft 350/ecodryft1.png',
+        images: [
+          'prodct_card_img/Pure/ecodryft 350/ecodryft1.png',
+          'prodct_card_img/Pure/ecodryft 350/ecodryft2.png',
+          'prodct_card_img/Pure/ecodryft 350/ecodryft3.webp'
+        ]
+      }, 'images/rMAReeVee.png', 3),
+
+      catalogProduct('pure-ecodryft-350', 'PURE EV', 'PURE ecoDryft 350', 'pure', 'Electric Motorcycle', {
+        batteryCapacity: '3.5 kWh',
+        range: '105-171 km',
+        topSpeed: '75 km/h',
+        motorPower: '3.0 kW Peak',
+        cardImage: 'prodct_card_img/Pure/ecodryft 350/ecodryft1.png',
+        images: [
+          'prodct_card_img/Pure/ecodryft 350/ecodryft1.png',
+          'prodct_card_img/Pure/ecodryft 350/ecodryft2.png',
+          'prodct_card_img/Pure/ecodryft 350/ecodryft3.webp'
+        ],
+        rotationFrames: [
+          'prodct_card_img/Pure/ecodryft 350/ROTATION/thumbnail1.png',
+          'prodct_card_img/Pure/ecodryft 350/ROTATION/thumbnail2.png',
+          'prodct_card_img/Pure/ecodryft 350/ROTATION/thumbnail3.png',
+          'prodct_card_img/Pure/ecodryft 350/ROTATION/thumbnail4.png',
+          'prodct_card_img/Pure/ecodryft 350/ROTATION/thumbnail5.png',
+          'prodct_card_img/Pure/ecodryft 350/ROTATION/thumbnail6.png',
+          'prodct_card_img/Pure/ecodryft 350/ROTATION/thumbnail7.png',
+          'prodct_card_img/Pure/ecodryft 350/ROTATION/view8.png'
+        ]
+      }, 'images/rMAReeVee.png', 3),
+
+      catalogProduct('upcot-xl-1500', 'UPCOT', 'UPCOT XL 1500', 'upcot', 'Commercial Electric Cargo Loader', {
+        batteryCapacity: '5.3 - 5.4 kWh',
+        range: '120-150 km',
+        topSpeed: '55 km/h',
+        motorPower: '1.6 kW Heavy-Duty BLDC',
+        loadCapacity: '300 kg Payload'
+      }, 'images/bike1.png', 1),
+
+      catalogProduct('upcot-xl-2100', 'UPCOT', 'UPCOT XL 2100', 'upcot', 'Commercial Utility EV', {
+        range: '150-170 km',
+        topSpeed: '60 km/h',
+        loadCapacity: '350 kg Payload'
+      }, 'images/bike1.png', 1),
+
+      catalogProduct('upcot-buraq', 'UPCOT', 'UPCOT Buraq', 'upcot', 'Electric Family Scooter Car', {
+        range: '160-200 km',
+        topSpeed: '60 km/h',
+        motorPower: '1.6 kW Peak'
+      }, 'images/rMAReeVee.png', 3),
+
+      catalogProduct('skandaa-master-125e', 'SKANDAA', 'SKANDAA Master 125E', 'skandaa', 'Electric Commuter Scooter', {
+        cardImage: 'prodct_card_img/skandaa/skandaa master 125E/MAster 125e.jpg',
+        images: [
+          'prodct_card_img/skandaa/skandaa master 125E/MAster 125e.jpg',
+          'prodct_card_img/skandaa/skandaa master 125E/IMG_20250325_144011-Photoroom-1024x768.png',
+          'prodct_card_img/skandaa/skandaa master 125E/IMG_20250325_144018-Photoroom-Photoroom-1024x768.webp'
+        ]
+      }, 'images/rMAReeVee.png', 3),
+
+      catalogProduct('skandaa-jinniu', 'SKANDAA', 'SKANDAA Jinniu', 'skandaa', 'Electric Commuter Scooter', {
+        cardImage: 'prodct_card_img/skandaa/Skandaa jinnu/images.jpg',
+        images: [
+          'prodct_card_img/skandaa/Skandaa jinnu/images.jpg',
+          'prodct_card_img/skandaa/Skandaa jinnu/10.webp',
+          'prodct_card_img/skandaa/Skandaa jinnu/5.webp',
+          'prodct_card_img/skandaa/Skandaa jinnu/6.webp'
+        ]
+      }, 'images/rMAReeVee.png', 3),
+
+      catalogProduct('skandaa-kira-ev', 'SKANDAA', 'SKANDAA Kira EV', 'skandaa', 'Electric Commuter Scooter', {
+        cardImage: 'prodct_card_img/skandaa/skandaa kira ev/DSC_0434-removebg-preview.png',
+        images: [
+          'prodct_card_img/skandaa/skandaa kira ev/DSC_0434-removebg-preview.png',
+          'prodct_card_img/skandaa/skandaa kira ev/IMG_20251006_144441.png-1024x781.webp',
+          'prodct_card_img/skandaa/skandaa kira ev/IMG_20251006_150723.png.webp'
+        ]
+      }, 'images/rMAReeVee.png', 3),
+
+      catalogProduct('skandaa-miya-pro', 'SKANDAA', 'SKANDAA Miya Pro', 'skandaa', 'Electric Commuter Scooter', {
+        cardImage: 'prodct_card_img/skandaa/Skandaa mia pro/IMG_20251006_143425.png-1024x767.webp',
+        images: [
+          'prodct_card_img/skandaa/Skandaa mia pro/IMG_20251006_143425.png-1024x767.webp',
+          'prodct_card_img/skandaa/Skandaa mia pro/IMG_20251006_144441.png-1024x781.webp',
+          'prodct_card_img/skandaa/Skandaa mia pro/IMG_20251007_105719.png-1024x448.webp'
+        ]
+      }, 'images/rMAReeVee.png', 3),
+
+      catalogProduct('urban-legent-sl', 'URBAN', 'URBAN Legent (SL)', 'urban', 'Electric Commuter Scooter', {
+        cardImage: 'prodct_card_img/urban/legend sl/images.jpg',
+        images: ['prodct_card_img/urban/legend sl/images.jpg', 'prodct_card_img/urban/legend sl/images (1).jpg', 'prodct_card_img/urban/legend sl/images (2).jpg']
+      }, 'images/rMAReeVee.png', 3),
+
+      catalogProduct('urban-fusion-dl', 'URBAN', 'URBAN Fusion (DL)', 'urban', 'Electric Commuter Scooter', {
+        cardImage: 'prodct_card_img/urban/fusion dl/images.jpg',
+        images: ['prodct_card_img/urban/fusion dl/images.jpg', 'prodct_card_img/urban/fusion dl/images (1).jpg', 'prodct_card_img/urban/fusion dl/images (2).jpg']
+      }, 'images/rMAReeVee.png', 3),
+
+      catalogProduct('urban-i-cruze-vibe', 'URBAN', 'URBAN I Cruze Vibe', 'urban', 'Electric Commuter Scooter', {
+        cardImage: 'prodct_card_img/urban/vibe/images.jpg',
+        images: ['prodct_card_img/urban/vibe/images.jpg', 'prodct_card_img/urban/vibe/images (1).jpg', 'prodct_card_img/urban/vibe/images (2).jpg']
+      }, 'images/rMAReeVee.png', 3),
+
+      catalogProduct('urban-raptor-2-0', 'URBAN', 'URBAN Raptor 2.0', 'urban', 'Electric Commuter Scooter', {
+        cardImage: 'prodct_card_img/urban/rapotor 2.0/images.jpg',
+        images: ['prodct_card_img/urban/rapotor 2.0/images.jpg', 'prodct_card_img/urban/rapotor 2.0/images (1).jpg', 'prodct_card_img/urban/rapotor 2.0/images (2).jpg']
+      }, 'images/rMAReeVee.png', 3)
+    ];
+
+    var selectedProductVariants = Object.create(null);
+
+    function productVariants(product) {
+      if (!Array.isArray(product.colorVariants)) return [];
+      return product.colorVariants.map(function (variant) {
+        var media = Array.isArray(variant.media)
+          ? variant.media.map(function (item) {
+            return {
+              type: item.type,
+              src: item.type === 'video' && item.localSrc
+                ? resolveProductAssetUrl(item.localSrc)
+                : (item.type === 'image' ? resolveProductAssetUrl(item.src) : item.src),
+              thumb: item.thumb ? resolveProductAssetUrl(item.thumb) : (item.type === 'image' ? resolveProductAssetUrl(item.src) : ''),
+              embedSrc: item.embedSrc || (item.type === 'video' && /^https?:\/\//i.test(item.src) ? item.src : '')
+            };
+          })
+          : (variant.images || []).map(function (img) {
+            var s = resolveProductAssetUrl(img);
+            return {type: 'image', src: s, thumb: s};
+          });
+        return {
+          name: variant.name,
+          slug: variant.slug,
+          value: variant.hex,
+          media: media,
+          images: media.filter(function (m) {return m.type === 'image';}).map(function (m) {return m.src;})
+        };
+      });
+    }
+
+    function selectedProductVariant(product) {
+      var variants = productVariants(product);
+      if (!variants.length) return null;
+      var selected = selectedProductVariants[product.id];
+      var match = variants.find(function (v) {return selected && v.slug === selected.slug;});
+      if (!match) {
+        match = variants.find(function (v) {return v.slug === product.activeColor;}) || variants[0];
+        selectedProductVariants[product.id] = match;
+      }
+      return match;
+    }
+
+    /* ---------- POINT 5 & 7: Uniform Cards & One-Time Entrance Observer ---------- */
+    (function () {
+      var grid = document.querySelector('[data-evp-grid]');
+      if (!grid) return;
+
+      PRODUCTS.forEach(function (product, idx) {
+        var card = document.createElement('article');
+        card.className = 'evp-card';
+        card.setAttribute('data-group', product.group);
+        card.setAttribute('data-product-card', product.id);
+        card.style.setProperty('--reveal-order', idx % 6);
+
+        var openButton = document.createElement('button');
+        openButton.type = 'button';
+        openButton.className = 'evp-card-open';
+        openButton.setAttribute('data-open-product', product.id);
+
+        var shot = document.createElement('div');
+        shot.className = 'evp-card-shot';
+        var image = document.createElement('img');
+        image.src = product.cardImage || product.fallbackImage;
+        image.alt = product.name;
+        image.loading = 'lazy';
+        image.onerror = function () {image.src = product.fallbackImage || 'images/bike2.png';};
+        shot.appendChild(image);
+
+        var body = document.createElement('div');
+        body.className = 'evp-card-body';
+
+        var brand = document.createElement('span');
+        brand.className = 'evp-card-brand';
+        brand.textContent = product.brand;
+
+        var name = document.createElement('span');
+        name.className = 'evp-card-name';
+        name.textContent = product.name;
+
+        var priceRow = document.createElement('div');
+        priceRow.className = 'evp-card-price-row';
+        priceRow.innerHTML = '<span class="evp-card-price"><span class="evp-card-price-label">Ex-Showroom</span><strong class="evp-card-price-value">' + product.price + '</strong></span>';
+
+        var kind = document.createElement('span');
+        kind.className = 'evp-card-kind';
+        kind.textContent = product.kind;
+
+        /* Viva-Housing Wave Button on Each Card */
+        var waveCta = document.createElement('span');
+        waveCta.className = 'evp-wave-btn mt-auto w-100';
+        waveCta.innerHTML = '<i class="bi bi-lightning-charge-fill"></i> ' + product.range + ' · Inspect Model';
+
+        body.appendChild(brand);
+        body.appendChild(name);
+        body.appendChild(priceRow);
+        body.appendChild(kind);
+        body.appendChild(waveCta);
+
+        openButton.appendChild(shot);
+        openButton.appendChild(body);
+        card.appendChild(openButton);
+        grid.appendChild(card);
+      });
+
+      /* POINT 7: Strictly ONCE per session entrance animation */
+      var cards = grid.querySelectorAll('.evp-card');
+      if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        grid.classList.add('evp-grid--reveal-ready');
+        var revealObserver = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-revealed');
+              obs.unobserve(entry.target); /* ONE-TIME ONLY */
+            }
+          });
+        }, {threshold: 0.14});
+        Array.prototype.forEach.call(cards, function (c) {revealObserver.observe(c);});
+      } else {
+        Array.prototype.forEach.call(cards, function (c) {c.classList.add('is-revealed');});
+      }
+    })();
+
+    /* ---------- Savings Calculator ---------- */
+    (function () {
+      var daily = document.getElementById('calcDaily');
+      if (!daily) return;
+      var elecRate = document.getElementById('calcElec');
+      var petrolRate = document.getElementById('calcPetrol');
+      var years = document.getElementById('calcYears');
+      var mileage = document.getElementById('calcMileage');
+      var vehicle = document.getElementById('calcVehicle');
+
+      [vehicle, document.querySelector('[data-ctd-vehicle]')].forEach(function (sel) {
+        if (!sel) return;
+        sel.innerHTML = '';
+        PRODUCTS.forEach(function (p) {
+          var o = document.createElement('option');
+          o.textContent = p.name;
+          sel.appendChild(o);
+        });
+      });
+
+      function inr(n) {return '\u20B9' + Math.round(n).toLocaleString('en-IN');}
+
+      function calc() {
+        var km = parseFloat(daily.value) || 40;
+        var elec = parseFloat(elecRate.value) || 8;
+        var petrol = parseFloat(petrolRate.value) || 100;
+        var yrs = parseFloat(years.value) || 5;
+        var mpl = parseFloat(mileage.value) || 50;
+
+        var totalKm = km * 365 * yrs;
+        var petrolCost = (totalKm / mpl) * petrol;
+        var elecCost = (totalKm / 45) * elec;
+        var savings = Math.max(0, petrolCost - elecCost);
+        var co2Kg = (totalKm / mpl) * 2.31;
+        var pct = petrolCost > 0 ? (savings / petrolCost) * 100 : 0;
+
+        document.querySelector('[data-out="petrol"]').textContent = inr(petrolCost);
+        document.querySelector('[data-out="elec"]').textContent = inr(elecCost);
+        document.querySelector('[data-out="savings"]').textContent = inr(savings);
+        document.querySelector('[data-out="co2"]').textContent = co2Kg >= 1000 ? (co2Kg / 1000).toFixed(2) + ' tons' : Math.round(co2Kg) + ' kg';
+        document.querySelector('[data-out="pct"]').textContent = Math.round(pct) + '%';
+        document.querySelectorAll('[data-out-years]').forEach(function (el) {el.textContent = yrs;});
+
+        var max = Math.max(petrolCost, elecCost, 1);
+        document.querySelector('[data-bar-petrol]').style.width = Math.max(2, (petrolCost / max) * 100) + '%';
+        document.querySelector('[data-bar-ev]').style.width = Math.max(2, (elecCost / max) * 100) + '%';
+        document.querySelector('[data-donut]').style.strokeDashoffset = String(327 * (1 - Math.min(1, pct / 100)));
+      }
+
+      [daily, elecRate, petrolRate, years, mileage, vehicle].forEach(function (el) {
+        if (el) {el.addEventListener('input', calc); el.addEventListener('change', calc);}
+      });
+      calc();
+    })();
+
+    /* ---------- Inspection Controller (14-Point Specification) ---------- */
+    (function () {
+      var modal = document.querySelector('[data-modal]');
+      if (!modal) return;
+
+      var stage = modal.querySelector('#evmMainStage');
+      var mainImg = modal.querySelector('[data-evm-main]');
+      var zoomLens = modal.querySelector('[data-zoom-lens]');
+      var zoomFlyout = modal.querySelector('[data-zoom-flyout]');
+      var thumbs = modal.querySelector('[data-evm-thumbs]');
+      var collageDrawer = modal.querySelector('[data-collage-drawer]');
+      var collageGrid = modal.querySelector('[data-collage-grid]');
+      var inspectionHotspots = modal.querySelector('[data-inspection-hotspots]');
+      var batteryFrame = modal.querySelector('[data-hotspot-battery-frame]');
+      var inspectionCallout = modal.querySelector('[data-inspection-callout]');
+      var inspectionPath = modal.querySelector('[data-inspection-path]');
+      var inspectionConnector = modal.querySelector('[data-inspection-connector]');
+      var photoLightbox = modal.querySelector('[data-photo-lightbox]');
+      var photoLightboxImage = modal.querySelector('[data-photo-lightbox-image]');
+      var inspectionStatus = modal.querySelector('[data-inspection-status]');
+      var video = modal.querySelector('[data-gallery-video]');
+      var videoEmbed = modal.querySelector('[data-gallery-embed]');
+      var colorSelection = modal.querySelector('[data-evm-color-selection]');
+      var productLookButton = modal.querySelector('[data-product-look]');
+      var productLookViewer = modal.querySelector('[data-product-look-viewer]');
+      var productLookStage = modal.querySelector('[data-product-look-stage]');
+      var productLookImage = modal.querySelector('[data-product-look-image]');
+      var productLookStatus = modal.querySelector('[data-product-look-status]');
+      var tdForm = modal.querySelector('[data-td-form]');
+      var tdOk = modal.querySelector('[data-td-ok]');
+      var tdVehicle = modal.querySelector('[data-td-vehicle]');
+
+      var byId = {};
+      PRODUCTS.forEach(function (p) {
+        byId[p.id] = p;
+        if (p.aliasId) byId[p.aliasId] = p;
+      });
+
+      var current = null;
+      var galleryItems = [];
+      var activeGalleryItem = null;
+      var imageIndex = 0;
+      var inspectionEnabled = false;
+      var productLookFrames = [];
+      var productLookIndex = 0;
+
+      /* POINT 12: Angle-Aware Hotspots with Separate Handlebar & Cockpit */
+      var inspectionParts = {
+        front_tyre: {name: 'Front Radial Tyre', spec: 'Tubeless radial tyre & alloy wheel', benefit: 'Superior road grip and cornering stability.'},
+        front_disc: {name: 'Dual Petal Disc Brake', spec: 'Hydraulic disc caliper with CBS/SBS', benefit: 'Responsive all-weather stopping power.'},
+        headlight: {name: 'Projector LED Headlight', spec: 'High-lumen LED projector headlamp & DRL', benefit: 'Crystal-clear night visibility.'},
+        handlebar: {name: 'Aerodynamic Handlebar', spec: 'Ergonomic grip controls & mode switches', benefit: 'Effortless rider control and posture.'},
+        cockpit: {name: 'Smart Digital Cockpit', spec: 'Full-color TFT digital instrument cluster', benefit: 'Real-time speed, SOC, range and ride mode telemetry.'},
+        faux_tank: {name: 'Aerodynamic Tank Shroud', spec: 'Sculpted central sports body fairing', benefit: 'Enhances aerodynamics and knee grip.'},
+        battery_pack: {name: 'LFP High-Voltage Battery', spec: 'IP67 weather-sealed Lithium-Ion enclosure', benefit: 'High thermal safety and long cycle life.'},
+        split_seat: {name: 'Ergonomic Seat', spec: 'High-density contoured dual saddle', benefit: 'All-day rider and pillion comfort.'},
+        monoshock: {name: 'Rear Suspension', spec: 'Heavy-duty hydraulic shock absorber', benefit: 'Smooth damping over rough roads.'},
+        hub_motor: {name: 'BLDC Hub Motor', spec: 'High-torque sealed brushless drive motor', benefit: 'Instant torque delivery with zero lag.'},
+        footboard: {name: 'Footboard & Leg Area', spec: 'Spacious anti-skid rider platform', benefit: 'Comfortable leg room and utility space.'},
+        charging_port: {name: 'Waterproof Charging Socket', spec: '5-Pin AC smart charging port', benefit: 'Safe domestic 15A plug-and-play charging.'}
+      };
+
+      var VEHICLE_HOTSPOT_MAP = {
+        side_profile: [
+          {id: 'front_tyre', name: 'Front Radial Tyre', top: '72%', left: '70%'},
+          {id: 'front_disc', name: 'Dual Petal Disc Brake', top: '65%', left: '66%'},
+          {id: 'headlight', name: 'Projector Headlight', top: '40%', left: '69%'},
+          {id: 'handlebar', name: 'Aerodynamic Handlebar', top: '28%', left: '60%'},
+          {id: 'cockpit', name: 'Smart Digital Cockpit', top: '24%', left: '55%'},
+          {id: 'faux_tank', name: 'Faux Aerodynamic Tank', top: '39%', left: '48%'},
+          {id: 'battery_pack', name: 'LFP High-Voltage Battery', top: '56%', left: '48%', isBattery: true, width: '19%', height: '18%'},
+          {id: 'split_seat', name: 'Ergonomic Split Seat', top: '39%', left: '33%'},
+          {id: 'monoshock', name: 'Rear Monoshock Absorber', top: '57%', left: '25%'},
+          {id: 'hub_motor', name: 'BLDC Hub Motor', top: '74%', left: '14%'}
+        ],
+        front_view: [
+          {id: 'headlight', name: 'Projector Headlight', top: '36%', left: '50%'},
+          {id: 'handlebar', name: 'Handlebar Controls', top: '24%', left: '36%'},
+          {id: 'cockpit', name: 'Smart Digital Cockpit', top: '21%', left: '50%'},
+          {id: 'front_disc', name: 'Front Caliper & Forks', top: '60%', left: '44%'},
+          {id: 'front_tyre', name: 'Front Radial Tyre', top: '78%', left: '50%'}
+        ]
+      };
+
+      function inferAngle(item) {
+        var s = String((item && item.src) || '').toLowerCase();
+        if (/front/.test(s)) return 'front_view';
+        if (/eliteblue2/.test(s)) return 'side_left';
+        return 'side_profile';
+      }
+
+      function renderHotspots() {
+        inspectionHotspots.replaceChildren(batteryFrame);
+        batteryFrame.hidden = true;
+        if (!inspectionEnabled || !activeGalleryItem || activeGalleryItem.type !== 'image') return;
+
+        var angle = inferAngle(activeGalleryItem);
+        var list = (angle === 'front_view') ? VEHICLE_HOTSPOT_MAP.front_view : VEHICLE_HOTSPOT_MAP.side_profile;
+        if (angle === 'side_left') {
+          list = VEHICLE_HOTSPOT_MAP.side_profile.map(function (pt) {
+            return Object.assign({}, pt, {left: (100 - parseFloat(pt.left)) + '%'});
+          });
+        }
+
+        var rect = stage.getBoundingClientRect();
+        list.forEach(function (pt) {
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'evm-hotspot';
+          btn.style.left = pt.left;
+          btn.style.top = pt.top;
+          btn.setAttribute('data-part-id', pt.id);
+          btn.setAttribute('aria-label', pt.name);
+          if (pt.isBattery) {
+            btn.setAttribute('data-is-battery', 'true');
+            batteryFrame.style.left = pt.left;
+            batteryFrame.style.top = pt.top;
+            batteryFrame.style.width = pt.width || '19%';
+            batteryFrame.style.height = pt.height || '18%';
+          }
+          btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var info = inspectionParts[pt.id];
+            if (!info) return;
+            batteryFrame.hidden = !pt.isBattery;
+            modal.querySelector('[data-inspection-name]').textContent = pt.name || info.name;
+            modal.querySelector('[data-inspection-spec]').textContent = info.spec;
+            modal.querySelector('[data-inspection-benefit]').textContent = info.benefit;
+            var x = parseFloat(pt.left) * 10;
+            var y = parseFloat(pt.top) * 7.5;
+            inspectionPath.setAttribute('d', 'M ' + x + ' ' + y + ' H 620 V 145');
+            inspectionConnector.removeAttribute('hidden');
+            inspectionCallout.hidden = false;
+          });
+          inspectionHotspots.appendChild(btn);
+        });
+      }
+
+      function setInspectionMode(on) {
+        if (activeGalleryItem && activeGalleryItem.type === 'video') on = false;
+        inspectionEnabled = on;
+        inspectionHotspots.hidden = !on;
+        inspectionStatus.hidden = !on;
+        inspectionCallout.hidden = true;
+        batteryFrame.hidden = true;
+        inspectionConnector.setAttribute('hidden', '');
+        stage.classList.toggle('is-inspection-mode', on);
+        var toggle = modal.querySelector('[data-inspection-toggle]');
+        if (toggle) toggle.setAttribute('aria-pressed', on ? 'true' : 'false');
+        if (on) renderHotspots();
+      }
+
+      /* POINT 8: Standardized 15-Point OEM Hierarchy Table */
+      function render15PointSpecs(p) {
+        var table = modal.querySelector('[data-evm-tech-specs]');
+        table.replaceChildren();
+        var o = p.oem15 || {};
+        var rows = [
+          ['01', 'Company / Brand', p.brand],
+          ['02', 'Model Designation', p.name],
+          ['03', 'Available Colours', o.colours],
+          ['04', 'Top Speed (km/h)', o.topSpeed],
+          ['05', 'Motor Peak Power (kW)', o.motorPower],
+          ['06', 'Motor Type / Name', o.motorName],
+          ['07', 'Controller Unit', o.controller],
+          ['08', 'Battery Type & Enclosure', o.batteryType],
+          ['09', 'Battery Capacity (kWh)', o.batteryCapacity],
+          ['10', 'Amps / Voltage Rating', o.amps],
+          ['11', 'Charging Time (0-100%)', o.chargingTime],
+          ['12', 'Certified Battery Range', o.range],
+          ['13', 'Riding Modes (Range Bike)', o.ridingModes],
+          ['14', 'Load Carrying Capacity', o.loadCapacity],
+          ['15', 'Official Warranty Coverage', o.warranty]
+        ];
+        rows.forEach(function (r) {
+          var row = document.createElement('div');
+          row.className = 'spec-row';
+          row.innerHTML = '<span class="spec-idx">' + r[0] + '</span><span class="spec-label">' + r[1] + '</span><span class="spec-val">' + (r[2] || UNVERIFIED_SPEC) + '</span>';
+          table.appendChild(row);
+        });
+      }
+
+      /* POINT 2 & 14: Hover Thumbnails & Bajaj Auto Collage Grid */
+      function renderMediaGallery() {
+        thumbs.replaceChildren();
+        collageGrid.replaceChildren();
+
+        var imageItems = galleryItems.filter(function (i) {return i.type === 'image';});
+        modal.querySelector('[data-album-count]').textContent = Math.max(imageItems.length, 1) + '+ Images / Albums';
+
+        galleryItems.forEach(function (item, idx) {
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'evm-thumb' + (item.type === 'video' ? ' evm-thumb--video' : '');
+          btn.setAttribute('aria-current', idx === imageIndex ? 'true' : 'false');
+          var im = document.createElement('img');
+          im.src = item.thumb || item.src;
+          im.alt = '';
+          btn.appendChild(im);
+          if (item.type === 'video') {
+            var badge = document.createElement('span');
+            badge.className = 'evm-thumb-video-badge';
+            badge.innerHTML = '<i class="bi bi-play-circle-fill"></i>';
+            btn.appendChild(badge);
+          }
+          /* POINT 2: Hover switches main stage immediately */
+          btn.addEventListener('mouseenter', function () {
+            if (item.type === 'image') showGalleryItem(idx, false);
+          });
+          btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            showGalleryItem(idx, item.type === 'video');
+          });
+          thumbs.appendChild(btn);
+        });
+
+        /* Bajaj Pulsar NS400Z Asymmetric Collage */
+        imageItems.forEach(function (item, idx) {
+          var cell = document.createElement('button');
+          cell.type = 'button';
+          cell.className = 'evm-collage-item' + (idx === 0 ? ' is-hero' : '');
+          var img = document.createElement('img');
+          img.src = item.src;
+          img.alt = current.name + ' view ' + (idx + 1);
+          cell.appendChild(img);
+          cell.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var targetIdx = galleryItems.indexOf(item);
+            if (targetIdx >= 0) showGalleryItem(targetIdx, false);
+            collageDrawer.hidden = true;
+          });
+          collageGrid.appendChild(cell);
+        });
+      }
+
+      function showGalleryItem(idx, autoplay) {
+        if (!galleryItems.length) return;
+        imageIndex = (idx + galleryItems.length) % galleryItems.length;
+        activeGalleryItem = galleryItems[imageIndex];
+
+        Array.prototype.forEach.call(thumbs.children, function (t, i) {
+          t.setAttribute('aria-current', i === imageIndex ? 'true' : 'false');
+        });
+
+        var isVid = activeGalleryItem.type === 'video';
+        var compBtn = modal.querySelector('[data-inspection-toggle]');
+        compBtn.disabled = isVid;
+        if (isVid) {
+          setInspectionMode(false);
+          mainImg.hidden = true;
+          modal.querySelector('#evmSliderTrack').hidden = true;
+          if (activeGalleryItem.embedSrc) {
+            video.hidden = true;
+            videoEmbed.src = activeGalleryItem.embedSrc;
+            videoEmbed.hidden = false;
+          } else {
+            videoEmbed.hidden = true;
+            video.src = activeGalleryItem.src;
+            video.hidden = false;
+            if (autoplay) video.play().catch(function () {});
+          }
+        } else {
+          video.pause();
+          video.hidden = true;
+          videoEmbed.src = 'about:blank';
+          videoEmbed.hidden = true;
+          modal.querySelector('#evmSliderTrack').hidden = false;
+          mainImg.hidden = false;
+          mainImg.src = activeGalleryItem.src;
+          mainImg.alt = current.name;
+          if (!photoLightbox.hidden) photoLightboxImage.src = activeGalleryItem.src;
+          if (inspectionEnabled) renderHotspots();
+        }
+      }
+
+      function loadGalleryForProduct(p) {
+        var variant = selectedProductVariant(p);
+        var list = [];
+        if (variant && variant.media.length) {
+          list = variant.media.slice();
+        } else if (Array.isArray(p.images) && p.images.length) {
+          list = p.images.map(function (src) {
+            var r = resolveProductAssetUrl(src);
+            return {type: 'image', src: r, thumb: r};
+          });
+        } else {
+          var fb = resolveProductAssetUrl(p.cardImage || p.fallbackImage);
+          list = [{type: 'image', src: fb, thumb: fb}];
+        }
+        galleryItems = list;
+        imageIndex = 0;
+        renderMediaGallery();
+        showGalleryItem(0, false);
+      }
+
+      function fillColours(p) {
+        var swatches = modal.querySelector('#evmColorSwatches');
+        var colorName = modal.querySelector('#evmColorName');
+        var colors = productVariants(p);
+        swatches.replaceChildren();
+        colorSelection.hidden = !colors.length;
+        modal.querySelector('[data-colour-count]').textContent = (colors.length || 3) + ' Colours';
+        if (!colors.length) return;
+
+        var selected = selectedProductVariant(p);
+        colorName.textContent = selected.name;
+        colors.forEach(function (c) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'evm-swatch-btn';
+          b.style.setProperty('--swatch-color', c.value);
+          b.setAttribute('aria-pressed', c.slug === selected.slug ? 'true' : 'false');
+          b.addEventListener('click', function (e) {
+            e.stopPropagation();
+            selectedProductVariants[p.id] = c;
+            p.activeColor = c.slug;
+            colorName.textContent = c.name;
+            Array.prototype.forEach.call(swatches.children, function (btn) {
+              btn.setAttribute('aria-pressed', btn === b ? 'true' : 'false');
+            });
+            loadGalleryForProduct(p);
+          });
+          swatches.appendChild(b);
+        });
+      }
+
+      /* POINT 6 & 9: Open Product with URL Hash Routing & Refresh Persistence */
+      function openProductView(id, updateHash) {
+        var p = byId[id];
+        if (!p) return;
+        current = p;
+
+        modal.querySelector('[data-evm-barname]').textContent = p.name;
+        modal.querySelector('[data-evm-summary-brand]').textContent = p.brand;
+        modal.querySelector('[data-evm-heading]').textContent = p.name;
+        modal.querySelector('[data-evm-price]').textContent = p.price;
+        modal.querySelector('[data-evm-onroad]').textContent = p.onRoad;
+        modal.querySelector('[data-evm-emi]').textContent = p.emi;
+        modal.querySelector('[data-evm-desc]').textContent = p.desc;
+
+        var aiCtx = document.querySelector('[data-ai-context-model]');
+        if (aiCtx) aiCtx.textContent = 'Active Model: ' + p.name + ' (' + p.price + ')';
+
+        productLookButton.hidden = !Array.isArray(p.rotationFrames) || !p.rotationFrames.length;
+        collageDrawer.hidden = true;
+
+        setInspectionMode(false);
+        fillColours(p);
+        loadGalleryForProduct(p);
+        render15PointSpecs(p);
+
+        if (tdVehicle) {
+          tdVehicle.innerHTML = '';
+          PRODUCTS.forEach(function (q) {
+            var o = document.createElement('option');
+            o.textContent = q.name;
+            if (q.id === p.id) o.selected = true;
+            tdVehicle.appendChild(o);
+          });
+        }
+
+        modal.hidden = false;
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+
+        if (updateHash !== false) {
+          history.pushState({vehicleId: p.id}, '', '#' + p.id);
+        }
+      }
+
+      function closeVehicleView(fromPopState) {
+        if (modal.hidden) return;
+        video.pause();
+        videoEmbed.src = 'about:blank';
+        zoomLens.hidden = true;
+        zoomFlyout.hidden = true;
+        stage.classList.remove('is-zoomed');
+        photoLightbox.hidden = true;
+        productLookViewer.hidden = true;
+        modal.hidden = true;
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        if (!fromPopState && window.location.hash) {
+          history.pushState('', document.title, window.location.pathname + window.location.search);
+        }
+      }
+
+      /* POINT 1: Amazon Side-Lens Zoom + In-Stage Cursor Zoom (Desktop Only) */
+      stage.addEventListener('pointermove', function (e) {
+        e.stopPropagation();
+        if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+        if (inspectionEnabled || !activeGalleryItem || activeGalleryItem.type !== 'image') {
+          zoomLens.hidden = true;
+          zoomFlyout.hidden = true;
+          stage.classList.remove('is-zoomed');
+          return;
+        }
+        var rect = stage.getBoundingClientRect();
+        var x = Math.max(0, Math.min(100, ((e.clientX - rect.left) / rect.width) * 100));
+        var y = Math.max(0, Math.min(100, ((e.clientY - rect.top) / rect.height) * 100));
+
+        mainImg.style.setProperty('--zoom-origin-x', x + '%');
+        mainImg.style.setProperty('--zoom-origin-y', y + '%');
+        stage.classList.add('is-zoomed');
+
+        zoomLens.style.left = x + '%';
+        zoomLens.style.top = y + '%';
+        zoomLens.hidden = false;
+
+        zoomFlyout.style.backgroundImage = 'url("' + activeGalleryItem.src + '")';
+        zoomFlyout.style.backgroundSize = '240%';
+        zoomFlyout.style.backgroundPosition = x + '% ' + y + '%';
+        zoomFlyout.hidden = false;
+      });
+
+      stage.addEventListener('pointerleave', function (e) {
+        e.stopPropagation();
+        stage.classList.remove('is-zoomed');
+        zoomLens.hidden = true;
+        zoomFlyout.hidden = true;
+      });
+
+      /* Touch Devices: Single Tap Opens Fullscreen Photo */
+      mainImg.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (window.matchMedia('(pointer: coarse)').matches && activeGalleryItem && activeGalleryItem.type === 'image') {
+          photoLightboxImage.src = activeGalleryItem.src;
+          photoLightbox.hidden = false;
+        }
+      });
+
+      /* Header Back Button (ONLY Trigger to Close View) */
+      modal.querySelector('#evmCloseDetailView').addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        closeVehicleView(false);
+      });
+
+      /* Next / Prev & Fullscreen Controls */
+      modal.querySelector('#evmPrevBtn').addEventListener('click', function (e) {
+        e.stopPropagation();
+        showGalleryItem(imageIndex - 1, true);
+      });
+      modal.querySelector('#evmNextBtn').addEventListener('click', function (e) {
+        e.stopPropagation();
+        showGalleryItem(imageIndex + 1, true);
+      });
+      modal.querySelector('[data-gallery-prev]').addEventListener('click', function (e) {
+        e.stopPropagation();
+        showGalleryItem(imageIndex - 1, true);
+      });
+      modal.querySelector('[data-gallery-next]').addEventListener('click', function (e) {
+        e.stopPropagation();
+        showGalleryItem(imageIndex + 1, true);
+      });
+      modal.querySelector('[data-fullscreen-open]').addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (!activeGalleryItem) return;
+        photoLightboxImage.src = activeGalleryItem.type === 'image' ? activeGalleryItem.src : (activeGalleryItem.thumb || current.cardImage);
+        photoLightbox.hidden = false;
+      });
+      photoLightbox.querySelector('[data-photo-lightbox-close]').addEventListener('click', function (e) {
+        e.stopPropagation();
+        photoLightbox.hidden = true;
+      });
+      photoLightbox.querySelector('[data-lightbox-prev]').addEventListener('click', function (e) {
+        e.stopPropagation();
+        showGalleryItem(imageIndex - 1, false);
+      });
+      photoLightbox.querySelector('[data-lightbox-next]').addEventListener('click', function (e) {
+        e.stopPropagation();
+        showGalleryItem(imageIndex + 1, false);
+      });
+
+      /* Component Parts Toggle & Card Close */
+      modal.querySelector('[data-inspection-toggle]').addEventListener('click', function (e) {
+        e.stopPropagation();
+        setInspectionMode(!inspectionEnabled);
+      });
+      modal.querySelector('[data-inspection-reset]').addEventListener('click', function (e) {
+        e.stopPropagation();
+        inspectionCallout.hidden = true;
+        batteryFrame.hidden = true;
+        inspectionConnector.setAttribute('hidden', '');
+      });
+
+      /* Bajaj Sub-Tabs: [Albums] [Colours] [Video] [360° Studio] */
+      modal.querySelectorAll('[data-subtab]').forEach(function (pill) {
+        pill.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var mode = pill.getAttribute('data-subtab');
+          if (mode === 'albums') {
+            collageDrawer.hidden = !collageDrawer.hidden;
+          } else if (mode === 'colours') {
+            if (!colorSelection.hidden) colorSelection.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+          } else if (mode === 'video') {
+            var vidIdx = galleryItems.findIndex(function (i) {return i.type === 'video';});
+            if (vidIdx >= 0) {
+              showGalleryItem(vidIdx, true);
+            } else {
+              /* Fallback to official Prana track showcase video if model has no dedicated video */
+              galleryItems.push({
+                type: 'video',
+                src: 'https://www.youtube-nocookie.com/embed/MF5tzM8kJTQ?autoplay=1&mute=1&loop=1&playlist=MF5tzM8kJTQ&controls=0&modestbranding=1&playsinline=1',
+                embedSrc: 'https://www.youtube-nocookie.com/embed/MF5tzM8kJTQ?autoplay=1&mute=1&loop=1&playlist=MF5tzM8kJTQ&controls=0&modestbranding=1&playsinline=1',
+                thumb: current.cardImage
+              });
+              renderMediaGallery();
+              showGalleryItem(galleryItems.length - 1, true);
+            }
+          } else if (mode === '360') {
+            open360Viewer();
+          }
+        });
+      });
+
+      modal.querySelector('[data-collage-close]').addEventListener('click', function (e) {
+        e.stopPropagation();
+        collageDrawer.hidden = true;
+      });
+
+      /* 360° Studio Viewer */
+      function show360Frame(idx) {
+        if (!productLookFrames.length) return;
+        productLookIndex = (idx + productLookFrames.length) % productLookFrames.length;
+        productLookImage.src = productLookFrames[productLookIndex];
+        productLookImage.hidden = false;
+        productLookStatus.textContent = '360° Angle ' + (productLookIndex + 1) + ' of ' + productLookFrames.length;
+      }
+
+      function open360Viewer() {
+        var frames = (current && Array.isArray(current.rotationFrames) && current.rotationFrames.length)
+          ? current.rotationFrames.map(resolveProductAssetUrl)
+          : galleryItems.filter(function (i) {return i.type === 'image';}).map(function (i) {return i.src;});
+        if (!frames.length) return;
+        productLookFrames = frames;
+        productLookViewer.hidden = false;
+        show360Frame(0);
+      }
+
+      productLookButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+        open360Viewer();
+      });
+      modal.querySelector('[data-product-look-close]').addEventListener('click', function (e) {
+        e.stopPropagation();
+        productLookViewer.hidden = true;
+      });
+      modal.querySelector('[data-product-look-prev]').addEventListener('click', function (e) {
+        e.stopPropagation();
+        show360Frame(productLookIndex - 1);
+      });
+      modal.querySelector('[data-product-look-next]').addEventListener('click', function (e) {
+        e.stopPropagation();
+        show360Frame(productLookIndex + 1);
+      });
+
+      /* Native Share Button with Toast Fallback */
+      modal.querySelector('[data-share-vehicle]').addEventListener('click', function (e) {
+        e.stopPropagation();
+        var shareUrl = window.location.href;
+        if (navigator.share) {
+          navigator.share({title: current ? current.name : 'rMAR eeVee', url: shareUrl}).catch(function () {});
+        } else if (navigator.clipboard) {
+          navigator.clipboard.writeText(shareUrl).then(function () {
+            var toast = document.getElementById('evmShareToast');
+            toast.hidden = false;
+            setTimeout(function () {toast.hidden = true;}, 2200);
+          });
+        }
+      });
+
+      /* Tabs Switching */
+      modal.querySelectorAll('.evm-tab').forEach(function (tab) {
+        tab.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var target = tab.getAttribute('data-tab');
+          modal.querySelectorAll('.evm-tab').forEach(function (t) {
+            t.classList.toggle('active', t === tab);
+            t.setAttribute('aria-selected', t === tab ? 'true' : 'false');
+          });
+          modal.querySelectorAll('.evm-pane').forEach(function (pane) {
+            pane.hidden = pane.getAttribute('data-pane') !== target;
+          });
+        });
+      });
+
+      /* Open from Any Product Card Click */
+      document.addEventListener('click', function (e) {
+        var opener = e.target.closest('[data-open-product]');
+        if (opener) {
+          e.preventDefault();
+          openProductView(opener.getAttribute('data-open-product'), true);
+        }
+      });
+
+      /* POINT 6 & 9: Direct Hash Routing & Browser Refresh Persistence */
+      function checkUrlRoute() {
+        var hashId = window.location.hash ? window.location.hash.replace(/^#/, '') : '';
+        var queryMatch = /[?&]product=([A-Za-z0-9_-]+)/.exec(window.location.search);
+        var targetId = (hashId && byId[hashId]) ? hashId : (queryMatch && byId[queryMatch[1]] ? queryMatch[1] : '');
+        if (targetId) {
+          openProductView(targetId, false);
+        } else if (!modal.hidden) {
+          closeVehicleView(true);
+        }
+      }
+
+      window.addEventListener('hashchange', checkUrlRoute);
+      window.addEventListener('popstate', checkUrlRoute);
+      window.addEventListener('DOMContentLoaded', checkUrlRoute);
+      checkUrlRoute();
+
+      /* POINT 13: Context-Aware Taamsi-AI Assistant Logic */
+      var aiTrigger = document.getElementById('evpAiBotTrigger');
+      var aiDrawer = document.getElementById('evpAiDrawer');
+      var aiClose = document.getElementById('evpAiClose');
+      var aiMessages = document.getElementById('evpAiMessages');
+      var aiForm = document.getElementById('evpAiForm');
+      var aiInput = document.getElementById('evpAiInput');
+
+      function answerWithTaamsiAi(question) {
+        var p = current || PRODUCTS[0];
+        var o = p.oem15 || {};
+        var q = question.toLowerCase();
+        var reply = '';
+        if (/range|battery|charge|மைலேஜ்|பேட்டரி/.test(q)) {
+          reply = '🔋 <b>' + p.name + '</b> மாடலில் <b>' + o.batteryCapacity + ' (' + o.batteryType + ')</b> பேட்டரி உள்ளது. ஒரு முறை சார்ஜ் செய்தால் <b>' + o.range + '</b> வரை செல்லும். சார்ஜிங் நேரம்: <b>' + o.chargingTime + '</b>.';
+        } else if (/price|emi|cost|விலை/.test(q)) {
+          reply = '💰 <b>' + p.name + '</b> எக்ஸ்-ஷோரூம் விலை <b>' + p.price + '</b> (ஆன்-ரோடு தோராயமாக <b>' + p.onRoad + '</b>). மாதத் தவணை (EMI) <b>' + p.emi + '</b> முதல் தொடங்குகிறது.';
+        } else if (/speed|motor|power|வேகம்/.test(q)) {
+          reply = '⚡ <b>' + p.name + '</b> அதிகபட்ச வேகம் <b>' + o.topSpeed + '</b> மற்றும் <b>' + o.motorPower + ' (' + o.motorName + ')</b> கொண்டுள்ளது.';
+        } else if (/warranty|வாரண்டி/.test(q)) {
+          reply = '🛡️ <b>' + p.name + '</b> மாடலுக்கு <b>' + o.warranty + '</b> அதிகாரப்பூர்வ வாரண்டி மற்றும் தென்காசி ஷோரூம் சர்வீஸ் சப்போர்ட் உண்டு.';
+        } else {
+          reply = '✨ <b>' + p.name + ' (' + p.brand + ')</b>: விலை ' + p.price + ', ரேஞ்ச் ' + o.range + ', டாப் ஸ்பீடு ' + o.topSpeed + '. டெஸ்ட் டிரைவ் புக் செய்ய "+91 73736 11500" எண்ணிற்கு அழைக்கலாம்!';
+        }
+
+        var uDiv = document.createElement('div');
+        uDiv.className = 'evp-ai-msg evp-ai-msg--user';
+        uDiv.textContent = question;
+        aiMessages.appendChild(uDiv);
+
+        var bDiv = document.createElement('div');
+        bDiv.className = 'evp-ai-msg evp-ai-msg--bot';
+        bDiv.innerHTML = reply;
+        aiMessages.appendChild(bDiv);
+        aiMessages.scrollTop = aiMessages.scrollHeight;
+      }
+
+      aiTrigger.addEventListener('click', function () {
+        aiDrawer.hidden = !aiDrawer.hidden;
+      });
+      aiClose.addEventListener('click', function () {
+        aiDrawer.hidden = true;
+      });
+      document.querySelectorAll('[data-ai-ask]').forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          answerWithTaamsiAi(chip.getAttribute('data-ai-ask'));
+        });
+      });
+      aiForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!aiInput.value.trim()) return;
+        answerWithTaamsiAi(aiInput.value.trim());
+        aiInput.value = '';
+      });
+    })();
+  </script>
+</body>
+
+</html>
